@@ -1,0 +1,2038 @@
+[
+  {
+    "version": "v2",
+    "run_id": "v2-baseline",
+    "run_mode": "baseline",
+    "results": [
+      {
+        "email_id": "E01",
+        "status": "persisted",
+        "processing_latency_ms": 26144,
+        "audit": {
+          "email_id": "E01",
+          "received_at": "2026-11-20T09:02:00+05:30",
+          "from_email": "ananya.rao@example.com",
+          "intent": "order_status",
+          "secondary_intent": "",
+          "order_id": "KC-1041",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "draft_reply",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "Hi Ananya,\n\nYour order KC-1041 for the Saffron Glow Face Serum has been shipped via SwiftShip. You can track your package here: https://track.example.com/SS7781041. The estimated delivery date for your order is 2026-11-21. Please note that this is an estimate and not a guarantee.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:53:32.971Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1041\",\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[1],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":25253}"
+        },
+        "ticket": null,
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"Your order KC-1041 for the Saffron Glow Face Serum has been shipped via SwiftShip. You can track your package here: https://track.example.com/SS7781041. The estimated delivery date for your order is 2026-11-21. Please note that this is an estimate and not a guarantee.\",\"faq_sections\":[1],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1041"
+                  },
+                  "toolCallId": "call_13757251034281041467",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1041\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1041\"},\"id\":\"call_13757251034281041467\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"delivery timelines and order tracking\"},\"id\":\"call_13757251034281041190\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1041"
+                              },
+                              "id": "call_13757251034281041467"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "delivery timelines and order tracking"
+                              },
+                              "id": "call_13757251034281041190"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_13757251034281041467",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1041"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_13757251034281041190",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "delivery timelines and order tracking"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_13757251034281041467": "EqkBCqYBAWkUfRM297YVwH4o0ib+zXTInOckfO6uPcTq5gN0i5zL+C/TX2y/amXEA7oaMF3zm7cznlC5qYBWGqEUlNnXNZUhA7n5VfzCCOeaIWzWMnsyyjlYz8Wa1kPf0TaSNxQ3NDj+0MsKQpdIetNWZ8v3NiM/d/72pg/9OF8jEBI7WDlS4SJBtaGlg63MZ6+SApDY4N0E+15pCSCjVDih8nk25uyONLlSXw=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1534,
+                          "output_tokens": 41,
+                          "total_tokens": 1575
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1534,
+                            "completionTokens": 41,
+                            "totalTokens": 1575
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d30-4563-7022-84d8-85fcb3aaef0d"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1041\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-SER-30\",\"name\":\"Saffron Glow Face Serum 30 ml\",\"qty\":1,\"unit_price\":1299}],\"subtotal\":1299,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1299,\"payment_method\":\"prepaid\",\"status\":\"shipped\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781041\",\"shipped_date\":\"2026-11-17\",\"estimated_delivery\":\"2026-11-21\",\"delivered_date\":null,\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "delivery timelines and order tracking"
+                  },
+                  "toolCallId": "call_13757251034281041190",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"delivery timelines and order tracking\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1041\"},\"id\":\"call_13757251034281041467\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"delivery timelines and order tracking\"},\"id\":\"call_13757251034281041190\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E02",
+        "status": "persisted",
+        "processing_latency_ms": 11491,
+        "audit": {
+          "email_id": "E02",
+          "received_at": "2026-11-20T09:15:00+05:30",
+          "from_email": "ishita.banerjee@example.com",
+          "intent": "product_query",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "draft_reply",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "Hi Ishita,\n\nThe Saffron Glow Face Serum is formulated to be lightweight and non-greasy, making it suitable for all skin types, including oily skin. I am happy to confirm that this product is vegan. We always recommend performing a patch test on your inner forearm for 24 hours before your first full application. Please consult a dermatologist if you have specific concerns regarding your skin type or any existing conditions.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:54:01.253Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":null,\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[7,8],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":10647}"
+        },
+        "ticket": null,
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"The Saffron Glow Face Serum is formulated to be lightweight and non-greasy, making it suitable for all skin types, including oily skin. I am happy to confirm that this product is vegan. We always recommend performing a patch test on your inner forearm for 24 hours before your first full application. Please consult a dermatologist if you have specific concerns regarding your skin type or any existing conditions.\", \"faq_sections\":[7, 8], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "Saffron Glow Face Serum oily skin vegan"
+                  },
+                  "toolCallId": "call_15974951169113116757",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"Saffron Glow Face Serum oily skin vegan\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"Saffron Glow Face Serum oily skin vegan\"},\"id\":\"call_15974951169113116757\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "Saffron Glow Face Serum oily skin vegan"
+                              },
+                              "id": "call_15974951169113116757"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_15974951169113116757",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "Saffron Glow Face Serum oily skin vegan"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_15974951169113116757": "EqkBCqYBAWkUfRPa/mhgzGi0Ib5C/A3uVewZtLqc6rk0jj6pqhUJ5M8fltibinaCDAQII1+sSjd6L8uKuW5sv8rOMc/3MiaBolwfYxC4+gxKp3OHhy6PfU1YOpNgkkibUxWc2/fvGczCej20jrmVstDi2Drlrb1Zd1pNaum/Zjjs1R4QXs4QVal7SF13KLkvN6n8+woalIhgyO/fBXnKLbtt0rpsprp0bNsM4Q=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1538,
+                          "output_tokens": 23,
+                          "total_tokens": 1561
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1538,
+                            "completionTokens": 23,
+                            "totalTokens": 1561
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d30-d99e-7489-8b87-2bbae7656caf"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"sections\":[{\"id\":7,\"text\":\"## 7. Products\\n\\nAll products are **cruelty-free**, **paraben-free**, made in India, and have a shelf life of **24 months** from manufacture (12 months after opening).\\n\\n| Product | Price | Key facts |\\n|---|---|---|\\n| Saffron Glow Face Serum 30 ml | ₹1,299 | Saffron + Vitamin C. Lightweight, non-greasy, suitable for **all skin types including oily**. **Vegan.** Use AM/PM after cleansing. |\\n| Kumkumadi Night Oil 15 ml | ₹1,149 | Traditional kumkumadi tailam blend. Best for **normal to dry** skin. **Not recommended for very oily or acne-prone skin.** Night use only. Vegan. |\\n| Ubtan Face Pack 100 g | ₹699 | Turmeric, chickpea flour, sandalwood. Mix with water or rose water. Use 2× a week. Vegan. |\\n| Rose Water Toner 200 ml | ₹899 | Steam-distilled rose water, alcohol-free. Suitable for all skin types. Vegan. |\\n| Bhringraj Hair Oil 200 ml | ₹649 | Bhringraj, amla, coconut oil base. Apply 1 hour before washing. Vegan. |\\n| Sandalwood Body Lotion 250 ml | ₹749 | Sandalwood + shea butter. Contains **beeswax**, so **not vegan**. |\\n| Aloe Calm Gel 150 g | ₹499 | 92% aloe vera. Soothing, suitable for all skin types. Vegan. |\\n| Bridal Glow Kit | ₹3,499 | Contains Saffron Glow Serum, Kumkumadi Night Oil, Ubtan Face Pack and Rose Water Toner. Start 4–6 weeks before the event. |\\n\"},{\"id\":8,\"text\":\"## 8. Product Safety & Medical Questions\\n\\n- Our products are **cosmetics, not medicines**. They are not intended to diagnose, treat or cure any skin or medical condition.\\n- We always recommend a **patch test** (inner forearm, 24 hours) before first use.\\n- For any skin condition (e.g., eczema, psoriasis, severe acne), pregnancy or allergies, customers should **consult a dermatologist or doctor** before use.\\n- Support must **not** give medical advice or make claims about curing or treating conditions.\\n- If a customer reports a reaction, advise them to stop using the product immediately and consult a doctor, and escalate to a human.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E03",
+        "status": "already_processed",
+        "audit": {
+          "row": 2,
+          "email_id": "E03",
+          "received_at": "2026-11-20T09:28:00+05:30",
+          "from_email": "kavya.reddy@example.com",
+          "intent": "return_refund",
+          "secondary_intent": "",
+          "order_id": "KC-1047",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": "1",
+          "order_found": "TRUE",
+          "action_taken": "ticket_and_draft",
+          "needs_human": "TRUE",
+          "ticket_id": "TKT-KC-1047-1",
+          "reply_draft": "Hi Kavya,\n\nWe can certainly assist with your return request for the Rose Water Toner from order KC-1047, as it falls within our 7-day return window. Please ensure the product remains unused and unopened with the seal intact for the quality check process. We will arrange a free reverse pickup for you, and a team member will follow up within 24 business hours to coordinate this. Once the item passes our quality check, your refund will be processed to your original payment method within 5–7 business days, excluding the non-refundable shipping fee.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:48:43.849Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1047\",\"reasons\":[\"human_must_review_ticket_no_operational_action\"],\"eligibility\":{\"state\":\"eligible_pending_pickup_and_qc\",\"days_since_delivery\":4,\"used_claim\":false,\"unopened_claim\":true,\"complete_set_required\":false,\"reason\":\"Customer claims are not quality verification.\",\"payment_method\":\"prepaid\",\"merchandise_value\":899,\"nonrefundable_fees\":79,\"refund_method\":\"Original payment method.\",\"refund_timing\":\"5–7 business days after returned item passes quality check.\",\"pickup_executed\":false,\"refund_approved\":false},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[4,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":18191}"
+        }
+      },
+      {
+        "email_id": "E04",
+        "status": "persisted",
+        "processing_latency_ms": 27356,
+        "audit": {
+          "email_id": "E04",
+          "received_at": "2026-11-20T09:41:00+05:30",
+          "from_email": "tanvi.desai@example.com",
+          "intent": "complaint",
+          "secondary_intent": "",
+          "order_id": "KC-1052",
+          "language": "en",
+          "sentiment": "negative",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1052-2",
+          "reply_draft": "Hi Tanvi,\n\nI am very sorry to hear that your Ubtan Face Pack arrived damaged in order KC-1052. Please share clear photos of the damaged jar and the outer shipping box within 48 hours of delivery so we can verify this for you. Once verified, you may choose between a free replacement or a full refund. A team member will follow up with you within 24 business hours to assist with your preferred resolution.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:55:03.458Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1052\",\"reasons\":[\"human_must_review_ticket_no_operational_action\",\"item_issue_verification_required\"],\"eligibility\":{\"state\":\"within_reporting_window_pending_verification\",\"issue\":\"damaged\",\"age_min_hours\":9.68333333333333,\"age_max_hours\":33.68333333333333,\"photos_listed\":[],\"photos_verified\":false,\"packing_weight_verified\":false,\"remedy\":\"FAQ section 5; human verification required; no refund or replacement executed.\",\"customer_requested_remedy\":\"unspecified\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true},{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":2,\"validation_history\":[[\"reporting_window_missing\"],[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[5,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":26565}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1052-2",
+          "created_at": "2026-11-24T10:55:02.638Z",
+          "updated_at": "2026-11-24T10:55:02.638Z",
+          "order_id": "KC-1052",
+          "customer_email": "tanvi.desai@example.com",
+          "email_ids": "E04",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer received a damaged Ubtan Face Pack jar with spilled contents in order KC-1052.",
+          "notes": "2026-11-24T10:55:02.638Z E04: Customer received a damaged Ubtan Face Pack jar with spilled contents in order KC-1052. | eligibility=within_reporting_window_pending_verification; requested_remedy=unspecified; attachments=none (unverified)"
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"I am very sorry to hear that your Ubtan Face Pack arrived damaged in order KC-1052. To assist you with a replacement or refund, please share clear photos of the damaged jar and the outer shipping box as per our policy. Once these are received, our team will verify the details and process your preferred remedy. A team member will follow up with you within 24 business hours to resolve this.\",\"faq_sections\":[5,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1052"
+                  },
+                  "toolCallId": "call_4364588249922838795",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1052\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1052\"},\"id\":\"call_4364588249922838795\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product complaint reporting process\"},\"id\":\"call_4364588249922840138\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1052"
+                              },
+                              "id": "call_4364588249922838795"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "damaged product complaint reporting process"
+                              },
+                              "id": "call_4364588249922840138"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_4364588249922838795",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1052"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_4364588249922840138",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "damaged product complaint reporting process"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_4364588249922838795": "EqkBCqYBAWkUfRNrcuI8+8aJKfsw5DBSEETbSdQP/PEw7TlChM6v7yl0n87pcdY/YLDtz2Z5YCwAxV3UEsiN+EGxS9lVYp9y453dVzw/SR6jFJ67y7Tyn8mTPzJ1GfUwRTEGFwjOSk6ti2lz7/2BsRSw2Nznn9Wwr3+duoNvApRvc+mepiUz4s8GsMq88IRTGMmlfcGiEKaoR4QHubNk/IWKHQuCbGuLkXSOeQ=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1684,
+                          "output_tokens": 41,
+                          "total_tokens": 1725
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1684,
+                            "completionTokens": 41,
+                            "totalTokens": 1725
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d31-954b-75fd-b820-6065474c9ac0"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1052\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-UBT-100\",\"name\":\"Ubtan Face Pack 100 g\",\"qty\":1,\"unit_price\":699},{\"sku\":\"KC-ROS-200\",\"name\":\"Rose Water Toner 200 ml\",\"qty\":1,\"unit_price\":899}],\"subtotal\":1598,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1598,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521052\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "damaged product complaint reporting process"
+                  },
+                  "toolCallId": "call_4364588249922840138",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"damaged product complaint reporting process\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1052\"},\"id\":\"call_4364588249922838795\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product complaint reporting process\"},\"id\":\"call_4364588249922840138\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          },
+          {
+            "raw": "{\"body\":\"I am very sorry to hear that your Ubtan Face Pack arrived damaged in order KC-1052. Please share clear photos of the damaged jar and the outer shipping box within 48 hours of delivery so we can verify this for you. Once verified, you may choose between a free replacement or a full refund. A team member will follow up with you within 24 business hours to assist with your preferred resolution.\",\"faq_sections\":[5,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1052"
+                  },
+                  "toolCallId": "call_13184246723388008384",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1052\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1052\"},\"id\":\"call_13184246723388008384\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product reporting policy\"},\"id\":\"call_13184246723388007575\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1052"
+                              },
+                              "id": "call_13184246723388008384"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "damaged product reporting policy"
+                              },
+                              "id": "call_13184246723388007575"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_13184246723388008384",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1052"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_13184246723388007575",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "damaged product reporting policy"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_13184246723388008384": "EqkBCqYBAWkUfRPcqzRuwq9ISQuKsoEhbb2p94BdnWcAaZNL5MUriwXjXz6siUpT3ejqiMmFSNjc+AUtfBakeTtQQ6yyQitiK1IRgakfjbiOhVl/OO60PhupZvtPYW+/0BqHSH+F3iGOMmGVKOZpHSvcq5zATAnGMRzXz/6o2MNapchoikQgX+Y/lfJSlnqMRW+QA8Ms8x87UHrDlbxSK0J0E7V0xg57sMkGlg=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1831,
+                          "output_tokens": 40,
+                          "total_tokens": 1871
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1831,
+                            "completionTokens": 40,
+                            "totalTokens": 1871
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d31-c0ad-71a1-93f0-6dc822a3d5b6"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1052\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-UBT-100\",\"name\":\"Ubtan Face Pack 100 g\",\"qty\":1,\"unit_price\":699},{\"sku\":\"KC-ROS-200\",\"name\":\"Rose Water Toner 200 ml\",\"qty\":1,\"unit_price\":899}],\"subtotal\":1598,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1598,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521052\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "damaged product reporting policy"
+                  },
+                  "toolCallId": "call_13184246723388007575",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"damaged product reporting policy\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1052\"},\"id\":\"call_13184246723388008384\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product reporting policy\"},\"id\":\"call_13184246723388007575\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E07",
+        "status": "persisted",
+        "processing_latency_ms": 12267,
+        "audit": {
+          "email_id": "E07",
+          "received_at": "2026-11-20T10:34:00+05:30",
+          "from_email": "arjun.nair@example.com",
+          "intent": "order_status",
+          "secondary_intent": "",
+          "order_id": "KC-1046",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "draft_reply",
+          "needs_human": true,
+          "ticket_id": "",
+          "reply_draft": "Hi Arjun,\n\nFor privacy, please contact us from the email address used to place the order. We cannot share order information from a different email address. A team member will follow up within 24 business hours.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:55:32.520Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1046\",\"reasons\":[\"order_not_authorized\",\"privacy_safe_template\"],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"not_authorized\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"privacy\",\"generic_fallback\":false,\"faq_sections\":[1],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":11487}"
+        },
+        "ticket": null,
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"For security and privacy reasons, we can only share order details with the registered email address associated with the purchase. Please have the person who placed the order contact us directly from their registered email account. We are unable to confirm delivery addresses or provide tracking links to third parties. Thank you for your understanding regarding our privacy policy.\",\"faq_sections\":[1],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1046"
+                  },
+                  "toolCallId": "call_17518926266812511919",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1046\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1046\"},\"id\":\"call_17518926266812511919\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"privacy policy order information\"},\"id\":\"call_17518926266812511874\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1046"
+                              },
+                              "id": "call_17518926266812511919"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "privacy policy order information"
+                              },
+                              "id": "call_17518926266812511874"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_17518926266812511919",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1046"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_17518926266812511874",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "privacy policy order information"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_17518926266812511919": "EqkBCqYBAWkUfRPk5yb5M8XXV45E9wW5oLu+GO+5VPAY4oAtShlECpyqNLXME9pYh7kyKLsEgOycT48QtfWfn60P+mI989Cm9aZu0bcHckOEofLurRxdjUIKsFz2JSqdNlErRrTKr5hurJGGJHrDgPdT3shjBweCBGpKgmDU5jrWrjG/oPp4USmQSPiBofWgJQ4F5zE7npXSfkUbNpik+ZFzyuyqaS0UlcHX6Q=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1580,
+                          "output_tokens": 40,
+                          "total_tokens": 1620
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1580,
+                            "completionTokens": 40,
+                            "totalTokens": 1620
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d32-4995-7260-8af9-d75077146300"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"not_authorized\"}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "privacy policy order information"
+                  },
+                  "toolCallId": "call_17518926266812511874",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"privacy policy order information\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1046\"},\"id\":\"call_17518926266812511919\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"privacy policy order information\"},\"id\":\"call_17518926266812511874\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E08",
+        "status": "persisted",
+        "processing_latency_ms": 55332,
+        "audit": {
+          "email_id": "E08",
+          "received_at": "2026-11-20T10:52:00+05:30",
+          "from_email": "riya.kapoor@example.com",
+          "intent": "complaint",
+          "secondary_intent": "return_refund",
+          "order_id": "KC-1051",
+          "language": "en",
+          "sentiment": "angry",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1051-3",
+          "reply_draft": "Hi Riya,\n\nI am truly sorry to hear that your Sandalwood lotion arrived in such a poor condition, Riya. Please share clear photos of the damaged product and the outer box within 48 hours of delivery so we can verify this issue as per our policy. Once verified, you may choose between a free replacement or a full refund for your order KC-1051. A member of our team will follow up with you within 24 business hours to assist further.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:56:44.545Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1051\",\"reasons\":[\"angry_customer\",\"human_must_review_ticket_no_operational_action\",\"item_issue_verification_required\"],\"eligibility\":{\"state\":\"within_reporting_window_pending_verification\",\"issue\":\"damaged\",\"age_min_hours\":10.866666666666667,\"age_max_hours\":34.86666666666667,\"photos_listed\":[],\"photos_verified\":false,\"packing_weight_verified\":false,\"remedy\":\"FAQ section 5; human verification required; no refund or replacement executed.\",\"customer_requested_remedy\":\"refund\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true},{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":2,\"validation_history\":[[\"reporting_window_missing\"],[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[5,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":54479}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1051-3",
+          "created_at": "2026-11-24T10:56:43.729Z",
+          "updated_at": "2026-11-24T10:56:43.729Z",
+          "order_id": "KC-1051",
+          "customer_email": "riya.kapoor@example.com",
+          "email_ids": "E08",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer received a damaged order KC-1051 with a leaking lotion bottle and is demanding a full refund.",
+          "notes": "2026-11-24T10:56:43.729Z E08: Customer received a damaged order KC-1051 with a leaking lotion bottle and is demanding a full refund. | eligibility=within_reporting_window_pending_verification; requested_remedy=refund; attachments=none (unverified)"
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"I am truly sorry to hear that your Sandalwood lotion arrived in such a poor condition, Riya. Please share clear photos of the damaged product and the outer box so we can verify this issue as per our policy. Once verified, you may choose between a free replacement or a full refund for your order KC-1051. A member of our team will follow up with you within 24 business hours to assist further.\", \"faq_sections\":[5, 6], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1051"
+                  },
+                  "toolCallId": "call_2643474555976225919",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1051\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1051\"},\"id\":\"call_2643474555976225919\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged leaking product refund replacement\"},\"id\":\"call_2643474555976227104\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1051"
+                              },
+                              "id": "call_2643474555976225919"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "damaged leaking product refund replacement"
+                              },
+                              "id": "call_2643474555976227104"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_2643474555976225919",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1051"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_2643474555976227104",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "damaged leaking product refund replacement"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_2643474555976225919": "EqkBCqYBAWkUfRNLlKvvwOa6pB33ij6+sIjE8ZMTtVuIQszPa4qwdk/FivUrusNUYK04LsW8rxeeSSpTGYQJh2lpKwnZwI3Weq2O0qygeIbt0lUbSKARqNH4L5VYoWLoPKzIAxh4xXoBxywHZXievamYa9UgO392eCQt9c3Uh4Bqc2DrSSkNfdzdwg88NYga76TZCaJoxHitHz7gt8dO4esij+Yn65ryE/FwTA=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1724,
+                          "output_tokens": 41,
+                          "total_tokens": 1765
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1724,
+                            "completionTokens": 41,
+                            "totalTokens": 1765
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d32-a66a-746f-a8a4-49e94fdcae35"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1051\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-SAN-250\",\"name\":\"Sandalwood Body Lotion 250 ml\",\"qty\":2,\"unit_price\":749}],\"subtotal\":1498,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1498,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781051\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "damaged leaking product refund replacement"
+                  },
+                  "toolCallId": "call_2643474555976227104",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"damaged leaking product refund replacement\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1051\"},\"id\":\"call_2643474555976225919\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged leaking product refund replacement\"},\"id\":\"call_2643474555976227104\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          },
+          {
+            "raw": "{\"body\":\"I am truly sorry to hear that your Sandalwood lotion arrived in such a poor condition, Riya. Please share clear photos of the damaged product and the outer box within 48 hours of delivery so we can verify this issue as per our policy. Once verified, you may choose between a free replacement or a full refund for your order KC-1051. A member of our team will follow up with you within 24 business hours to assist further.\",\"faq_sections\":[5,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1051"
+                  },
+                  "toolCallId": "call_16214908532163307922",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1051\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1051\"},\"id\":\"call_16214908532163307922\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product refund replacement policy\"},\"id\":\"call_16214908532163308441\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1051"
+                              },
+                              "id": "call_16214908532163307922"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "damaged product refund replacement policy"
+                              },
+                              "id": "call_16214908532163308441"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_16214908532163307922",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1051"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_16214908532163308441",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "damaged product refund replacement policy"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_16214908532163307922": "EqkBCqYBAWkUfRNlbd4OdqtVM/Eufj7C483sA0YKgX+7xPFBft1XpA7gJxRRAyui6EROO012Av5AHQ+UYKLKJNPGILl3q1fskOIVxQkkmkg1pWtNnPMlVYf15cZ71cjfgg2DxYPKCY1kAXwfVmLQe21YGDk0kfK6ZGyoF1mFLac6bz/TsX+gSzFMDCrURNtZ3hlpprKr44FbR5fU0CNspfNLZEAbtDmJVkq39g=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1874,
+                          "output_tokens": 41,
+                          "total_tokens": 1915
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1874,
+                            "completionTokens": 41,
+                            "totalTokens": 1915
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d33-2df8-74bf-a239-a9767d6bbc6a"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1051\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-SAN-250\",\"name\":\"Sandalwood Body Lotion 250 ml\",\"qty\":2,\"unit_price\":749}],\"subtotal\":1498,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1498,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781051\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "damaged product refund replacement policy"
+                  },
+                  "toolCallId": "call_16214908532163308441",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"damaged product refund replacement policy\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1051\"},\"id\":\"call_16214908532163307922\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product refund replacement policy\"},\"id\":\"call_16214908532163308441\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E10",
+        "status": "persisted",
+        "processing_latency_ms": 54386,
+        "audit": {
+          "email_id": "E10",
+          "received_at": "2026-11-20T11:26:00+05:30",
+          "from_email": "vikram.singh@example.com",
+          "intent": "order_status",
+          "secondary_intent": "",
+          "order_id": "KC-1044",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 0.98,
+          "order_found": true,
+          "action_taken": "draft_reply",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "Hi Vikram,\n\nYour order KC-1044 for the Bhringraj hair oil has been shipped via BharatExpress. You can track your package here: https://track.example.com/BX5521044. The estimated delivery date is 2026-11-25. Please note that this is an estimate and not a guarantee.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:57:55.825Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":null,\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[1],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":53550}"
+        },
+        "ticket": null,
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"Your order KC-1044 for the Bhringraj hair oil has been shipped via BharatExpress. You can track your package here: https://track.example.com/BX5521044. The estimated delivery date is 2026-11-25. Please note that this is an estimate and not a guarantee.\",\"faq_sections\":[1],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "vikram.singh@example.com"
+                  },
+                  "toolCallId": "call_3334172481145292137",
+                  "log": "Invoking \"get_order\" with {\"input\":\"vikram.singh@example.com\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"vikram.singh@example.com\"},\"id\":\"call_3334172481145292137\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status delivery tracking\"},\"id\":\"call_3334172481145292778\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "vikram.singh@example.com"
+                              },
+                              "id": "call_3334172481145292137"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "order status delivery tracking"
+                              },
+                              "id": "call_3334172481145292778"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_3334172481145292137",
+                            "name": "get_order",
+                            "args": {
+                              "input": "vikram.singh@example.com"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_3334172481145292778",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "order status delivery tracking"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_3334172481145292137": "EqkBCqYBAWkUfRNrfASEI3Kf+bpnInhni1ayBuAby5qge9vI+D0Pq6Ps8TOe+eimDlvpYbu7N8LmAbgfTcwe5UFxgELQHHDc9SKbQazihj4QEUsOR7dlW2TPNBf2wLq+mrpUTc43GKwWkBzr8d8rAmVVuGAVTDcMbyLwB2zwA8cjh4iXWIRWvuK11o8vQmdmkkY9oTSuR2Qnq7CdIgiGKtWpTDpYTmdghwE7BQ=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1540,
+                          "output_tokens": 43,
+                          "total_tokens": 1583
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1540,
+                            "completionTokens": 43,
+                            "totalTokens": 1583
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d33-c916-730b-8454-29f3ce758d38"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1044\",\"order_date\":\"2026-11-16\",\"items\":[{\"sku\":\"KC-BHR-200\",\"name\":\"Bhringraj Hair Oil 200 ml\",\"qty\":2,\"unit_price\":649}],\"subtotal\":1298,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1298,\"payment_method\":\"prepaid\",\"status\":\"shipped\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521044\",\"shipped_date\":\"2026-11-18\",\"estimated_delivery\":\"2026-11-25\",\"delivered_date\":null,\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "order status delivery tracking"
+                  },
+                  "toolCallId": "call_3334172481145292778",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"order status delivery tracking\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"vikram.singh@example.com\"},\"id\":\"call_3334172481145292137\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status delivery tracking\"},\"id\":\"call_3334172481145292778\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E12",
+        "status": "persisted",
+        "processing_latency_ms": 20422,
+        "audit": {
+          "email_id": "E12",
+          "received_at": "2026-11-20T12:05:00+05:30",
+          "from_email": "manish.gupta@example.com",
+          "intent": "return_refund",
+          "secondary_intent": "",
+          "order_id": "KC-1055",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1055-4",
+          "reply_draft": "Hi Manish,\n\nI understand you are looking to return your Saffron Glow Face Serum and Kumkumadi Night Oil from order KC-1055 as they did not suit your skin. According to our return policy, items must be unused, unopened, and have the seal intact to be eligible for a return within 7 days of delivery. As your order was delivered on 2026-11-12, it falls outside this 7-day window. Please note that we cannot accept returns for products that have been used. A team member will review your request and follow up with you within 24 business hours.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:58:33.256Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1055\",\"reasons\":[\"untrusted_instruction_attempt\",\"human_must_review_ticket_no_operational_action\"],\"eligibility\":{\"state\":\"ineligible\",\"days_since_delivery\":8,\"used_claim\":true,\"unopened_claim\":false,\"complete_set_required\":false,\"reason\":\"Outside seven-day window.\",\"payment_method\":\"prepaid\",\"merchandise_value\":2448,\"nonrefundable_fees\":0,\"refund_method\":\"Original payment method.\",\"refund_timing\":\"5–7 business days after returned item passes quality check.\",\"pickup_executed\":false,\"refund_approved\":false},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[4,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":19621}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1055-4",
+          "created_at": "2026-11-24T10:58:32.230Z",
+          "updated_at": "2026-11-24T10:58:32.230Z",
+          "order_id": "KC-1055",
+          "customer_email": "manish.gupta@example.com",
+          "email_ids": "E12",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer is requesting a refund for order KC-1055 because the products did not suit their skin.",
+          "notes": "2026-11-24T10:58:32.230Z E12: Customer is requesting a refund for order KC-1055 because the products did not suit their skin. | eligibility=ineligible; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"I understand you are looking to return your Saffron Glow Face Serum and Kumkumadi Night Oil from order KC-1055 as they did not suit your skin. According to our return policy, items must be unused, unopened, and have the seal intact to be eligible for a return within 7 days of delivery. As your order was delivered on 2026-11-12, it falls outside this 7-day window. Please note that we cannot accept returns for products that have been used. A team member will review your request and follow up with you within 24 business hours.\",\"faq_sections\":[4,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1055"
+                  },
+                  "toolCallId": "call_5523502931416770528",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1055\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1055\"},\"id\":\"call_5523502931416770528\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return policy refund eligibility\"},\"id\":\"call_5523502931416770051\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1055"
+                              },
+                              "id": "call_5523502931416770528"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "return policy refund eligibility"
+                              },
+                              "id": "call_5523502931416770051"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_5523502931416770528",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1055"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_5523502931416770051",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "return policy refund eligibility"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_5523502931416770528": "EqkBCqYBAWkUfRPcoN9fwbW0istwZ77X7ma5OaIp6qq52ExKK1Fvk0o0BmXDkss0lvuqRL3x/EgzqIo0JCr1TNvlxJx9jUZr7PZsKZsBm7thGm4aWqsP1ZPyH27mPtBSTTK473bgfjyWH8uAYJbh8o8CQ7dlM9UlZVy7i7Hyn+JtybSYxpwsdNmSR2fugqyELp87x6x5z68azRXvv9FqjWPYcIMvL8TBEoVqzg=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1742,
+                          "output_tokens": 40,
+                          "total_tokens": 1782
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1742,
+                            "completionTokens": 40,
+                            "totalTokens": 1782
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d34-e4f9-77a3-b7a2-42fb67f62bb9"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1055\",\"order_date\":\"2026-11-08\",\"items\":[{\"sku\":\"KC-SER-30\",\"name\":\"Saffron Glow Face Serum 30 ml\",\"qty\":1,\"unit_price\":1299},{\"sku\":\"KC-KUM-15\",\"name\":\"Kumkumadi Night Oil 15 ml\",\"qty\":1,\"unit_price\":1149}],\"subtotal\":2448,\"shipping_fee\":0,\"cod_fee\":0,\"total\":2448,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781055\",\"shipped_date\":\"2026-11-09\",\"estimated_delivery\":\"2026-11-12\",\"delivered_date\":\"2026-11-12\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "return policy refund eligibility"
+                  },
+                  "toolCallId": "call_5523502931416770051",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"return policy refund eligibility\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1055\"},\"id\":\"call_5523502931416770528\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return policy refund eligibility\"},\"id\":\"call_5523502931416770051\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":4,\"text\":\"## 4. Returns\\n\\n- Returns are accepted within **7 days of delivery**.\\n- Returned items must be **unused, unopened and with the seal intact**. For hygiene reasons, we cannot accept opened or used products, including \\\"didn't suit me\\\" or \\\"didn't see results\\\" cases.\\n- To start a return, the customer replies with the order ID. We arrange a free reverse pickup within 2–3 business days.\\n- Combo or kit products (e.g., Bridal Glow Kit) must be returned as a complete set.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E19",
+        "status": "persisted",
+        "processing_latency_ms": 353481,
+        "audit": {
+          "email_id": "E19",
+          "received_at": "2026-11-20T14:52:00+05:30",
+          "from_email": "farhan.sheikh@example.com",
+          "intent": "return_refund",
+          "secondary_intent": "",
+          "order_id": "KC-1050",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1050-5",
+          "reply_draft": "Hi Farhan,\n\nYou may return the Kumkumadi Night Oil and Aloe Calm Gel from order KC-1050 as they are within the 7-day return window and remain unopened with seals intact. We will arrange a free reverse pickup for these items; a team member will follow up within 24 business hours to coordinate this. For COD orders, we process refunds via UPI or bank transfer within 5–7 business days after the returned items pass our quality check. We will request your preferred payment details only after the pickup is successfully completed. Please note that the COD fee of 49 is non-refundable per our policy.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T11:04:43.307Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1050\",\"reasons\":[\"human_must_review_ticket_no_operational_action\"],\"eligibility\":{\"state\":\"eligible_pending_pickup_and_qc\",\"days_since_delivery\":3,\"used_claim\":false,\"unopened_claim\":true,\"complete_set_required\":false,\"reason\":\"Customer claims are not quality verification.\",\"payment_method\":\"cod\",\"merchandise_value\":1648,\"nonrefundable_fees\":49,\"refund_method\":\"UPI or bank transfer; details only after pickup.\",\"refund_timing\":\"5–7 business days after returned item passes quality check.\",\"pickup_executed\":false,\"refund_approved\":false},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true},{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":2,\"validation_history\":[[\"refund_timing_missing\"],[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[4,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":352529}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1050-5",
+          "created_at": "2026-11-24T11:04:42.452Z",
+          "updated_at": "2026-11-24T11:04:42.452Z",
+          "order_id": "KC-1050",
+          "customer_email": "farhan.sheikh@example.com",
+          "email_ids": "E19",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return unopened Kumkumadi oil and aloe gel from order KC-1050 and is inquiring about the refund process for a cash-on-delivery payment.",
+          "notes": "2026-11-24T11:04:42.452Z E19: Customer wants to return unopened Kumkumadi oil and aloe gel from order KC-1050 and is inquiring about the refund process for a cash-on-delivery payment. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"You may return the Kumkumadi Night Oil and Aloe Calm Gel from order KC-1050 as they are within the 7-day return window and remain unopened with seals intact. We will arrange a free reverse pickup for these items; a team member will follow up within 24 business hours to coordinate this. For COD orders, we process refunds via UPI or bank transfer once the returned items pass our quality check. We will request your preferred payment details only after the pickup is successfully completed. Please note that the COD fee of 49 is non-refundable per our policy.\",\"faq_sections\":[4,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1050"
+                  },
+                  "toolCallId": "call_14691966750597801388",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1050\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1050\"},\"id\":\"call_14691966750597801388\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return policy refund process\"},\"id\":\"call_14691966750597801889\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1050"
+                              },
+                              "id": "call_14691966750597801388"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "return policy refund process"
+                              },
+                              "id": "call_14691966750597801889"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_14691966750597801388",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1050"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_14691966750597801889",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "return policy refund process"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_14691966750597801388": "EqkBCqYBAWkUfRMpkGcBfuWGSpjNeZyTCMBfhOKC/ELsqQkGCyoEQIsAo4qJ/eUilTPFMd9IDt89xQVj2JcL145IZHSX9FtUi/QvBvN9MunYGggAzFKhpgj2fYvK4XX1zXDPcdQxrg29vW3LuJoJLoaZ50Vi2w668I4CdbUZiX0MyUfpOVtOWl8UCMJsNaydX36GXtVNrRsM5VsWMIYV97YOIONamvRaN5p+bA=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1702,
+                          "output_tokens": 40,
+                          "total_tokens": 1742
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1702,
+                            "completionTokens": 40,
+                            "totalTokens": 1742
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d35-c79c-71d2-b670-a2543e237b2f"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1050\",\"order_date\":\"2026-11-13\",\"items\":[{\"sku\":\"KC-KUM-15\",\"name\":\"Kumkumadi Night Oil 15 ml\",\"qty\":1,\"unit_price\":1149},{\"sku\":\"KC-ALO-150\",\"name\":\"Aloe Calm Gel 150 g\",\"qty\":1,\"unit_price\":499}],\"subtotal\":1648,\"shipping_fee\":0,\"cod_fee\":49,\"total\":1697,\"payment_method\":\"cod\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521050\",\"shipped_date\":\"2026-11-14\",\"estimated_delivery\":\"2026-11-17\",\"delivered_date\":\"2026-11-17\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "return policy refund process"
+                  },
+                  "toolCallId": "call_14691966750597801889",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"return policy refund process\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1050\"},\"id\":\"call_14691966750597801388\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return policy refund process\"},\"id\":\"call_14691966750597801889\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":4,\"text\":\"## 4. Returns\\n\\n- Returns are accepted within **7 days of delivery**.\\n- Returned items must be **unused, unopened and with the seal intact**. For hygiene reasons, we cannot accept opened or used products, including \\\"didn't suit me\\\" or \\\"didn't see results\\\" cases.\\n- To start a return, the customer replies with the order ID. We arrange a free reverse pickup within 2–3 business days.\\n- Combo or kit products (e.g., Bridal Glow Kit) must be returned as a complete set.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          },
+          {
+            "raw": "{\"body\":\"You may return the Kumkumadi Night Oil and Aloe Calm Gel from order KC-1050 as they are within the 7-day return window and remain unopened with seals intact. We will arrange a free reverse pickup for these items; a team member will follow up within 24 business hours to coordinate this. For COD orders, we process refunds via UPI or bank transfer within 5–7 business days after the returned items pass our quality check. We will request your preferred payment details only after the pickup is successfully completed. Please note that the COD fee of 49 is non-refundable per our policy.\",\"faq_sections\":[4,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1050"
+                  },
+                  "toolCallId": "call_186049972842467739",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1050\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1050\"},\"id\":\"call_186049972842467739\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return refund policy COD\"},\"id\":\"call_186049972842468106\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1050"
+                              },
+                              "id": "call_186049972842467739"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "return refund policy COD"
+                              },
+                              "id": "call_186049972842468106"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_186049972842467739",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1050"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_186049972842468106",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "return refund policy COD"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_186049972842467739": "EqkBCqYBAWkUfRO61We6Y9LfTTC8NdMTBxcbkwuxE2DdoYvBuO7UR4TcfLn4+lDw3DZu3jzgPql3czgHSb6QXHBEZLQ85WfwJXxtAkbWnVp/95i2vABRD0WbLa8ffL381JTh6JH8F2aokU6BIIZNCu3n1ker6tyXxGzHcA1B/46+jOn+usvKS534vjmQle3rp4ZJUaUQw3bjm6bPgy+M5EXwem4JR96T+uX8PA=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1883,
+                          "output_tokens": 40,
+                          "total_tokens": 1923
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1883,
+                            "completionTokens": 40,
+                            "totalTokens": 1923
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d39-2739-774b-9fa9-053365900dee"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1050\",\"order_date\":\"2026-11-13\",\"items\":[{\"sku\":\"KC-KUM-15\",\"name\":\"Kumkumadi Night Oil 15 ml\",\"qty\":1,\"unit_price\":1149},{\"sku\":\"KC-ALO-150\",\"name\":\"Aloe Calm Gel 150 g\",\"qty\":1,\"unit_price\":499}],\"subtotal\":1648,\"shipping_fee\":0,\"cod_fee\":49,\"total\":1697,\"payment_method\":\"cod\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521050\",\"shipped_date\":\"2026-11-14\",\"estimated_delivery\":\"2026-11-17\",\"delivered_date\":\"2026-11-17\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "return refund policy COD"
+                  },
+                  "toolCallId": "call_186049972842468106",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"return refund policy COD\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1050\"},\"id\":\"call_186049972842467739\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return refund policy COD\"},\"id\":\"call_186049972842468106\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":4,\"text\":\"## 4. Returns\\n\\n- Returns are accepted within **7 days of delivery**.\\n- Returned items must be **unused, unopened and with the seal intact**. For hygiene reasons, we cannot accept opened or used products, including \\\"didn't suit me\\\" or \\\"didn't see results\\\" cases.\\n- To start a return, the customer replies with the order ID. We arrange a free reverse pickup within 2–3 business days.\\n- Combo or kit products (e.g., Bridal Glow Kit) must be returned as a complete set.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E20",
+        "status": "persisted",
+        "processing_latency_ms": 53628,
+        "audit": {
+          "email_id": "E20",
+          "received_at": "2026-11-20T15:14:00+05:30",
+          "from_email": "lakshmi.n@example.com",
+          "intent": "product_query",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "draft_reply",
+          "needs_human": true,
+          "ticket_id": "",
+          "reply_draft": "Hi Lakshmi,\n\nOur products are cosmetics, not medicines, and are not intended to diagnose, treat or cure medical conditions. Please consult a dermatologist or doctor before use. A team member will follow up within 24 business hours.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T11:05:53.782Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":null,\"reasons\":[\"medical_question\",\"medical_safe_template\"],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"medical\",\"generic_fallback\":false,\"faq_sections\":[8],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":52796}"
+        },
+        "ticket": null,
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"Our Kumkumadi Night Oil is a cosmetic product and is not intended to diagnose, treat, or cure any medical conditions such as eczema. We strongly recommend that you consult with a dermatologist or doctor before using any new product on skin affected by a medical condition. For all our products, we advise performing a patch test on your inner forearm for 24 hours prior to full application. Please prioritize professional medical guidance for your skin concerns.\", \"faq_sections\":[8], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "medical advice eczema kumkumadi oil"
+                  },
+                  "toolCallId": "call_5303402235749640639",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"medical advice eczema kumkumadi oil\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"medical advice eczema kumkumadi oil\"},\"id\":\"call_5303402235749640639\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "medical advice eczema kumkumadi oil"
+                              },
+                              "id": "call_5303402235749640639"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_5303402235749640639",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "medical advice eczema kumkumadi oil"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_5303402235749640639": "EqkBCqYBAWkUfRNa/1657BbBXMZEKHFDOJnEysQU2196FEsAz87/BIm2oRq0YbjLIBlN4/Up4ZLMAqrdireweSF633CVcv07eAgFMQmkq8Rulmid4j6txSnk3LYKq3idgGzVuCETQmbL+/Thuyx0GtIsw/sbd1wQJv/HVYMj5UO05Z6iraHl63urZ4f77v55JIJ4X8mcOLKNPzHGmOV4JtQtbeI2dQZ1G/JwoA=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1540,
+                          "output_tokens": 22,
+                          "total_tokens": 1562
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1540,
+                            "completionTokens": 22,
+                            "totalTokens": 1562
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d3b-aef0-732b-8fc3-5bd22481ba38"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"sections\":[{\"id\":8,\"text\":\"## 8. Product Safety & Medical Questions\\n\\n- Our products are **cosmetics, not medicines**. They are not intended to diagnose, treat or cure any skin or medical condition.\\n- We always recommend a **patch test** (inner forearm, 24 hours) before first use.\\n- For any skin condition (e.g., eczema, psoriasis, severe acne), pregnancy or allergies, customers should **consult a dermatologist or doctor** before use.\\n- Support must **not** give medical advice or make claims about curing or treating conditions.\\n- If a customer reports a reaction, advise them to stop using the product immediately and consult a doctor, and escalate to a human.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E21",
+        "status": "persisted",
+        "processing_latency_ms": 24397,
+        "audit": {
+          "email_id": "E21",
+          "received_at": "2026-11-20T15:55:00+05:30",
+          "from_email": "tanvi.desai@example.com",
+          "intent": "complaint",
+          "secondary_intent": "",
+          "order_id": "KC-1052",
+          "language": "en",
+          "sentiment": "angry",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1052-2",
+          "reply_draft": "Hi Tanvi,\n\nI am truly sorry to hear that your Ubtan jar arrived damaged in order KC-1052, and I appreciate you sharing the photos of the jar and outer box. Per our policy, we accept reports of damaged items within 48 hours of delivery, and I have noted your preference for a replacement. Your request and the attached files have been forwarded to our team for verification. A team member will follow up with you within 24 business hours to assist with the next steps.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T11:06:35.115Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1052\",\"reasons\":[\"angry_customer\",\"human_must_review_ticket_no_operational_action\",\"item_issue_verification_required\"],\"eligibility\":{\"state\":\"within_reporting_window_pending_verification\",\"issue\":\"damaged\",\"age_min_hours\":15.916666666666664,\"age_max_hours\":39.916666666666664,\"photos_listed\":[\"cracked_jar.jpg\",\"outer_box.jpg\"],\"photos_verified\":false,\"packing_weight_verified\":false,\"remedy\":\"FAQ section 5; human verification required; no refund or replacement executed.\",\"customer_requested_remedy\":\"replacement\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true},{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":2,\"validation_history\":[[\"reporting_window_missing\",\"attachment_acknowledgment_missing\"],[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[5,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":23590}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1052-2",
+          "created_at": "2026-11-24T10:55:02.638Z",
+          "updated_at": "2026-11-24T11:06:34.316Z",
+          "order_id": "KC-1052",
+          "customer_email": "tanvi.desai@example.com",
+          "email_ids": "E04,E21",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer reporting a cracked Ubtan jar in order KC-1052 and requesting a replacement.",
+          "notes": "2026-11-24T10:55:02.638Z E04: Customer received a damaged Ubtan Face Pack jar with spilled contents in order KC-1052. | eligibility=within_reporting_window_pending_verification; requested_remedy=unspecified; attachments=none (unverified)\n2026-11-24T11:06:34.316Z E21: Customer reporting a cracked Ubtan jar in order KC-1052 and requesting a replacement. | eligibility=within_reporting_window_pending_verification; requested_remedy=replacement; attachments=cracked_jar.jpg,outer_box.jpg (unverified)"
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"I am very sorry to hear that your Ubtan jar arrived cracked in order KC-1052. I have noted your preference for a replacement, and I have forwarded your photos of the jar and outer box to our team for verification. A team member will follow up with you within 24 business hours to assist further. Thank you for your patience while we resolve this for you.\", \"faq_sections\":[5, 6], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1052"
+                  },
+                  "toolCallId": "call_16112905805704008274",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1052\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1052\"},\"id\":\"call_16112905805704008274\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product replacement policy\"},\"id\":\"call_16112905805704009701\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1052"
+                              },
+                              "id": "call_16112905805704008274"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "damaged product replacement policy"
+                              },
+                              "id": "call_16112905805704009701"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_16112905805704008274",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1052"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_16112905805704009701",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "damaged product replacement policy"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_16112905805704008274": "EqkBCqYBAWkUfRPDHAPNZ7pePIdAdFf2pdyHYT64urxzwjdQbSDD7GhM2uiLK8SQK4oYCBocZtUTly2YTcxjbR/3nQzFzyjeKH2cyccECHoxteNISdya7rc826lUMeAlIuYr/0Iurl+pnFrzTjy9KOQttivXJvNseRrr29FrUnJoCSQaaTlLsDStKNh6eOmSiZ74L/gpuRpGou57gX+qgtQuqL0wg7Ire43YBw=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1714,
+                          "output_tokens": 40,
+                          "total_tokens": 1754
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1714,
+                            "completionTokens": 40,
+                            "totalTokens": 1754
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d3c-1feb-752e-9057-5038055e62d9"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1052\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-UBT-100\",\"name\":\"Ubtan Face Pack 100 g\",\"qty\":1,\"unit_price\":699},{\"sku\":\"KC-ROS-200\",\"name\":\"Rose Water Toner 200 ml\",\"qty\":1,\"unit_price\":899}],\"subtotal\":1598,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1598,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521052\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "damaged product replacement policy"
+                  },
+                  "toolCallId": "call_16112905805704009701",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"damaged product replacement policy\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1052\"},\"id\":\"call_16112905805704008274\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product replacement policy\"},\"id\":\"call_16112905805704009701\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          },
+          {
+            "raw": "{\"body\":\"I am truly sorry to hear that your Ubtan jar arrived damaged in order KC-1052, and I appreciate you sharing the photos of the jar and outer box. Per our policy, we accept reports of damaged items within 48 hours of delivery, and I have noted your preference for a replacement. Your request and the attached files have been forwarded to our team for verification. A team member will follow up with you within 24 business hours to assist with the next steps.\",\"faq_sections\":[5,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1052"
+                  },
+                  "toolCallId": "call_5529943895882103390",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1052\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1052\"},\"id\":\"call_5529943895882103390\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product replacement policy\"},\"id\":\"call_5529943895882103223\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1052"
+                              },
+                              "id": "call_5529943895882103390"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "damaged product replacement policy"
+                              },
+                              "id": "call_5529943895882103223"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_5529943895882103390",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1052"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_5529943895882103223",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "damaged product replacement policy"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_5529943895882103390": "EqkBCqYBAWkUfRO/Hh5pUKwxG0OxrxZUqRJFZfluTGCd9OuDpgbaFF2u7HnTN+7HbUzye0BRX0DLiCShixRCs5WJi/c0aCegVjK+WAkhod/1sW2rjLu9qyr1MPbfstP0AfIGDrkxKfC1OP/8tv7gPsbQ5TXEVj236/NHGZ6ZvJbdTc4HxravjByPTah1ZF83/0O3G8+x7IL9LoO7GMtKAOZ/dW36JosqZ9hgAw=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1862,
+                          "output_tokens": 40,
+                          "total_tokens": 1902
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1862,
+                            "completionTokens": 40,
+                            "totalTokens": 1902
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d3c-5147-70c0-a6f0-ce7d0ada1e6b"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1052\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-UBT-100\",\"name\":\"Ubtan Face Pack 100 g\",\"qty\":1,\"unit_price\":699},{\"sku\":\"KC-ROS-200\",\"name\":\"Rose Water Toner 200 ml\",\"qty\":1,\"unit_price\":899}],\"subtotal\":1598,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1598,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521052\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "damaged product replacement policy"
+                  },
+                  "toolCallId": "call_5529943895882103223",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"damaged product replacement policy\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1052\"},\"id\":\"call_5529943895882103390\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"damaged product replacement policy\"},\"id\":\"call_5529943895882103223\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "email_id": "E24",
+        "status": "persisted",
+        "processing_latency_ms": 44285,
+        "audit": {
+          "email_id": "E24",
+          "received_at": "2026-11-20T17:15:00+05:30",
+          "from_email": "deepak.rao@example.com",
+          "intent": "order_status",
+          "secondary_intent": "",
+          "order_id": "KC-1045",
+          "language": "en",
+          "sentiment": "negative",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "draft_reply",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "Hi Deepak,\n\nDeepak, I am sorry to inform you that order KC-1045 was cancelled on 2026-11-16 because the item was out of stock at our warehouse. A refund of INR 828 was initiated to your original payment method on 2026-11-16. Please note that refunds typically take 5–7 business days to reflect in your account. A team member will follow up within 24 business hours if you require further assistance regarding this cancellation.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T11:07:36.181Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1045\",\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true},{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":2,\"validation_history\":[[\"unsupported_operational_claim\"],[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[3],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":43429}"
+        },
+        "ticket": null,
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"Deepak, I am sorry to inform you that order KC-1045 was cancelled on 2026-11-16 because the item was out of stock at our warehouse. A refund of INR 828 was initiated to your original payment method on the same day. Please note that refunds typically take 5–7 business days to reflect in your account. A team member will follow up within 24 business hours if you require further assistance regarding this cancellation.\",\"faq_sections\":[3],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1045"
+                  },
+                  "toolCallId": "call_12837819499097668177",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1045\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1045\"},\"id\":\"call_12837819499097668177\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"tracking link order status\"},\"id\":\"call_12837819499097668398\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1045"
+                              },
+                              "id": "call_12837819499097668177"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "tracking link order status"
+                              },
+                              "id": "call_12837819499097668398"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_12837819499097668177",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1045"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_12837819499097668398",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "tracking link order status"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_12837819499097668177": "EqkBCqYBAWkUfROc7syhhkY06yenVP7jUQSvr8CoPlHnoreYc8YyvnNbdxW/ImZbiMWTpRcYu5TSCzruHRnIa1Ea/+10CpV96ka1kmVzsI9mlDUdlpAplFwecZAM8v0Scn0MnMmJrC69lB0p7wEJodqm5GwweLMU0FatlEAube0oFPbbFjHhrzd25n3sXpZUsJrnB/hSSf4jONeLRlGcZGtc50UdHZmbJuhHVw=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1551,
+                          "output_tokens": 40,
+                          "total_tokens": 1591
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1551,
+                            "completionTokens": 40,
+                            "totalTokens": 1591
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d3c-ca9e-7111-a862-dc43cf4598cc"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1045\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-SAN-250\",\"name\":\"Sandalwood Body Lotion 250 ml\",\"qty\":1,\"unit_price\":749}],\"subtotal\":749,\"shipping_fee\":79,\"cod_fee\":0,\"total\":828,\"payment_method\":\"prepaid\",\"status\":\"cancelled\",\"courier\":null,\"tracking_url\":null,\"shipped_date\":null,\"estimated_delivery\":null,\"delivered_date\":null,\"cancelled_date\":\"2026-11-16\",\"cancellation_reason\":\"Out of stock at warehouse\",\"refund_status\":\"Refund of INR 828 initiated to original payment method on 2026-11-16\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "tracking link order status"
+                  },
+                  "toolCallId": "call_12837819499097668398",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"tracking link order status\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1045\"},\"id\":\"call_12837819499097668177\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"tracking link order status\"},\"id\":\"call_12837819499097668398\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":3,\"text\":\"## 3. Order Cancellation\\n\\n- Orders can be cancelled **only before dispatch**. Once dispatched, the customer must wait for delivery and raise a return instead.\\n- If we cancel an order (for example, an item is out of stock), prepaid orders are refunded automatically to the original payment method within **5–7 business days**.\\n\"}]}"
+              }
+            ]
+          },
+          {
+            "raw": "{\"body\":\"Deepak, I am sorry to inform you that order KC-1045 was cancelled on 2026-11-16 because the item was out of stock at our warehouse. A refund of INR 828 was initiated to your original payment method on 2026-11-16. Please note that refunds typically take 5–7 business days to reflect in your account. A team member will follow up within 24 business hours if you require further assistance regarding this cancellation.\",\"faq_sections\":[3],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1045"
+                  },
+                  "toolCallId": "call_4821225590531566239",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1045\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1045\"},\"id\":\"call_4821225590531566239\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status tracking cancellation refund\"},\"id\":\"call_4821225590531566230\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1045"
+                              },
+                              "id": "call_4821225590531566239"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "order status tracking cancellation refund"
+                              },
+                              "id": "call_4821225590531566230"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_4821225590531566239",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1045"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_4821225590531566230",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "order status tracking cancellation refund"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_4821225590531566239": "EqkBCqYBAWkUfRMIcqw9btkst1I6ermMEppiAtfIHY8q2CzxFmKRSxjDrdcHpURipa505Hmpv8jXiJiLGr6vIcyodSeWouQCRRbD7sJODkn2u3MMc2i3QN7s6+dSfJGDZso3PvhESUCkUldl9J4Q65L2CqPkLCrGG5XMtb0k2wFdqOdGjKdD+RfwrTq6DmpnI0aw/5iCvTI0ZRVpZsJhyJk+A+c6+mwBmKDhQg=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1712,
+                          "output_tokens": 41,
+                          "total_tokens": 1753
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1712,
+                            "completionTokens": 41,
+                            "totalTokens": 1753
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d3d-27fe-7799-aa28-6782a5035431"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1045\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-SAN-250\",\"name\":\"Sandalwood Body Lotion 250 ml\",\"qty\":1,\"unit_price\":749}],\"subtotal\":749,\"shipping_fee\":79,\"cod_fee\":0,\"total\":828,\"payment_method\":\"prepaid\",\"status\":\"cancelled\",\"courier\":null,\"tracking_url\":null,\"shipped_date\":null,\"estimated_delivery\":null,\"delivered_date\":null,\"cancelled_date\":\"2026-11-16\",\"cancellation_reason\":\"Out of stock at warehouse\",\"refund_status\":\"Refund of INR 828 initiated to original payment method on 2026-11-16\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "order status tracking cancellation refund"
+                  },
+                  "toolCallId": "call_4821225590531566230",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"order status tracking cancellation refund\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1045\"},\"id\":\"call_4821225590531566239\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status tracking cancellation refund\"},\"id\":\"call_4821225590531566230\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":3,\"text\":\"## 3. Order Cancellation\\n\\n- Orders can be cancelled **only before dispatch**. Once dispatched, the customer must wait for delivery and raise a return instead.\\n- If we cancel an order (for example, an item is out of stock), prepaid orders are refunded automatically to the original payment method within **5–7 business days**.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

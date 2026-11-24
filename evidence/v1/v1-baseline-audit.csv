@@ -1,0 +1,69 @@
+email_id,received_at,from_email,intent,secondary_intent,order_id,language,sentiment,confidence,order_found,action_taken,needs_human,ticket_id,reply_draft,prompt_version,processed_at,error,notes
+E01,2026-11-20T09:02:00+05:30,ananya.rao@example.com,order_status,,KC-1041,en,neutral,1,TRUE,draft_reply,FALSE,,"Hi Ananya, your order KC-1041 has been shipped via SwiftShip and is currently in transit. It is estimated to reach you by November 21, 2026. You can track your package here: https://track.example.com/SS7781041.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:00:12.960Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1041"",""reasons"":[],""eligibility"":{""state"":""not_applicable""},""tools"":[""get_order"",""search_faq""],""first_try_valid"":true}"
+E02,2026-11-20T09:15:00+05:30,ishita.banerjee@example.com,product_query,,,en,neutral,1,FALSE,draft_reply,FALSE,,"Hi Ishita, the Saffron Glow Face Serum is lightweight, non-greasy, and suitable for all skin types, including oily skin. It is also a vegan product. We always recommend performing a patch test on your inner forearm for 24 hours before using any new product on your face. Please let us know if you have any other questions. 
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:04:44.154Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":null,""reasons"":[],""eligibility"":{""state"":""not_applicable""},""tools"":[""search_faq""],""first_try_valid"":true}"
+E03,2026-11-20T09:28:00+05:30,kavya.reddy@example.com,return_refund,,KC-1047,en,neutral,1,TRUE,ticket_and_draft,TRUE,TKT-KC-1047-1,"Hi Kavya,
+
+Your request needs a team member’s review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:05:55.603Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1047"",""reasons"":[""human_must_review_ticket_no_operational_action"",""brand_format"",""unsupported_operational_claim""],""eligibility"":{""state"":""eligible_pending_pickup_and_qc"",""days_since_delivery"":4,""used_claim"":false,""unopened_claim"":true,""complete_set_required"":false,""reason"":""Customer claims are not quality verification."",""payment_method"":""prepaid"",""merchandise_value"":899,""nonrefundable_fees"":79,""refund_method"":""Original payment method."",""refund_timing"":""5–7 business days after returned item passes quality check."",""pickup_executed"":false,""refund_approved"":false},""tools"":[""get_order"",""search_faq""],""first_try_valid"":true}"
+E04,2026-11-20T09:41:00+05:30,tanvi.desai@example.com,complaint,return_refund,KC-1052,en,negative,1,TRUE,ticket_and_draft,TRUE,TKT-KC-1052-2,"Hi Tanvi,
+
+Your request needs a team member’s review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:07:44.889Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1052"",""reasons"":[""human_must_review_ticket_no_operational_action"",""item_issue_verification_required"",""order_tool_not_used""],""eligibility"":{""state"":""within_reporting_window_pending_verification"",""issue"":""damaged"",""age_min_hours"":9.68333333333333,""age_max_hours"":33.68333333333333,""photos_listed"":[],""photos_verified"":false,""packing_weight_verified"":false,""remedy"":""FAQ section 5; human verification required; no refund or replacement executed."",""customer_requested_remedy"":""unspecified""},""tools"":[""search_faq""],""first_try_valid"":true}"
+E07,2026-11-20T10:34:00+05:30,arjun.nair@example.com,order_status,,KC-1046,en,neutral,1,FALSE,draft_reply,TRUE,,"Hi Arjun,
+
+For privacy, please contact us from the email address used to place the order. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:09:05.630Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1046"",""reasons"":[""order_not_authorized"",""privacy_safe_template""],""eligibility"":{""state"":""not_applicable""},""tools"":[""search_faq"",""get_order""],""first_try_valid"":true}"
+E08,2026-11-20T10:52:00+05:30,riya.kapoor@example.com,complaint,return_refund,KC-1051,en,angry,1,TRUE,ticket_and_draft,TRUE,TKT-KC-1051-3,"Hi Riya,
+
+Your request needs a team member’s review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:10:38.978Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1051"",""reasons"":[""angry_customer"",""human_must_review_ticket_no_operational_action"",""item_issue_verification_required"",""brand_format""],""eligibility"":{""state"":""within_reporting_window_pending_verification"",""issue"":""damaged"",""age_min_hours"":10.866666666666667,""age_max_hours"":34.86666666666667,""photos_listed"":[],""photos_verified"":false,""packing_weight_verified"":false,""remedy"":""FAQ section 5; human verification required; no refund or replacement executed."",""customer_requested_remedy"":""refund""},""tools"":[""get_order"",""search_faq""],""first_try_valid"":true}"
+E10,2026-11-20T11:26:00+05:30,vikram.singh@example.com,order_status,,KC-1044,en,neutral,0.98,TRUE,draft_reply,TRUE,,"Hi Vikram,
+
+Your request needs a team member’s review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:11:29.174Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":null,""reasons"":[""brand_format""],""eligibility"":{""state"":""not_applicable""},""tools"":[""get_order"",""search_faq""],""first_try_valid"":true}"
+E12,2026-11-20T12:05:00+05:30,manish.gupta@example.com,return_refund,,KC-1055,en,neutral,1,TRUE,ticket_and_draft,TRUE,TKT-KC-1055-4,"Hi Manish,
+
+Your request needs a team member’s review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:12:17.388Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1055"",""reasons"":[""untrusted_instruction_attempt"",""human_must_review_ticket_no_operational_action"",""order_tool_not_used"",""brand_format""],""eligibility"":{""state"":""ineligible"",""days_since_delivery"":8,""used_claim"":true,""unopened_claim"":false,""complete_set_required"":false,""reason"":""Outside seven-day window."",""payment_method"":""prepaid"",""merchandise_value"":2448,""nonrefundable_fees"":0,""refund_method"":""Original payment method."",""refund_timing"":""5–7 business days after returned item passes quality check."",""pickup_executed"":false,""refund_approved"":false},""tools"":[""search_faq""],""first_try_valid"":true}"
+E19,2026-11-20T14:52:00+05:30,farhan.sheikh@example.com,return_refund,,KC-1050,en,neutral,1,TRUE,ticket_and_draft,TRUE,TKT-KC-1050-5,"Hi Farhan,
+
+Your request needs a team member’s review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:12:43.228Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1050"",""reasons"":[""human_must_review_ticket_no_operational_action"",""order_tool_not_used""],""eligibility"":{""state"":""eligible_pending_pickup_and_qc"",""days_since_delivery"":3,""used_claim"":false,""unopened_claim"":true,""complete_set_required"":false,""reason"":""Customer claims are not quality verification."",""payment_method"":""cod"",""merchandise_value"":1648,""nonrefundable_fees"":49,""refund_method"":""UPI or bank transfer; details only after pickup."",""refund_timing"":""5–7 business days after returned item passes quality check."",""pickup_executed"":false,""refund_approved"":false},""tools"":[""search_faq""],""first_try_valid"":true}"
+E20,2026-11-20T15:14:00+05:30,lakshmi.n@example.com,product_query,,,en,neutral,1,FALSE,draft_reply,TRUE,,"Hi Lakshmi,
+
+Our products are cosmetics, not medicines, and are not intended to diagnose, treat or cure medical conditions. Please consult a dermatologist or doctor before use. Your question needs human review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:13:36.447Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":null,""reasons"":[""medical_question"",""medical_safe_template""],""eligibility"":{""state"":""not_applicable""},""tools"":[""search_faq""],""first_try_valid"":true}"
+E21,2026-11-20T15:55:00+05:30,tanvi.desai@example.com,complaint,,KC-1052,en,negative,1,TRUE,ticket_and_draft,TRUE,TKT-KC-1052-2,"Hi Tanvi,
+
+Your request needs a team member’s review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:14:30.292Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1052"",""reasons"":[""human_must_review_ticket_no_operational_action"",""item_issue_verification_required"",""order_tool_not_used"",""brand_format""],""eligibility"":{""state"":""within_reporting_window_pending_verification"",""issue"":""damaged"",""age_min_hours"":15.916666666666664,""age_max_hours"":39.916666666666664,""photos_listed"":[""cracked_jar.jpg"",""outer_box.jpg""],""photos_verified"":false,""packing_weight_verified"":false,""remedy"":""FAQ section 5; human verification required; no refund or replacement executed."",""customer_requested_remedy"":""replacement""},""tools"":[""search_faq""],""first_try_valid"":true}"
+E24,2026-11-20T17:15:00+05:30,deepak.rao@example.com,order_status,,KC-1045,en,negative,1,TRUE,draft_reply,TRUE,,"Hi Deepak,
+
+Your request needs a team member’s review. Thank you for your patience. A team member will follow up within 24 business hours.
+
+Warm regards,
+Team Kesar",v1,2026-11-24T10:15:34.902Z,,"{""run_id"":""v1-baseline"",""extracted_order_id"":""KC-1045"",""reasons"":[""brand_format""],""eligibility"":{""state"":""not_applicable""},""tools"":[""get_order"",""search_faq""],""first_try_valid"":true}"

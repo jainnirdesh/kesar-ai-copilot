@@ -1,0 +1,446 @@
+{
+  "provenance": "Saved execution evidence, no new external runs; expected labels are human-authored from official sources, not an official answer key.",
+  "metrics": {
+    "v1": {
+      "n": 12,
+      "primary_correct": 12,
+      "secondary_exact": 11,
+      "persisted": 11,
+      "replays": [
+        "E01"
+      ],
+      "reported_first_try_valid": 12,
+      "reported_errors": 0,
+      "tool_name_compliant": 8,
+      "generic_fallbacks": 8,
+      "fallback_kinds": {
+        "unavailable": 0
+      },
+      "drafted": 12,
+      "human_flags": 10,
+      "escalation_correct": 10,
+      "latency_sample": 0,
+      "mean_seconds": null,
+      "median_seconds": null,
+      "max_seconds": null,
+      "repair_cases": 0
+    },
+    "v2": {
+      "n": 12,
+      "primary_correct": 12,
+      "secondary_exact": 12,
+      "persisted": 11,
+      "replays": [
+        "E03"
+      ],
+      "reported_first_try_valid": 12,
+      "reported_errors": 0,
+      "tool_name_compliant": 12,
+      "generic_fallbacks": 0,
+      "fallback_kinds": {
+        "medical": 1,
+        "none": 10,
+        "privacy": 1
+      },
+      "drafted": 12,
+      "human_flags": 8,
+      "escalation_correct": 12,
+      "latency_sample": 11,
+      "mean_seconds": 62.10809090909091,
+      "median_seconds": 27.356,
+      "max_seconds": 353.481,
+      "repair_cases": 5
+    },
+    "currency": {
+      "n": 12,
+      "primary_correct": 12,
+      "secondary_exact": 11,
+      "persisted": 12,
+      "replays": [],
+      "reported_first_try_valid": 12,
+      "reported_errors": 0,
+      "tool_name_compliant": 12,
+      "generic_fallbacks": 0,
+      "fallback_kinds": {
+        "medical": 1,
+        "none": 7,
+        "privacy": 1,
+        "return_ineligible": 1,
+        "return_policy": 2
+      },
+      "drafted": 12,
+      "human_flags": 8,
+      "escalation_correct": 12,
+      "latency_sample": 12,
+      "mean_seconds": 45.39666666666667,
+      "median_seconds": 33.007,
+      "max_seconds": 124.345,
+      "repair_cases": 4
+    },
+    "extended": {
+      "n": 13,
+      "primary_correct": 13,
+      "secondary_exact": 13,
+      "persisted": 13,
+      "replays": [],
+      "reported_first_try_valid": 13,
+      "reported_errors": 0,
+      "tool_name_compliant": 13,
+      "generic_fallbacks": 0,
+      "fallback_kinds": {
+        "item_issue": 1,
+        "log_only": 4,
+        "none": 6,
+        "order_clarification": 1,
+        "return_ineligible": 1
+      },
+      "drafted": 9,
+      "human_flags": 8,
+      "escalation_correct": 13,
+      "latency_sample": 13,
+      "mean_seconds": 51.16969230769231,
+      "median_seconds": 30.03,
+      "max_seconds": 180.5,
+      "repair_cases": 3
+    }
+  },
+  "final25": {
+    "n": 25,
+    "primary_correct": 25,
+    "secondary_exact": 24,
+    "persisted": 25,
+    "replays": [],
+    "reported_first_try_valid": 25,
+    "reported_errors": 0,
+    "tool_name_compliant": 25,
+    "generic_fallbacks": 0,
+    "fallback_kinds": {
+      "item_issue": 1,
+      "log_only": 4,
+      "medical": 1,
+      "none": 13,
+      "order_clarification": 1,
+      "privacy": 1,
+      "return_ineligible": 2,
+      "return_policy": 2
+    },
+    "drafted": 21,
+    "human_flags": 16,
+    "escalation_correct": 25,
+    "latency_sample": 25,
+    "mean_seconds": 48.39864,
+    "median_seconds": 30.03,
+    "max_seconds": 180.5,
+    "repair_cases": 7
+  },
+  "reconciliation": {
+    "v1": {
+      "raw_audit_rows": 12,
+      "raw_ticket_rows": 5,
+      "scored_email_count": 12,
+      "excluded_audit_ids": [],
+      "excluded_ticket_ids": [],
+      "audit_differences": [],
+      "ticket_differences": [],
+      "scored_tickets": [
+        {
+          "ticket_id": "TKT-KC-1047-1",
+          "created_at": "2026-11-24T10:05:55.316Z",
+          "updated_at": "2026-11-24T10:05:55.316Z",
+          "order_id": "KC-1047",
+          "customer_email": "kavya.reddy@example.com",
+          "email_ids": "E03",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return a sealed Rose Water Toner from order KC-1047 for a refund.",
+          "notes": "2026-11-24T10:05:55.316Z E03: Customer wants to return a sealed Rose Water Toner from order KC-1047 for a refund. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1052-2",
+          "created_at": "2026-11-24T10:07:44.617Z",
+          "updated_at": "2026-11-24T10:14:30.035Z",
+          "order_id": "KC-1052",
+          "customer_email": "tanvi.desai@example.com",
+          "email_ids": "E04,E21",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer reports a cracked Ubtan jar in order KC-1052 and requests a replacement.",
+          "notes": "2026-11-24T10:07:44.617Z E04: Customer received a damaged Ubtan Face Pack jar with spilled contents for order KC-1052. | eligibility=within_reporting_window_pending_verification; requested_remedy=unspecified; attachments=none (unverified)\n2026-11-24T10:14:30.035Z E21: Customer reports a cracked Ubtan jar in order KC-1052 and requests a replacement. | eligibility=within_reporting_window_pending_verification; requested_remedy=replacement; attachments=cracked_jar.jpg,outer_box.jpg (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1051-3",
+          "created_at": "2026-11-24T10:10:38.707Z",
+          "updated_at": "2026-11-24T10:10:38.707Z",
+          "order_id": "KC-1051",
+          "customer_email": "riya.kapoor@example.com",
+          "email_ids": "E08",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer received a damaged, leaking order KC-1051 and is demanding a full refund.",
+          "notes": "2026-11-24T10:10:38.707Z E08: Customer received a damaged, leaking order KC-1051 and is demanding a full refund. | eligibility=within_reporting_window_pending_verification; requested_remedy=refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1055-4",
+          "created_at": "2026-11-24T10:12:17.123Z",
+          "updated_at": "2026-11-24T10:12:17.123Z",
+          "order_id": "KC-1055",
+          "customer_email": "manish.gupta@example.com",
+          "email_ids": "E12",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer is requesting a refund for order KC-1055 because the products did not suit their skin.",
+          "notes": "2026-11-24T10:12:17.123Z E12: Customer is requesting a refund for order KC-1055 because the products did not suit their skin. | eligibility=ineligible; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1050-5",
+          "created_at": "2026-11-24T10:12:42.972Z",
+          "updated_at": "2026-11-24T10:12:42.972Z",
+          "order_id": "KC-1050",
+          "customer_email": "farhan.sheikh@example.com",
+          "email_ids": "E19",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return unopened Kumkumadi oil and aloe gel from order KC-1050 and is inquiring about the refund process for a cash-on-delivery payment.",
+          "notes": "2026-11-24T10:12:42.972Z E19: Customer wants to return unopened Kumkumadi oil and aloe gel from order KC-1050 and is inquiring about the refund process for a cash-on-delivery payment. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        }
+      ]
+    },
+    "v2": {
+      "raw_audit_rows": 12,
+      "raw_ticket_rows": 5,
+      "scored_email_count": 12,
+      "excluded_audit_ids": [],
+      "excluded_ticket_ids": [],
+      "audit_differences": [],
+      "ticket_differences": [],
+      "scored_tickets": [
+        {
+          "ticket_id": "TKT-KC-1047-1",
+          "created_at": "2026-11-24T10:48:42.999Z",
+          "updated_at": "2026-11-24T10:48:42.999Z",
+          "order_id": "KC-1047",
+          "customer_email": "kavya.reddy@example.com",
+          "email_ids": "E03",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return a sealed, unopened Rose Water Toner from order KC-1047 for a refund.",
+          "notes": "2026-11-24T10:48:42.999Z E03: Customer wants to return a sealed, unopened Rose Water Toner from order KC-1047 for a refund. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1052-2",
+          "created_at": "2026-11-24T10:55:02.638Z",
+          "updated_at": "2026-11-24T11:06:34.316Z",
+          "order_id": "KC-1052",
+          "customer_email": "tanvi.desai@example.com",
+          "email_ids": "E04,E21",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer reporting a cracked Ubtan jar in order KC-1052 and requesting a replacement.",
+          "notes": "2026-11-24T10:55:02.638Z E04: Customer received a damaged Ubtan Face Pack jar with spilled contents in order KC-1052. | eligibility=within_reporting_window_pending_verification; requested_remedy=unspecified; attachments=none (unverified)\n2026-11-24T11:06:34.316Z E21: Customer reporting a cracked Ubtan jar in order KC-1052 and requesting a replacement. | eligibility=within_reporting_window_pending_verification; requested_remedy=replacement; attachments=cracked_jar.jpg,outer_box.jpg (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1051-3",
+          "created_at": "2026-11-24T10:56:43.729Z",
+          "updated_at": "2026-11-24T10:56:43.729Z",
+          "order_id": "KC-1051",
+          "customer_email": "riya.kapoor@example.com",
+          "email_ids": "E08",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer received a damaged order KC-1051 with a leaking lotion bottle and is demanding a full refund.",
+          "notes": "2026-11-24T10:56:43.729Z E08: Customer received a damaged order KC-1051 with a leaking lotion bottle and is demanding a full refund. | eligibility=within_reporting_window_pending_verification; requested_remedy=refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1055-4",
+          "created_at": "2026-11-24T10:58:32.230Z",
+          "updated_at": "2026-11-24T10:58:32.230Z",
+          "order_id": "KC-1055",
+          "customer_email": "manish.gupta@example.com",
+          "email_ids": "E12",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer is requesting a refund for order KC-1055 because the products did not suit their skin.",
+          "notes": "2026-11-24T10:58:32.230Z E12: Customer is requesting a refund for order KC-1055 because the products did not suit their skin. | eligibility=ineligible; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1050-5",
+          "created_at": "2026-11-24T11:04:42.452Z",
+          "updated_at": "2026-11-24T11:04:42.452Z",
+          "order_id": "KC-1050",
+          "customer_email": "farhan.sheikh@example.com",
+          "email_ids": "E19",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return unopened Kumkumadi oil and aloe gel from order KC-1050 and is inquiring about the refund process for a cash-on-delivery payment.",
+          "notes": "2026-11-24T11:04:42.452Z E19: Customer wants to return unopened Kumkumadi oil and aloe gel from order KC-1050 and is inquiring about the refund process for a cash-on-delivery payment. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        }
+      ]
+    },
+    "currency": {
+      "raw_audit_rows": 12,
+      "raw_ticket_rows": 5,
+      "scored_email_count": 12,
+      "excluded_audit_ids": [],
+      "excluded_ticket_ids": [],
+      "audit_differences": [],
+      "ticket_differences": [],
+      "scored_tickets": [
+        {
+          "ticket_id": "TKT-KC-1047-1",
+          "created_at": "2026-11-24T15:45:14.335Z",
+          "updated_at": "2026-11-24T15:45:14.335Z",
+          "order_id": "KC-1047",
+          "customer_email": "kavya.reddy@example.com",
+          "email_ids": "E03",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return a sealed Rose Water Toner from order KC-1047 for a refund.",
+          "notes": "2026-11-24T15:45:14.335Z E03: Customer wants to return a sealed Rose Water Toner from order KC-1047 for a refund. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1052-2",
+          "created_at": "2026-11-24T15:45:43.505Z",
+          "updated_at": "2026-11-24T15:52:41.636Z",
+          "order_id": "KC-1052",
+          "customer_email": "tanvi.desai@example.com",
+          "email_ids": "E04,E21",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer following up on a cracked Ubtan jar in order KC-1052 and requesting a replacement.",
+          "notes": "2026-11-24T15:45:43.505Z E04: Customer received order KC-1052 with a cracked Ubtan Face Pack jar and spilled powder, requesting help. | eligibility=within_reporting_window_pending_verification; requested_remedy=unspecified; attachments=none (unverified)\n2026-11-24T15:52:41.636Z E21: Customer following up on a cracked Ubtan jar in order KC-1052 and requesting a replacement. | eligibility=within_reporting_window_pending_verification; requested_remedy=replacement; attachments=cracked_jar.jpg,outer_box.jpg (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1051-3",
+          "created_at": "2026-11-24T15:47:40.241Z",
+          "updated_at": "2026-11-24T15:47:40.241Z",
+          "order_id": "KC-1051",
+          "customer_email": "riya.kapoor@example.com",
+          "email_ids": "E08",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer received a leaking Sandalwood lotion bottle in order KC-1051 and demands an immediate full refund.",
+          "notes": "2026-11-24T15:47:40.241Z E08: Customer received a leaking Sandalwood lotion bottle in order KC-1051 and demands an immediate full refund. | eligibility=within_reporting_window_pending_verification; requested_remedy=refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1055-4",
+          "created_at": "2026-11-24T15:50:24.543Z",
+          "updated_at": "2026-11-24T15:50:24.543Z",
+          "order_id": "KC-1055",
+          "customer_email": "manish.gupta@example.com",
+          "email_ids": "E12",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer is requesting a refund for order KC-1055 as the products did not suit their skin.",
+          "notes": "2026-11-24T15:50:24.543Z E12: Customer is requesting a refund for order KC-1055 as the products did not suit their skin. | eligibility=ineligible; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1050-5",
+          "created_at": "2026-11-24T15:51:44.305Z",
+          "updated_at": "2026-11-24T15:51:44.305Z",
+          "order_id": "KC-1050",
+          "customer_email": "farhan.sheikh@example.com",
+          "email_ids": "E19",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return unopened Kumkumadi oil and aloe gel from order KC-1050 and asks about cash refund.",
+          "notes": "2026-11-24T15:51:44.305Z E19: Customer wants to return unopened Kumkumadi oil and aloe gel from order KC-1050 and asks about cash refund. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        }
+      ]
+    },
+    "extended": {
+      "raw_audit_rows": 14,
+      "raw_ticket_rows": 5,
+      "scored_email_count": 13,
+      "excluded_audit_ids": [
+        "E03"
+      ],
+      "excluded_ticket_ids": [
+        "TKT-KC-1047-1"
+      ],
+      "audit_differences": [],
+      "ticket_differences": [],
+      "scored_tickets": [
+        {
+          "ticket_id": "TKT-KC-1048-2",
+          "created_at": "2026-11-24T16:23:08.623Z",
+          "updated_at": "2026-11-24T16:23:08.623Z",
+          "order_id": "KC-1048",
+          "customer_email": "sneha.joshi@example.com",
+          "email_ids": "E11",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return an unopened Bridal Glow Kit from order KC-1048 for a refund due to a postponed wedding.",
+          "notes": "2026-11-24T16:23:08.623Z E11: Customer wants to return an unopened Bridal Glow Kit from order KC-1048 for a refund due to a postponed wedding. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1053-3",
+          "created_at": "2026-11-24T16:25:24.447Z",
+          "updated_at": "2026-11-24T16:25:24.447Z",
+          "order_id": "KC-1053",
+          "customer_email": "karan.malhotra@example.com",
+          "email_ids": "E14",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer received the wrong items (Bhringraj Hair Oil instead of Ubtan Face Packs) for order KC-1053 and requests the correct items.",
+          "notes": "2026-11-24T16:25:24.447Z E14: Customer received the wrong items (Bhringraj Hair Oil instead of Ubtan Face Packs) for order KC-1053 and requests the correct items. | eligibility=within_reporting_window_pending_verification; requested_remedy=correct_items; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1049-4",
+          "created_at": "2026-11-24T16:29:18.924Z",
+          "updated_at": "2026-11-24T16:29:18.924Z",
+          "order_id": "KC-1049",
+          "customer_email": "aditya.verma@example.com",
+          "email_ids": "E16",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer is unsatisfied with the Saffron Glow serum from order KC-1049 and is requesting a refund.",
+          "notes": "2026-11-24T16:29:18.924Z E16: Customer is unsatisfied with the Saffron Glow serum from order KC-1049 and is requesting a refund. | eligibility=ineligible; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        {
+          "ticket_id": "TKT-KC-1054-5",
+          "created_at": "2026-11-24T16:34:06.054Z",
+          "updated_at": "2026-11-24T16:34:06.054Z",
+          "order_id": "KC-1054",
+          "customer_email": "pooja.nair@example.com",
+          "email_ids": "E23",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer reports Aloe Calm Gel missing from order KC-1054 and requests a refund for the missing item.",
+          "notes": "2026-11-24T16:34:06.054Z E23: Customer reports Aloe Calm Gel missing from order KC-1054 and requests a refund for the missing item. | eligibility=within_reporting_window_pending_verification; requested_remedy=refund; attachments=none (unverified)"
+        }
+      ]
+    }
+  },
+  "batch_disclosure": "Final25 combines currency baseline12 and extended13 with unchanged prompts/model3.5; separate tab persistence, not a single clean25 run. Extended CSV E03 and its smoke ticket excluded only from derived scoring.",
+  "manual_findings": {
+    "E04": "Extra return_refund secondary versus frozen expected checklist; judgment call.",
+    "E11": "Correct kit/QC policy, but unnecessary non-refundable shipping INR0 wording.",
+    "E15": "Correct COD fee49 but omits useful full COD total1897.",
+    "E18": "Safe clarification; active-order qualifier is stronger than source lookup.",
+    "E23": "Correct packing-weight/499 remedy, but should explicitly acknowledge refund rather than resend preference."
+  },
+  "final_ticket_reconciliation": {
+    "ticket_rows": 9,
+    "unique_orders": 9,
+    "duplicate_orders": []
+  }
+}

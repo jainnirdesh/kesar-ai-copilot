@@ -1,0 +1,91 @@
+{
+  "scope": "Local final packaging audit; no external requests, workflow runs, evaluation reruns or Git mutations.",
+  "package_files_scanned": 110,
+  "secret_pattern_hits": [],
+  "personal_path_or_private_email_hits": [],
+  "excluded_file_violations": [],
+  "valid_json_files": 49,
+  "png_validation": [
+    {
+      "file": "evidence/v1/v1-baseline-execution.png",
+      "width": 1908,
+      "height": 1030,
+      "crc_and_compression_valid": true
+    },
+    {
+      "file": "evidence/v2/v2-baseline-execution.png",
+      "width": 2538,
+      "height": 1566,
+      "crc_and_compression_valid": true
+    },
+    {
+      "file": "screenshots/audit_log.png",
+      "width": 2940,
+      "height": 1912,
+      "crc_and_compression_valid": true
+    },
+    {
+      "file": "screenshots/tickets.png",
+      "width": 2940,
+      "height": 1912,
+      "crc_and_compression_valid": true
+    },
+    {
+      "file": "screenshots/v1-baseline-execution.png",
+      "width": 1908,
+      "height": 1030,
+      "crc_and_compression_valid": true
+    },
+    {
+      "file": "screenshots/v2-baseline-execution.png",
+      "width": 2538,
+      "height": 1566,
+      "crc_and_compression_valid": true
+    },
+    {
+      "file": "screenshots/workflow.png",
+      "width": 2538,
+      "height": 1352,
+      "crc_and_compression_valid": true
+    }
+  ],
+  "required_screenshots_visually_reviewed": true,
+  "workflow_exports_checked": [
+    "workflow/v1/01-kesar-v1-processor.json",
+    "workflow/v1/02-kesar-v1-runner.json",
+    "workflow/v2/01-kesar-v2-processor.json",
+    "workflow/v2/02-kesar-v2-runner.json",
+    "workflow/v2_1/01-kesar-v2.1-processor.json",
+    "workflow/v2_1/02-kesar-v2.1-runner.json",
+    "workflow/v2_1_currency/01-kesar-v2.1-currency-processor.json",
+    "workflow/v2_1_currency/02-kesar-v2.1-currency-runner.json",
+    "workflow/v2_1_currency_extended/01-kesar-v2.1-currency-extended-processor.json",
+    "workflow/v2_1_currency_extended/02-kesar-v2.1-currency-extended-runner.json"
+  ],
+  "workflow_verification_limit": "Static structure only; no live n8n import. Earlier checkpoint parsed156 code snippets.",
+  "local_git_history": {
+    "commits_scanned": 4,
+    "blobs_scanned": 185,
+    "secret_pattern_hits": [],
+    "remote_history_checked": false,
+    "author_identity": "Commit author identity exists as standard Git metadata; do not transfer original .git history. No identities included in this report."
+  },
+  "historical_evidence": {
+    "copies_checked": 53,
+    "documented_sanitized_copies": 3,
+    "unexplained_mismatches": [],
+    "source_manifest_metadata_deltas": [
+      ".DS_Store",
+      "implementation/evidence/.DS_Store"
+    ],
+    "functional_source_changes": []
+  },
+  "derived_csv_rows": {
+    "final25-audit.csv": 25,
+    "final25-tickets.csv": 9
+  },
+  "broken_local_document_links": [],
+  "sharing_permissions": "Not independently verified; candidate-supplied URLs only.",
+  "license": "No new license applied to company materials.",
+  "remaining_official_requirement": "Five-minute recording not supplied."
+}

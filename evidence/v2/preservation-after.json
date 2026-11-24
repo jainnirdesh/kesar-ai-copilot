@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "preexisting_files_checked": 45,
+  "frozen_v1_entries_checked": 24,
+  "changed_preexisting": [],
+  "changed_frozen": [],
+  "baseline_sha256": "11646237aec1d47a2ba824c8ebf64a344a3a135f4ed92cea48bd76559879a666"
+}

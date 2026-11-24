@@ -1,0 +1,33 @@
+{
+  "description": "Local V2.1 checkpoint only; no external run. Historical source/evidence preserved; OS metadata differences explicitly recorded, not masked.",
+  "files": {
+    "code/v2_1/build_workflows.py": "f474b81129cf249c0da30c8d56f85c283e592cee8e62c3e588d9d695f9e64d6f",
+    "code/v2_1/core.js": "1be930bf78519c495995c8ce86b523b8d8740c59900a8fcb92efb31bfc9c64a5",
+    "code/v2_1/reconcile_evidence.py": "24af65f4a3bf96711624df275d7e04b1a9110b39c18e53d1837dbc3610f00ab7",
+    "code/v2_1/verify_checkpoint.py": "90289a06ebe564ff617080123def3cbab0e7ad89fec311dd3e09355b7f70447f",
+    "config/v2_1/config.example.json": "b88360a558751ea0da02968be5bfa770ca113691a040926c3df61e1bd09958e2",
+    "docs/v2_1/CHANGELOG.md": "3611ae309befe36d57f8a6cbdc111c03a1e846245a678187f229e449a6be4cbd",
+    "docs/v2_1/EVALUATION_PLAN.md": "447012aa19f034fe2a37db9c73a8490d840cb7bd44a95408390ccf92573b65c7",
+    "docs/v2_1/OBSERVABILITY.md": "148515cbfea239492743febbbf7804e001bab74ff9269cc9941a6b7e3f32dc50",
+    "docs/v2_1/PRESERVATION.md": "8c200a70dbadaff7beae831c9ac9d29fdd5809c8388292221b2077bfbffc0ca3",
+    "docs/v2_1/README.md": "5bf734c61a0bed2237da26550dc97d358a117f6fc7f2fa4dd1b36d42dc6158a6",
+    "docs/v2_1/REQUIREMENTS.md": "c108de9612f0a91f51cd7d83ba8cd89bed54b389daa85a5ee6d38d806ba0dc03",
+    "docs/v2_1/SETUP.md": "8bb72fe7a49e765a13f5166d80e33288f90889c34a782fbb6207077b5fad34d3",
+    "docs/v2_1/TEST_REPORT.md": "97e886f8ef25f7ca214f6a961f49d963f6a5c7303cfecc626ae5a9c13244d367",
+    "evidence/v2_1/LOCAL_VALIDATION_FINAL.tap": "5cbc4d4012842c22e7750c30a3b2592750e48c9441c39e061c3a7ac6aa046a6f",
+    "evidence/v2_1/README.md": "a48efa8b16058e56c9adaa6b4bf3531f5609865d25a431423cdc93bb85789969",
+    "evidence/v2_1/artifact-verification-final.json": "4a52dcbf19277003052ad0f6796c5f694e7584e832523055674156adddc0f0b1",
+    "evidence/v2_1/preservation-before.json": "7b81ff2e188d3c0616e6fc46ba1aee20b0d1e3719f37671c31791c2352c966bd",
+    "evidence/v2_1/prior-baseline-reconciliation-final.json": "e636b13bdf4d6dcc41c18dd55060c54d61a32cbd0a77921e650d44c48f9a746d",
+    "evidence/v2_1/prior-baseline-reconciliation.json": "ec750e93a49d8d3c8e84984d3d486607aeb6ce31c4dd79a1eebc007435bcd6e9",
+    "evidence/v2_1/test-results-final.json": "2bbc05dfc77cd655bc685fcf3f055f84f67564a4552773e8314c5af8ba4df905",
+    "prompts/v2_1/agent.md": "1db869079c6d8cc9cb8addb2e87f3f3c8268f4be797e368d2d1a22c40256d554",
+    "prompts/v2_1/classification.md": "2b05a446dde604abbf9494d237fe19475b5e150dbabeacb914c5afdff2a17b3d",
+    "tests/v2_1/expected-outcomes.json": "b5d42955155d27dc595f21941bd7925e45b594f02c24596293f624bc2a407183",
+    "tests/v2_1/hardening.test.js": "2581bf95241d539db00a62c38fa27d8e370c28a6cb6e8b13c4c85f0f52f63c0f",
+    "tests/v2_1/helpers.js": "e7738edf46b16ac388c28c5d58f553958330cf430bfbcd8078aa8fcea098fa14",
+    "tests/v2_1/workflow.test.js": "c493ea3799354f4fe14c46a2f98de4fd8d054766274957ec163a3a2e8e2a867f",
+    "workflow/v2_1/01-kesar-v2.1-processor.json": "5fa4b231d50c847b3c98b09be2b35ff69cd16f1f9d1022f82c75eefd4c2c07f7",
+    "workflow/v2_1/02-kesar-v2.1-runner.json": "7e49c222f52cf9a968a0156119cf6471fff2cd0fdb347f25dcbb910d24ae9569"
+  }
+}

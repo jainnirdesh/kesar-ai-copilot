@@ -1,0 +1,27 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "implementation/tests/core.test.js",
+    "implementation/tests/workflow.test.js",
+    "implementation/tests/v2/core.test.js",
+    "implementation/tests/v2/workflow.test.js",
+    "implementation/tests/v2_1/hardening.test.js",
+    "implementation/tests/v2_1/workflow.test.js"
+  ],
+  "node_version": "v25.5.0",
+  "exit_code": 1,
+  "tests": 72,
+  "pass": 70,
+  "fail": 2,
+  "skipped": 0,
+  "failed_test_names": [
+    "all pre-existing assignment/V1/evidence files retain initial and frozen snapshot hashes",
+    "all preserved files, including new V1 CSV/screenshot and both baseline JSONs, match SHA-256 manifest"
+  ],
+  "classification": "Two preservation assertions fail on recorded Finder metadata drift; source/workflow/raw-evidence hashes checked separately. No failed assertion has been suppressed.",
+  "external_v2_1_runs": 0,
+  "external_gemini_evaluations": 0,
+  "google_sheets_mutations": 0
+}

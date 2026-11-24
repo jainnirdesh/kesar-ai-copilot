@@ -1,0 +1,582 @@
+TAP version 13
+# Subtest: all official expected classifications satisfy contract, extracted ID remains null in E10
+ok 1 - all official expected classifications satisfy contract, extracted ID remains null in E10
+  ---
+  duration_ms: 7.653292
+  type: 'test'
+  ...
+# Subtest: validator rejects invalid types, enum, range, pattern, missing fields, excess Unicode summary
+ok 2 - validator rejects invalid types, enum, range, pattern, missing fields, excess Unicode summary
+  ---
+  duration_ms: 0.185458
+  type: 'test'
+  ...
+# Subtest: bounded repair helper handles fenced JSON and returns schema-valid human fallback
+ok 3 - bounded repair helper handles fenced JSON and returns schema-valid human fallback
+  ---
+  duration_ms: 0.233042
+  type: 'test'
+  ...
+# Subtest: ownership boundary denies E07 without exposing owner identity/address/order; missing/ambiguous safe
+ok 4 - ownership boundary denies E07 without exposing owner identity/address/order; missing/ambiguous safe
+  ---
+  duration_ms: 0.153125
+  type: 'test'
+  ...
+# Subtest: all 25 policy outcomes match predetermined expectations; no host-clock dependency
+ok 5 - all 25 policy outcomes match predetermined expectations; no host-clock dependency
+  ---
+  duration_ms: 0.540875
+  type: 'test'
+  ...
+# Subtest: refund arithmetic, kit restriction, COD timing and unavailable verification remain explicit
+ok 6 - refund arithmetic, kit restriction, COD timing and unavailable verification remain explicit
+  ---
+  duration_ms: 0.6915
+  type: 'test'
+  ...
+# Subtest: injection cannot suppress ticket; secondary complaint triggers ticket and High priority
+ok 7 - injection cannot suppress ticket; secondary complaint triggers ticket and High priority
+  ---
+  duration_ms: 0.272291
+  type: 'test'
+  ...
+# Subtest: draft validation rejects invented amounts, dates, links, claims, missing tool evidence; privacy/medical override
+ok 8 - draft validation rejects invented amounts, dates, links, claims, missing tool evidence; privacy/medical override
+  ---
+  duration_ms: 2.452541
+  type: 'test'
+  ...
+# Subtest: ticket and audit plans over 25 provided fixtures: 9 tickets, 25 rows, E04/E21 reuse, replay safe
+ok 9 - ticket and audit plans over 25 provided fixtures: 9 tickets, 25 rows, E04/E21 reuse, replay safe
+  ---
+  duration_ms: 5.048209
+  type: 'test'
+  ...
+# Subtest: export graph uses standard nodes, exactly two read-only tools, RAW writes, no credentials or webhook
+ok 10 - export graph uses standard nodes, exactly two read-only tools, RAW writes, no credentials or webhook
+  ---
+  duration_ms: 7.682791
+  type: 'test'
+  ...
+# Subtest: every embedded Code node and expression compiles; get_order returns exact protected result in sandbox
+ok 11 - every embedded Code node and expression compiles; get_order returns exact protected result in sandbox
+  ---
+  duration_ms: 1.440709
+  type: 'test'
+  ...
+# Subtest: original source manifest matches all preserved assignment files
+ok 12 - original source manifest matches all preserved assignment files
+  ---
+  duration_ms: 13.962875
+  type: 'test'
+  ...
+# Subtest: V2 classification contract and bounded-repair fallback retain all official fields
+ok 13 - V2 classification contract and bounded-repair fallback retain all official fields
+  ---
+  duration_ms: 4.14225
+  type: 'test'
+  ...
+# Subtest: intent-specific tool plan requires order plus FAQ for all order requests; products FAQ only; other no tools
+ok 14 - intent-specific tool plan requires order plus FAQ for all order requests; products FAQ only; other no tools
+  ---
+  duration_ms: 1.159125
+  type: 'test'
+  ...
+# Subtest: missing tool detection requires a successful actual observation, not tool name alone
+ok 15 - missing tool detection requires a successful actual observation, not tool name alone
+  ---
+  duration_ms: 5.680542
+  type: 'test'
+  ...
+# Subtest: repair accumulates only real observations and resolves skipped order tool; exhaustion remains explicitly noncompliant
+ok 16 - repair accumulates only real observations and resolves skipped order tool; exhaustion remains explicitly noncompliant
+  ---
+  duration_ms: 3.181125
+  type: 'test'
+  ...
+# Subtest: FAQ observation must contain exact trusted section text; IDs alone do not count as retrieval
+ok 17 - FAQ observation must contain exact trusted section text; IDs alone do not count as retrieval
+  ---
+  duration_ms: 0.125958
+  type: 'test'
+  ...
+# Subtest: formatter preserves valid informational content from actual V1 E01 and is idempotent
+ok 18 - formatter preserves valid informational content from actual V1 E01 and is idempotent
+  ---
+  duration_ms: 2.193917
+  type: 'test'
+  ...
+# Subtest: formatter normalizes CRLF, whitespace, markdown, repeated greetings and closing without generic escalation
+ok 19 - formatter normalizes CRLF, whitespace, markdown, repeated greetings and closing without generic escalation
+  ---
+  duration_ms: 0.134292
+  type: 'test'
+  ...
+# Subtest: formatter preserves Hindi/Hinglish body and meaningful paragraphs, never truncates long content
+ok 20 - formatter preserves Hindi/Hinglish body and meaningful paragraphs, never truncates long content
+  ---
+  duration_ms: 0.184292
+  type: 'test'
+  ...
+# Subtest: formatting-only variation passes semantics and keeps content instead of generic fallback
+ok 21 - formatting-only variation passes semantics and keeps content instead of generic fallback
+  ---
+  duration_ms: 1.098417
+  type: 'test'
+  ...
+# Subtest: ownership boundary, mismatched trace and final privacy template prevent unauthorized details
+ok 22 - ownership boundary, mismatched trace and final privacy template prevent unauthorized details
+  ---
+  duration_ms: 0.352791
+  type: 'test'
+  ...
+# Subtest: missing and ambiguous orders have safe context-aware clarification; no false order details
+ok 23 - missing and ambiguous orders have safe context-aware clarification; no false order details
+  ---
+  duration_ms: 0.109333
+  type: 'test'
+  ...
+# Subtest: return eligibility boundaries use received_at not computer clock; 7 inclusive, >7 excluded
+ok 24 - return eligibility boundaries use received_at not computer clock; 7 inclusive, >7 excluded
+  ---
+  duration_ms: 0.092333
+  type: 'test'
+  ...
+# Subtest: prepaid/COD policy fallbacks state QC dependencies, fees and no premature payment request
+ok 25 - prepaid/COD policy fallbacks state QC dependencies, fees and no premature payment request
+  ---
+  duration_ms: 0.196667
+  type: 'test'
+  ...
+# Subtest: damage/incorrect/missing complaints retain evidence, preferences and unverified attachments
+ok 26 - damage/incorrect/missing complaints retain evidence, preferences and unverified attachments
+  ---
+  duration_ms: 0.447625
+  type: 'test'
+  ...
+# Subtest: unsupported actions are rejected, conditional QC timing is allowed, source-verified initiation remains allowed
+ok 27 - unsupported actions are rejected, conditional QC timing is allowed, source-verified initiation remains allowed
+  ---
+  duration_ms: 0.212084
+  type: 'test'
+  ...
+# Subtest: factual completeness rejects missing tracking/date and invented price, date, guarantee or attachment verification
+ok 28 - factual completeness rejects missing tracking/date and invented price, date, guarantee or attachment verification
+  ---
+  duration_ms: 0.110875
+  type: 'test'
+  ...
+# Subtest: injection creates ineligible return ticket and policy response; medical safety is preserved
+ok 29 - injection creates ineligible return ticket and policy response; medical safety is preserved
+  ---
+  duration_ms: 0.595916
+  type: 'test'
+  ...
+# Subtest: fresh 25-email ticket plans keep 9 unique tickets, E04/E21 history and creation timestamp; replay does not append
+ok 30 - fresh 25-email ticket plans keep 9 unique tickets, E04/E21 history and creation timestamp; replay does not append
+  ---
+  duration_ms: 4.715584
+  type: 'test'
+  ...
+# Subtest: RAW payload validator rejects malformed/oversized rows, preserves literal formulas as strings
+ok 31 - RAW payload validator rejects malformed/oversized rows, preserves literal formulas as strings
+  ---
+  duration_ms: 0.661459
+  type: 'test'
+  ...
+# Subtest: all V2 fallbacks pass final safety and brand checks for official fixtures
+ok 32 - all V2 fallbacks pass final safety and brand checks for official fixtures
+  ---
+  duration_ms: 9.654208
+  type: 'test'
+  ...
+# Subtest: V2 export references compile, agent repair has real tools, RAW URLs and isolated configuration
+ok 33 - V2 export references compile, agent repair has real tools, RAW URLs and isolated configuration
+  ---
+  duration_ms: 8.385
+  type: 'test'
+  ...
+# Subtest: baseline evaluator separates classification accuracy, confidence, replay and unavailable measurements
+ok 34 - baseline evaluator separates classification accuracy, confidence, replay and unavailable measurements
+  ---
+  duration_ms: 73.847542
+  type: 'test'
+  ...
+# Subtest: all pre-existing assignment/V1/evidence files retain initial and frozen snapshot hashes
+not ok 35 - all pre-existing assignment/V1/evidence files retain initial and frozen snapshot hashes
+  ---
+  duration_ms: 7.380916
+  type: 'test'
+  location: '[LOCAL_WORKSPACE]/implementation/tests/v2/core.test.js:28:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    .DS_Store
+    + actual - expected
+    
+    + 'c809c51bddd79ab467e45b4bacdc1adf40ba9cf855a8d0034c41a36a0997f016'
+    - '27f895b37cc8bb1599b1bf4aab18eaf58b9699337fcdcd2bcb15fe0f296cb1cd'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: '27f895b37cc8bb1599b1bf4aab18eaf58b9699337fcdcd2bcb15fe0f296cb1cd'
+  actual: 'c809c51bddd79ab467e45b4bacdc1adf40ba9cf855a8d0034c41a36a0997f016'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> ([LOCAL_WORKSPACE]/implementation/tests/v2/core.test.js:28:326)
+    Test.runInAsyncScope (node:async_hooks:212:14)
+    Test.run (node:internal/test_runner/test:1109:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+    Test.postRun (node:internal/test_runner/test:1238:19)
+    Test.run (node:internal/test_runner/test:1166:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:786:7)
+  ...
+# Subtest: Initialize rejects protected V1 tab configuration before any external API call
+ok 36 - Initialize rejects protected V1 tab configuration before any external API call
+  ---
+  duration_ms: 0.805958
+  type: 'test'
+  ...
+# Subtest: exported V2 graph routes all 25 official fixtures with mocked boundaries; 25 audit rows and 9 tickets
+ok 37 - exported V2 graph routes all 25 official fixtures with mocked boundaries; 25 audit rows and 9 tickets
+  ---
+  duration_ms: 307.710084
+  type: 'test'
+  ...
+# Subtest: real graph tool repair invokes tools on retry; exhausted retry never gains fictional tool credit
+ok 38 - real graph tool repair invokes tools on retry; exhausted retry never gains fictional tool credit
+  ---
+  duration_ms: 18.444667
+  type: 'test'
+  ...
+# Subtest: graph classification repair/exhaustion and agent outages persist safe human-review audit
+ok 39 - graph classification repair/exhaustion and agent outages persist safe human-review audit
+  ---
+  duration_ms: 16.956375
+  type: 'test'
+  ...
+# Subtest: partial write recovery preserves ticket history; lost audit response recovers through replay
+ok 40 - partial write recovery preserves ticket history; lost audit response recovers through replay
+  ---
+  duration_ms: 18.050042
+  type: 'test'
+  ...
+# Subtest: runner modes support smoke, baseline, full and replay; completion preserves full JSON results
+ok 41 - runner modes support smoke, baseline, full and replay; completion preserves full JSON results
+  ---
+  duration_ms: 1.878584
+  type: 'test'
+  ...
+# Subtest: attachment transfer/inspection equivalents are rejected; filenames and recorded-request statements allowed
+ok 42 - attachment transfer/inspection equivalents are rejected; filenames and recorded-request statements allowed
+  ---
+  duration_ms: 20.854208
+  type: 'test'
+  ...
+# Subtest: customer evidence fields cannot authorize an attachment action; trusted executed fact needs evidence reference
+ok 43 - customer evidence fields cannot authorize an attachment action; trusted executed fact needs evidence reference
+  ---
+  duration_ms: 1.025959
+  type: 'test'
+  ...
+# Subtest: unopened is not intact-seal evidence; condition reports are never warehouse verification
+ok 44 - unopened is not intact-seal evidence; condition reports are never warehouse verification
+  ---
+  duration_ms: 0.53575
+  type: 'test'
+  ...
+# Subtest: explicit customer seal report permits attribution, never a verified assertion
+ok 45 - explicit customer seal report permits attribution, never a verified assertion
+  ---
+  duration_ms: 0.092375
+  type: 'test'
+  ...
+# Subtest: ordinary-return completeness requires pickup window and exact applicable shipping fee
+ok 46 - ordinary-return completeness requires pickup window and exact applicable shipping fee
+  ---
+  duration_ms: 0.967375
+  type: 'test'
+  ...
+# Subtest: prepaid and COD fallback policies remain conditional, QC-bound and non-executing
+ok 47 - prepaid and COD fallback policies remain conditional, QC-bound and non-executing
+  ---
+  duration_ms: 0.323958
+  type: 'test'
+  ...
+# Subtest: unambiguous same-day refund coreference passes without changing customer wording
+ok 48 - unambiguous same-day refund coreference passes without changing customer wording
+  ---
+  duration_ms: 0.873083
+  type: 'test'
+  ...
+# Subtest: refund coreference rejects absent, wrong, multiple and unrelated date anchors
+ok 49 - refund coreference rejects absent, wrong, multiple and unrelated date anchors
+  ---
+  duration_ms: 3.991334
+  type: 'test'
+  ...
+# Subtest: same-day support never permits completed/approved/processed or unsupported refunds
+ok 50 - same-day support never permits completed/approved/processed or unsupported refunds
+  ---
+  duration_ms: 0.552959
+  type: 'test'
+  ...
+# Subtest: sentiment review generalizes restrained followups versus explicit anger; escalation remains independent
+ok 51 - sentiment review generalizes restrained followups versus explicit anger; escalation remains independent
+  ---
+  duration_ms: 0.32775
+  type: 'test'
+  ...
+# Subtest: privacy, injection, medical and order ownership regressions remain protected
+ok 52 - privacy, injection, medical and order ownership regressions remain protected
+  ---
+  duration_ms: 0.198625
+  type: 'test'
+  ...
+# Subtest: tickets retain deduplication, history and replay idempotency
+ok 53 - tickets retain deduplication, history and replay idempotency
+  ---
+  duration_ms: 0.499375
+  type: 'test'
+  ...
+# Subtest: every official fixture safe fallback still passes final safety and formatting
+ok 54 - every official fixture safe fallback still passes final safety and formatting
+  ---
+  duration_ms: 18.658125
+  type: 'test'
+  ...
+# Subtest: freshness guard rejects smoke-contaminated and malformed schemas
+ok 55 - freshness guard rejects smoke-contaminated and malformed schemas
+  ---
+  duration_ms: 0.330875
+  type: 'test'
+  ...
+# Subtest: observability redacts secrets and reports unavailable retry counts honestly
+ok 56 - observability redacts secrets and reports unavailable retry counts honestly
+  ---
+  duration_ms: 0.238209
+  type: 'test'
+  ...
+# Subtest: all preserved files, including new V1 CSV/screenshot and both baseline JSONs, match SHA-256 manifest
+not ok 57 - all preserved files, including new V1 CSV/screenshot and both baseline JSONs, match SHA-256 manifest
+  ---
+  duration_ms: 9.204625
+  type: 'test'
+  location: '[LOCAL_WORKSPACE]/implementation/tests/v2_1/hardening.test.js:24:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    .DS_Store
+    + actual - expected
+    
+    + 'c809c51bddd79ab467e45b4bacdc1adf40ba9cf855a8d0034c41a36a0997f016'
+    - '27f895b37cc8bb1599b1bf4aab18eaf58b9699337fcdcd2bcb15fe0f296cb1cd'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: '27f895b37cc8bb1599b1bf4aab18eaf58b9699337fcdcd2bcb15fe0f296cb1cd'
+  actual: 'c809c51bddd79ab467e45b4bacdc1adf40ba9cf855a8d0034c41a36a0997f016'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> ([LOCAL_WORKSPACE]/implementation/tests/v2_1/hardening.test.js:24:270)
+    Test.runInAsyncScope (node:async_hooks:212:14)
+    Test.run (node:internal/test_runner/test:1109:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:786:18)
+    Test.postRun (node:internal/test_runner/test:1238:19)
+    Test.run (node:internal/test_runner/test:1166:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:786:7)
+  ...
+# Subtest: archived V2 defects are detected retrospectively without a new live evaluation
+ok 58 - archived V2 defects are detected retrospectively without a new live evaluation
+  ---
+  duration_ms: 4.675542
+  type: 'test'
+  ...
+# Subtest: exported V2.1 graph routes all 25 official fixtures with mocked boundaries; 25 audit rows and 9 tickets
+ok 59 - exported V2.1 graph routes all 25 official fixtures with mocked boundaries; 25 audit rows and 9 tickets
+  ---
+  duration_ms: 372.013708
+  type: 'test'
+  ...
+# Subtest: real graph tool repair invokes tools on retry; exhausted retry never gains fictional tool credit
+ok 60 - real graph tool repair invokes tools on retry; exhausted retry never gains fictional tool credit
+  ---
+  duration_ms: 22.079666
+  type: 'test'
+  ...
+# Subtest: graph classification repair/exhaustion and agent outages persist safe human-review audit
+ok 61 - graph classification repair/exhaustion and agent outages persist safe human-review audit
+  ---
+  duration_ms: 21.607333
+  type: 'test'
+  ...
+# Subtest: partial write recovery preserves ticket history; lost audit response recovers through replay
+ok 62 - partial write recovery preserves ticket history; lost audit response recovers through replay
+  ---
+  duration_ms: 25.140541
+  type: 'test'
+  ...
+# Subtest: observability records raw classifications, validation/repair history, real stage timings and execution IDs
+ok 63 - observability records raw classifications, validation/repair history, real stage timings and execution IDs
+  ---
+  duration_ms: 9.629875
+  type: 'test'
+  ...
+# Subtest: provider errors are retained without inventing hidden retry counts
+ok 64 - provider errors are retained without inventing hidden retry counts
+  ---
+  duration_ms: 8.298125
+  type: 'test'
+  ...
+# Subtest: baseline refuses replays while explicit replay testing remains idempotent
+ok 65 - baseline refuses replays while explicit replay testing remains idempotent
+  ---
+  duration_ms: 10.126084
+  type: 'test'
+  ...
+# Subtest: runner preflight, selected baseline and completion enforce 12 fresh results and isolated modes
+ok 66 - runner preflight, selected baseline and completion enforce 12 fresh results and isolated modes
+  ---
+  duration_ms: 2.480416
+  type: 'test'
+  ...
+# Subtest: both V2.1 exports have valid node connections, compilable expressions and no credential bindings
+ok 67 - both V2.1 exports have valid node connections, compilable expressions and no credential bindings
+  ---
+  duration_ms: 13.270375
+  type: 'test'
+  ...
+# Subtest: preserved monetary and all safety/policy core source is byte-for-byte unchanged
+ok 68 - preserved monetary and all safety/policy core source is byte-for-byte unchanged
+  ---
+  duration_ms: 2.709083
+  type: 'test'
+  ...
+# Subtest: explicit source-correct currency notation passes and bare/wrong/foreign amounts remain invalid
+ok 69 - explicit source-correct currency notation passes and bare/wrong/foreign amounts remain invalid
+  ---
+  duration_ms: 20.547916
+  type: 'test'
+  ...
+# Subtest: currency elsewhere, wrong decimals and unsupported totals do not excuse an invalid shipping fee
+ok 70 - currency elsewhere, wrong decimals and unsupported totals do not excuse an invalid shipping fee
+  ---
+  duration_ms: 1.192084
+  type: 'test'
+  ...
+# Subtest: both actual smoke agent outputs remain rejected; contextual final fallback remains safe
+ok 71 - both actual smoke agent outputs remain rejected; contextual final fallback remains safe
+  ---
+  duration_ms: 5.296459
+  type: 'test'
+  ...
+# Subtest: monetary repair is built from authorized source data, not a fixture ID or arbitrary customer demand
+ok 72 - monetary repair is built from authorized source data, not a fixture ID or arbitrary customer demand
+  ---
+  duration_ms: 0.276209
+  type: 'test'
+  ...
+# Subtest: runner is the model source; current smoke and pinned baseline use 3.5 with honest comparison flags
+ok 73 - runner is the model source; current smoke and pinned baseline use 3.5 with honest comparison flags
+  ---
+  duration_ms: 0.427375
+  type: 'test'
+  ...
+# Subtest: legacy/missing/mismatched runner configuration fails closed before processing
+ok 74 - legacy/missing/mismatched runner configuration fails closed before processing
+  ---
+  duration_ms: 0.491959
+  type: 'test'
+  ...
+# Subtest: baseline model pin and v1 comparison claims are enforced; full mode and old tabs are blocked
+ok 75 - baseline model pin and v1 comparison claims are enforced; full mode and old tabs are blocked
+  ---
+  duration_ms: 0.348792
+  type: 'test'
+  ...
+# Subtest: empty-tab guard still blocks smoke contamination and malformed headers
+ok 76 - empty-tab guard still blocks smoke contamination and malformed headers
+  ---
+  duration_ms: 0.851167
+  type: 'test'
+  ...
+# Subtest: new exports compile and all real agents retain tools, currency context and correction guidance
+ok 77 - new exports compile and all real agents retain tools, currency context and correction guidance
+  ---
+  duration_ms: 31.691334
+  type: 'test'
+  ...
+# Subtest: pre-existing source/evidence and archived V2.1 copy remain unchanged; metadata differences remain reportable
+ok 78 - pre-existing source/evidence and archived V2.1 copy remain unchanged; metadata differences remain reportable
+  ---
+  duration_ms: 39.541666
+  type: 'test'
+  ...
+# Subtest: revision processor uses the runner-selected model in metadata and both Gemini bindings
+ok 79 - revision processor uses the runner-selected model in metadata and both Gemini bindings
+  ---
+  duration_ms: 61.576333
+  type: 'test'
+  ...
+# Subtest: bare shipping fee triggers a bounded targeted repair with source-grounded literal guidance
+ok 80 - bare shipping fee triggers a bounded targeted repair with source-grounded literal guidance
+  ---
+  duration_ms: 32.756916
+  type: 'test'
+  ...
+# Subtest: repeated currency omission remains invalid and preserves the conditional policy fallback
+ok 81 - repeated currency omission remains invalid and preserves the conditional policy fallback
+  ---
+  duration_ms: 14.591458
+  type: 'test'
+  ...
+# Subtest: ticket history, replay idempotency, privacy, injection and medical controls are retained in the revision graph
+ok 82 - ticket history, replay idempotency, privacy, injection and medical controls are retained in the revision graph
+  ---
+  duration_ms: 104.327125
+  type: 'test'
+  ...
+# Subtest: baseline completion rejects legacy processor outputs or a mismatched executed model
+ok 83 - baseline completion rejects legacy processor outputs or a mismatched executed model
+  ---
+  duration_ms: 1.226958
+  type: 'test'
+  ...
+# Subtest: exported processor graph traverses all 25 official emails using explicitly mocked services
+ok 84 - exported processor graph traverses all 25 official emails using explicitly mocked services
+  ---
+  duration_ms: 245.17975
+  type: 'test'
+  ...
+# Subtest: actual repair/fallback graph paths preserve schema and human review without external models
+ok 85 - actual repair/fallback graph paths preserve schema and human review without external models
+  ---
+  duration_ms: 15.736
+  type: 'test'
+  ...
+# Subtest: agent service failure produces audited safe fallback
+ok 86 - agent service failure produces audited safe fallback
+  ---
+  duration_ms: 4.686083
+  type: 'test'
+  ...
+# Subtest: partial ticket write recovers without duplicate ticket or note on retry
+ok 87 - partial ticket write recovers without duplicate ticket or note on retry
+  ---
+  duration_ms: 9.066584
+  type: 'test'
+  ...
+# Subtest: lost response after audit commit is recovered by replay check
+ok 88 - lost response after audit commit is recovered by replay check
+  ---
+  duration_ms: 5.383334
+  type: 'test'
+  ...
+1..88
+# tests 88
+# suites 0
+# pass 86
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 685.584167

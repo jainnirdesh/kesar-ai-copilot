@@ -1,0 +1,29 @@
+{
+  "description": "Authored local V1 checkpoint; not a configured Cloud export or live run. Verify these hashes before changing V1 for V2.",
+  "files": {
+    "DECISIONS.md": "030b612e5823dad72a2d4dd7c36ed11939d05aec972aae457d582ae6f97f5e1f",
+    "README.md": "9911b7cb82b0f3a28137f22671af78d9ce81963934937d8eafcd02a4d365b15c",
+    "REQUIREMENTS.md": "606af7e1e98fd8b6b7241f17bfc037438da3b03eb5b5320c879cd95bd9a36543",
+    "SETUP_V1.md": "f718f21ed9d548c930a893327b146a40358794ca6432af52550116c6a967b5c4",
+    "SOURCES.md": "1885feafbd6dc9d35a7498e575052e56cc49e0a617ce843f9ec3d7af1b84ae06",
+    "TEST_REPORT.md": "b820c052b2a878b1205005392c46129369e80ddd448383936e5558422599e58b",
+    "code/build_workflows.py": "6c2871938cc802f33698ee521b8664bae8be0f95b74c5ec800eb8699c939988a",
+    "code/core.js": "e8dc65ee098f68d55b40e66133be54d4218097ede21f26747fce86693a3664df",
+    "config/config.example.json": "b77281fcf6223b351a121ba29272191eb209cb8ff10d812aadae4c0cdd7932f3",
+    "config/original-files.sha256.json": "d223583d319ae9f5dde7726b42677a0be926eaddbc758d0fcd66f7ecc8298ea2",
+    "evidence/v1/LOCAL_VALIDATION.txt": "c7f5cc9d95229aa9ee59919e44181d3e149736ad04e5a9c3a1c32b9abaefd4c8",
+    "evidence/v1/RUN_RECORD.md": "bb97a97939bb213002192de31d2a5a68e8e073980ab3e7511f794b1df6967ff1",
+    "evidence/v1/subset.json": "8fdbffffbc0a413131bb70dba84d9d725db279e73e0f7e86b21d90cebc8c1bd6",
+    "evidence/v2/STATUS.md": "0ff7b1c66fab55c23e9332f831f8ef560ce2053c1f38f9ba8a1edc90b3919b4a",
+    "prompts/v1/agent.md": "db269be0c1102739c97213cb635e2f20b7df9990e621fbf01bcec8081f15429b",
+    "prompts/v1/classification.md": "5209610f0f744d3abfd229408e45ac79bc703b1006635ccf59fbb00c13d217c7",
+    "screenshots/STATUS.md": "f1f4eeb8981396482d05c068d0e761fcb08c45d0c34cb59fe894101d0a3318a8",
+    "sheets/audit_log_template.csv": "bc690252014f7e52c09e51b4df04698855cfc99c3b41a270cbfad607bcbcca5d",
+    "sheets/tickets_template.csv": "f2cda55cb39f39b2851a5bff47f089cb7ff4e5a30366f7be82f59612bae3f5dc",
+    "tests/core.test.js": "d113b234938f787a7998acd2a6e1059050874042986b14ecbe0169262530db5b",
+    "tests/expected-outcomes.json": "b5d42955155d27dc595f21941bd7925e45b594f02c24596293f624bc2a407183",
+    "tests/workflow.test.js": "16346c58130b102c70c9cdc5af90c1506071f9049d566e9de3fac9893fe49b54",
+    "workflow/v1/01-kesar-v1-processor.json": "8a7b77e23e164fa0279e4bf90423f1861f6248323f709b0dc03e1b8eec5890d8",
+    "workflow/v1/02-kesar-v1-runner.json": "d4427e32bef2cb011ab532c2d894f2ed970afd11d28cde50a8c2d59e90642180"
+  }
+}

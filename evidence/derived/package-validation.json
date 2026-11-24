@@ -1,0 +1,103 @@
+{
+  "scope": "Local static packaging checks only; no external calls, imports or evaluation reruns.",
+  "workflow_exports": [
+    {
+      "path": "workflow/v1/01-kesar-v1-processor.json",
+      "nodes": 33,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v1/02-kesar-v1-runner.json",
+      "nodes": 6,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v2/01-kesar-v2-processor.json",
+      "nodes": 40,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v2/02-kesar-v2-runner.json",
+      "nodes": 6,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v2_1/01-kesar-v2.1-processor.json",
+      "nodes": 50,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v2_1/02-kesar-v2.1-runner.json",
+      "nodes": 9,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v2_1_currency/01-kesar-v2.1-currency-processor.json",
+      "nodes": 50,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v2_1_currency/02-kesar-v2.1-currency-runner.json",
+      "nodes": 9,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v2_1_currency_extended/01-kesar-v2.1-currency-extended-processor.json",
+      "nodes": 50,
+      "errors": [],
+      "matches_authored_export": true
+    },
+    {
+      "path": "workflow/v2_1_currency_extended/02-kesar-v2.1-currency-extended-runner.json",
+      "nodes": 9,
+      "errors": [],
+      "matches_authored_export": true
+    }
+  ],
+  "javascript_parse": {
+    "snippets": 156,
+    "errors": []
+  },
+  "copied_historical_evidence": {
+    "files": 53,
+    "mismatches": []
+  },
+  "source_preservation": {
+    "checked": 202,
+    "changed": [
+      "implementation/evidence/.DS_Store"
+    ],
+    "metadata_changes": [
+      "implementation/evidence/.DS_Store"
+    ],
+    "functional_changes": []
+  },
+  "security": {
+    "text_files_scanned": 101,
+    "pattern_hits": [],
+    "credential_bindings": 0,
+    "images_visually_reviewed": 2,
+    "local_path_metadata_in_historical_logs": [
+      "evidence/v2_1/LOCAL_VALIDATION_FINAL.tap",
+      "evidence/v2_1_currency/LOCAL_VALIDATION_FINAL.tap",
+      "evidence/v2_1_currency/LOCAL_VALIDATION.tap"
+    ],
+    "limitations": "Pattern scans are not a guarantee. Original TAP logs retain filesystem usernames; no login credentials were seen. Git history and remote access permissions not checked."
+  },
+  "product_answer_words": [
+    63,
+    92,
+    62,
+    69,
+    60
+  ],
+  "broken_main_document_links": []
+}

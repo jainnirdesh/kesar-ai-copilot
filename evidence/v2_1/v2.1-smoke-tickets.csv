@@ -1,0 +1,2 @@
+ticket_id,created_at,updated_at,order_id,customer_email,email_ids,intent,priority,status,summary,notes
+TKT-KC-1047-1,2026-11-24T14:56:36.182Z,2026-11-24T14:56:36.182Z,KC-1047,kavya.reddy@example.com,E03,return_refund,Normal,Open,"Customer wants to return a sealed, unopened Rose Water Toner from order KC-1047 and get a refund.","2026-11-24T14:56:36.182Z E03: Customer wants to return a sealed, unopened Rose Water Toner from order KC-1047 and get a refund. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"

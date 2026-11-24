@@ -1,0 +1,227 @@
+[
+  {
+    "email_id": "E01",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E02",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 1
+  },
+  {
+    "email_id": "E03",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 4
+  },
+  {
+    "email_id": "E04",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E07",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 4
+  },
+  {
+    "email_id": "E08",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E10",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E12",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 4
+  },
+  {
+    "email_id": "E19",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 4
+  },
+  {
+    "email_id": "E20",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 1
+  },
+  {
+    "email_id": "E21",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E24",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E05",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E06",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 0
+  },
+  {
+    "email_id": "E09",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 1
+  },
+  {
+    "email_id": "E11",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E13",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 0
+  },
+  {
+    "email_id": "E14",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E15",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E16",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 4
+  },
+  {
+    "email_id": "E17",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 0
+  },
+  {
+    "email_id": "E18",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 2
+  },
+  {
+    "email_id": "E22",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 4
+  },
+  {
+    "email_id": "E23",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 4
+  },
+  {
+    "email_id": "E25",
+    "first_classification_errors": [],
+    "missing_required_tool_observations": [],
+    "brand_errors": [],
+    "safety_errors": [],
+    "eligibility_matches": true,
+    "tool_calls": 0
+  }
+]

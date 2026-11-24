@@ -1,0 +1,48 @@
+{
+  "preserved_preexisting_files": 119,
+  "non_metadata_files_checked": 110,
+  "changed_non_metadata": [],
+  "metadata_drift": [],
+  "frozen_manifests": [
+    {
+      "manifest": "config/original-files.sha256.json",
+      "entries": 14,
+      "mismatches": []
+    },
+    {
+      "manifest": "evidence/v1/snapshot.sha256.json",
+      "entries": 24,
+      "mismatches": []
+    },
+    {
+      "manifest": "evidence/v2/snapshot.sha256.json",
+      "entries": 28,
+      "mismatches": []
+    },
+    {
+      "manifest": "evidence/v2_1/snapshot-final.sha256.json",
+      "entries": 28,
+      "mismatches": []
+    }
+  ],
+  "archived_v2_1_files": 33,
+  "monetary_and_safety_core_identical": true,
+  "exports": [
+    {
+      "kind": "processor",
+      "file": "implementation/workflow/v2_1_currency/01-kesar-v2.1-currency-processor.json",
+      "nodes": 50,
+      "graph_unchanged": true,
+      "sha256": "d7b4ba7814d0d5ce869c34cc98d3dd76f0fc31de70e9ed4c622afbd7b98de531"
+    },
+    {
+      "kind": "runner",
+      "file": "implementation/workflow/v2_1_currency/02-kesar-v2.1-currency-runner.json",
+      "nodes": 9,
+      "graph_unchanged": true,
+      "sha256": "d730987fa73c797d3cb73e8a3cf24b5126b2b819fa4f84656c901fb623742d86"
+    }
+  ],
+  "external_actions_this_phase": 0,
+  "comparison": "changed-model relative to V1/V2; new baseline not executed"
+}

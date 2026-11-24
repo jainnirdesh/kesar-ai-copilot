@@ -1,0 +1,27 @@
+{
+  "scope": "Submission copies only; original implementation evidence unchanged.",
+  "replacement": "Personal workspace prefixes replaced with [LOCAL_WORKSPACE]; remaining home prefixes replaced with [LOCAL_HOME]. No test outcomes, assertions, CSV records or evaluation metrics changed.",
+  "files": [
+    {
+      "public_copy": "evidence/v2_1/LOCAL_VALIDATION_FINAL.tap",
+      "original_copy_sha256": "5cbc4d4012842c22e7750c30a3b2592750e48c9441c39e061c3a7ac6aa046a6f",
+      "sanitized_sha256": "0c9d877bf219b08c4b1b420574a58125ccbaaf1780ec98e4450d0e60650bbf41",
+      "original_source": "implementation/evidence/v2_1/LOCAL_VALIDATION_FINAL.tap",
+      "source_unchanged": true
+    },
+    {
+      "public_copy": "evidence/v2_1_currency/LOCAL_VALIDATION_FINAL.tap",
+      "original_copy_sha256": "12710b81720f97d8383b51a66e78c1514ded48d77e61281f32db3aa262fe80fc",
+      "sanitized_sha256": "41d01584100e8afc13b4a37673ec289b6774f1b854474009b8bb0f77bf1c7edc",
+      "original_source": "implementation/evidence/v2_1_currency/LOCAL_VALIDATION_FINAL.tap",
+      "source_unchanged": true
+    },
+    {
+      "public_copy": "evidence/v2_1_currency/LOCAL_VALIDATION.tap",
+      "original_copy_sha256": "8251d13660eb0354aa51a19b563a9c82e67bc01b157479ad221ec5c4a786f673",
+      "sanitized_sha256": "673358cfcb4861dbcd811f7b5f670e5ceb0ae1168b2a40398c6e4bd6ec92ea2e",
+      "original_source": "implementation/evidence/v2_1_currency/LOCAL_VALIDATION.tap",
+      "source_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "provenance": "Derived from pre-existing saved execution JSON only; no new external evaluation. Runtime model/IDs/timings are observed; exact deployed manual guard changes are user-reported because configured Cloud exports are absent.",
+  "runs": [
+    {
+      "file": "v2.1-smoke-E03-gemini-3.5-flash-lite.json",
+      "sha256": "32355af6bff86742f1fc2f29376b9b197f70ac7fe61abd18384862f426c22818",
+      "runner_id": "40",
+      "processor_id": "41",
+      "model": "models/gemini-3.5-flash-lite",
+      "status": "persisted",
+      "intent": "return_refund",
+      "confidence": 1,
+      "classification_valid_first_try": true,
+      "recorded_classification_attempts": 1,
+      "reported_503_outputs": 0,
+      "hidden_http_retry_count": null,
+      "draft_attempts": 2,
+      "tools_in_draft_trace": [
+        "get_order",
+        "search_faq",
+        "get_order",
+        "search_faq"
+      ],
+      "draft_validation_history": [
+        [
+          "exact_shipping_fee_missing"
+        ],
+        [
+          "exact_shipping_fee_missing"
+        ]
+      ],
+      "fallback_kind": "return_policy",
+      "ticket_id": "TKT-KC-1047-1",
+      "processing_latency_ms": 129345,
+      "stage_timings": {
+        "classification_ms": [
+          43083
+        ],
+        "draft_ms": [
+          2797,
+          80120
+        ],
+        "ticket_read_ms": 903,
+        "ticket_write_ms": 834,
+        "audit_write_ms": 824
+      },
+      "provider_errors_reported_in_classification_or_drafting": 0
+    },
+    {
+      "file": "v2.1-smoke-E03-model-override-attempt-3.json",
+      "sha256": "f2da0597c63710575565836af3fa7a869b0c2f6d91c880efd37014baa76a1392",
+      "runner_id": "38",
+      "processor_id": "39",
+      "model": "models/gemini-3.1-flash-lite",
+      "status": "persisted",
+      "intent": "other",
+      "confidence": 0,
+      "classification_valid_first_try": false,
+      "recorded_classification_attempts": 2,
+      "reported_503_outputs": 2,
+      "hidden_http_retry_count": null,
+      "draft_attempts": 0,
+      "tools_in_draft_trace": [],
+      "draft_validation_history": [],
+      "fallback_kind": "log_only",
+      "ticket_id": "",
+      "processing_latency_ms": 81067,
+      "stage_timings": {
+        "classification_ms": [
+          47419,
+          31138
+        ],
+        "draft_ms": [],
+        "ticket_read_ms": 1032,
+        "ticket_write_ms": null,
+        "audit_write_ms": 338
+      },
+      "provider_errors_reported_in_classification_or_drafting": 2
+    },
+    {
+      "file": "v2.1-smoke-E03-provider-503-attempt-2.json",
+      "sha256": "9314e21629899cdb3fed75b76ff47375e85d9b002abb595d10e0528e99f4a1de",
+      "runner_id": "36",
+      "processor_id": "37",
+      "model": "models/gemini-3.1-flash-lite",
+      "status": "persisted",
+      "intent": "other",
+      "confidence": 0,
+      "classification_valid_first_try": false,
+      "recorded_classification_attempts": 2,
+      "reported_503_outputs": 2,
+      "hidden_http_retry_count": null,
+      "draft_attempts": 0,
+      "tools_in_draft_trace": [],
+      "draft_validation_history": [],
+      "fallback_kind": "log_only",
+      "ticket_id": "",
+      "processing_latency_ms": 56354,
+      "stage_timings": {
+        "classification_ms": [
+          20962,
+          33304
+        ],
+        "draft_ms": [],
+        "ticket_read_ms": 579,
+        "ticket_write_ms": null,
+        "audit_write_ms": 853
+      },
+      "provider_errors_reported_in_classification_or_drafting": 2
+    },
+    {
+      "file": "v2.1-smoke-E03-provider-503.json",
+      "sha256": "d398fbcbe106b34100192cb53341e9ce07e243472714f2b86515eaea47c812cd",
+      "runner_id": "34",
+      "processor_id": "35",
+      "model": "models/gemini-3.1-flash-lite",
+      "status": "persisted",
+      "intent": "other",
+      "confidence": 0,
+      "classification_valid_first_try": false,
+      "recorded_classification_attempts": 2,
+      "reported_503_outputs": 2,
+      "hidden_http_retry_count": null,
+      "draft_attempts": 0,
+      "tools_in_draft_trace": [],
+      "draft_validation_history": [],
+      "fallback_kind": "log_only",
+      "ticket_id": "",
+      "processing_latency_ms": 40926,
+      "stage_timings": {
+        "classification_ms": [
+          19748,
+          19356
+        ],
+        "draft_ms": [],
+        "ticket_read_ms": 298,
+        "ticket_write_ms": null,
+        "audit_write_ms": 338
+      },
+      "provider_errors_reported_in_classification_or_drafting": 2
+    }
+  ],
+  "comparison": "models/gemini-3.5-flash-lite differs from the confirmed V1/V2 reference models/gemini-3.1-flash-lite; not a controlled same-model comparison.",
+  "limits": [
+    "No independent smoke Sheet CSV/screenshot in this folder. Persistence is evidenced by returned records, not a fresh Sheet read.",
+    "Actual n8n version remains a placeholder in saved results.",
+    "503 messages identify reported high-demand service unavailability; hidden transport retry counts remain unknown.",
+    "Successful fallback is not a successful agent repair. No revised currency/config prompt has been evaluated externally."
+  ]
+}

@@ -1,0 +1,197 @@
+[
+  {
+    "version": "v2.1",
+    "run_mode": "smoke",
+    "run_id": "v2.1-smoke",
+    "runner_execution_id": "34",
+    "results": [
+      {
+        "email_id": "E03",
+        "status": "persisted",
+        "workflow_version": "v2.1",
+        "processing_latency_ms": 40926,
+        "audit": {
+          "email_id": "E03",
+          "received_at": "2026-11-20T09:28:00+05:30",
+          "from_email": "kavya.reddy@example.com",
+          "intent": "other",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 0,
+          "order_found": false,
+          "action_taken": "log_only",
+          "needs_human": true,
+          "ticket_id": "",
+          "reply_draft": "",
+          "prompt_version": "v2.1",
+          "processed_at": "2026-11-24T14:33:04.488Z",
+          "error": "intent; secondary_intent; order_id; sentiment; language; confidence; summary",
+          "notes": "{\"run_id\":\"v2.1-smoke\",\"extracted_order_id\":null,\"reasons\":[\"low_classification_confidence\",\"classification_fallback\"],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[],\"first_try_valid\":false,\"classification_repaired\":false,\"v2\":{\"fallback_kind\":\"log_only\",\"generic_fallback\":false,\"tool_compliance\":true,\"brand_compliant\":true},\"latency_ms\":40553,\"observability\":{\"version\":\"v2.1\",\"model\":\"models/gemini-3.1-flash-lite\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"RECORD_PRIVATELY_AFTER_IMPORT\",\"execution_id\":\"35\",\"workflow_id\":\"K6FHRm1Pr0UrXOgK\",\"runner\":{\"execution_id\":\"34\",\"workflow_id\":\"CEUsJ0dEb2lNrmr1\",\"scope\":\"smoke\",\"freshness_verified\":false},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795530743966,\"finished_at_ms\":1795530744820,\"duration_ms\":854},\"classification\":{\"attempts\":[{\"raw\":{\"error\":\"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\"},\"validation_errors\":[\"intent\",\"secondary_intent\",\"order_id\",\"sentiment\",\"language\",\"confidence\",\"summary\"],\"timing\":{\"started_at_ms\":1795530744856,\"finished_at_ms\":1795530764604,\"duration_ms\":19748},\"provider_error\":{\"message\":\"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"code\":null,\"status\":null,\"retry_count\":null},\"provider_retry_count\":null},{\"raw\":{\"error\":\"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\"},\"validation_errors\":[\"intent\",\"secondary_intent\",\"order_id\",\"sentiment\",\"language\",\"confidence\",\"summary\"],\"timing\":{\"started_at_ms\":1795530764637,\"finished_at_ms\":1795530783993,\"duration_ms\":19356},\"provider_error\":{\"message\":\"[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"code\":null,\"status\":null,\"retry_count\":null},\"provider_retry_count\":null}],\"repair_used\":true},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[],\"ticket_read\":{\"started_at_ms\":1795530784158,\"finished_at_ms\":1795530784456,\"duration_ms\":298},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+              },
+              "validation_errors": [
+                "intent",
+                "secondary_intent",
+                "order_id",
+                "sentiment",
+                "language",
+                "confidence",
+                "summary"
+              ],
+              "timing": {
+                "started_at_ms": 1795530744856,
+                "finished_at_ms": 1795530764604,
+                "duration_ms": 19748
+              },
+              "provider_error": {
+                "message": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+                "code": null,
+                "status": null,
+                "retry_count": null
+              },
+              "provider_retry_count": null
+            },
+            {
+              "raw": {
+                "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+              },
+              "validation_errors": [
+                "intent",
+                "secondary_intent",
+                "order_id",
+                "sentiment",
+                "language",
+                "confidence",
+                "summary"
+              ],
+              "timing": {
+                "started_at_ms": 1795530764637,
+                "finished_at_ms": 1795530783993,
+                "duration_ms": 19356
+              },
+              "provider_error": {
+                "message": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+                "code": null,
+                "status": null,
+                "retry_count": null
+              },
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": true
+        },
+        "draft_evidence": [],
+        "observability": {
+          "version": "v2.1",
+          "model": "models/gemini-3.1-flash-lite",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "RECORD_PRIVATELY_AFTER_IMPORT",
+          "execution_id": "35",
+          "workflow_id": "K6FHRm1Pr0UrXOgK",
+          "runner": {
+            "execution_id": "34",
+            "workflow_id": "CEUsJ0dEb2lNrmr1",
+            "scope": "smoke",
+            "freshness_verified": false
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795530743966,
+            "finished_at_ms": 1795530744820,
+            "duration_ms": 854
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+                },
+                "validation_errors": [
+                  "intent",
+                  "secondary_intent",
+                  "order_id",
+                  "sentiment",
+                  "language",
+                  "confidence",
+                  "summary"
+                ],
+                "timing": {
+                  "started_at_ms": 1795530744856,
+                  "finished_at_ms": 1795530764604,
+                  "duration_ms": 19748
+                },
+                "provider_error": {
+                  "message": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+                  "code": null,
+                  "status": null,
+                  "retry_count": null
+                },
+                "provider_retry_count": null
+              },
+              {
+                "raw": {
+                  "error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
+                },
+                "validation_errors": [
+                  "intent",
+                  "secondary_intent",
+                  "order_id",
+                  "sentiment",
+                  "language",
+                  "confidence",
+                  "summary"
+                ],
+                "timing": {
+                  "started_at_ms": 1795530764637,
+                  "finished_at_ms": 1795530783993,
+                  "duration_ms": 19356
+                },
+                "provider_error": {
+                  "message": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+                  "code": null,
+                  "status": null,
+                  "retry_count": null
+                },
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": true
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [],
+          "ticket_read": {
+            "started_at_ms": 1795530784158,
+            "finished_at_ms": 1795530784456,
+            "duration_ms": 298
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795530784523,
+            "finished_at_ms": 1795530784861,
+            "duration_ms": 338
+          },
+          "end_to_end": {
+            "started_at_ms": 1795530743935,
+            "finished_at_ms": 1795530784861,
+            "duration_ms": 40926
+          },
+          "tool_timings": []
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "phase_start_files": 84,
+  "non_metadata_files": 77,
+  "non_metadata_changes": [],
+  "phase_start_metadata_drift": [
+    {
+      "path": "implementation/evidence/v1/.DS_Store",
+      "expected": "df675ed27e464d9f5db05c891ba302bb56bd4584c427a1af4a86b134617f1479",
+      "actual": "92a60c6af6f9240bc05636f758b9e6ac6f86cf6156ca510f46db418280f48029",
+      "finder_metadata": true
+    }
+  ],
+  "frozen_snapshots": [
+    {
+      "manifest": "config/original-files.sha256.json",
+      "entries": 14,
+      "mismatches": []
+    },
+    {
+      "manifest": "evidence/v1/snapshot.sha256.json",
+      "entries": 24,
+      "mismatches": []
+    },
+    {
+      "manifest": "evidence/v2/snapshot.sha256.json",
+      "entries": 28,
+      "mismatches": []
+    }
+  ],
+  "exports": [
+    {
+      "path": "implementation/workflow/v2_1/01-kesar-v2.1-processor.json",
+      "sha256": "5fa4b231d50c847b3c98b09be2b35ff69cd16f1f9d1022f82c75eefd4c2c07f7",
+      "nodes": 50,
+      "active": false,
+      "errors": []
+    },
+    {
+      "path": "implementation/workflow/v2_1/02-kesar-v2.1-runner.json",
+      "sha256": "7e49c222f52cf9a968a0156119cf6471fff2cd0fdb347f25dcbb910d24ae9569",
+      "nodes": 9,
+      "active": false,
+      "errors": []
+    }
+  ]
+}

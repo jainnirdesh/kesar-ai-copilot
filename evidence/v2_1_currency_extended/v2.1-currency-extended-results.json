@@ -1,0 +1,3228 @@
+[
+  {
+    "version": "v2.1-currency-1",
+    "run_mode": "extended",
+    "run_id": "v2.1-currency-extended",
+    "runner_execution_id": "57",
+    "model": "models/gemini-3.5-flash-lite",
+    "baseline_model": "models/gemini-3.5-flash-lite",
+    "v1_model_confirmed": false,
+    "controlled_same_model_comparison": false,
+    "results": [
+      {
+        "email_id": "E05",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 59277,
+        "audit": {
+          "email_id": "E05",
+          "received_at": "2026-11-20T10:03:00+05:30",
+          "from_email": "priya.sharma@example.com",
+          "intent": "order_status",
+          "secondary_intent": "",
+          "order_id": "KC-1043",
+          "language": "hinglish",
+          "sentiment": "neutral",
+          "confidence": 0.98,
+          "order_found": true,
+          "action_taken": "draft_reply",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "Hi Priya,\n\naapka order KC-1043 courier partner SwiftShip ke through shipped hai aur iska tracking link https://track.example.com/SS7781043 hai. Iski estimated delivery date 2026-11-23 hai, jo ki ek estimate hai aur guarantee nahi. Aapke travel plans ke liye, delivery timelines metro cities mein 2–4 business days aur rest of India mein 4–6 business days hain dispatch ke baad.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:21:08.974Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":\"KC-1043\",\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[1],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":58926,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"58\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537210084,\"finished_at_ms\":1795537210396,\"duration_ms\":312},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"order_status\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": \\\"KC-1043\\\", \\\"sentiment\\\": \\\"neutral\\\", \\\"language\\\": \\\"hinglish\\\", \\\"confidence\\\": 0.98, \\\"summary\\\": \\\"Customer inquiring about delivery status for order KC-1043 before traveling on Monday.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537210423,\"finished_at_ms\":1795537212101,\"duration_ms\":1678},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795537212364,\"finished_at_ms\":1795537268422,\"duration_ms\":56058},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795537268613,\"finished_at_ms\":1795537268946,\"duration_ms\":333},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"order_status\", \"secondary_intent\": null, \"order_id\": \"KC-1043\", \"sentiment\": \"neutral\", \"language\": \"hinglish\", \"confidence\": 0.98, \"summary\": \"Customer inquiring about delivery status for order KC-1043 before traveling on Monday.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537210423,
+                "finished_at_ms": 1795537212101,
+                "duration_ms": 1678
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\": \"Hi Priya, aapka order KC-1043 courier partner SwiftShip ke through shipped hai aur iska tracking link https://track.example.com/SS7781043 hai. Iski estimated delivery date 2026-11-23 hai, jo ki ek estimate hai aur guarantee nahi. Aapke travel plans ke liye, delivery timelines metro cities mein 2–4 business days aur rest of India mein 4–6 business days hain dispatch ke baad.\", \"faq_sections\": [1], \"unsupported_question\": false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1043"
+                  },
+                  "toolCallId": "call_9545305305889487849",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1043\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1043\"},\"id\":\"call_9545305305889487849\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"shipping delivery time tracking\"},\"id\":\"call_9545305305889485818\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1043"
+                              },
+                              "id": "call_9545305305889487849"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "shipping delivery time tracking"
+                              },
+                              "id": "call_9545305305889485818"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_9545305305889487849",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1043"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_9545305305889485818",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "shipping delivery time tracking"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2146,
+                          "output_tokens": 40,
+                          "total_tokens": 2186
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2146,
+                            "completionTokens": 40,
+                            "totalTokens": 2186
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e5b-93d9-753a-bcdb-cb09ee7365f6"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1043\",\"order_date\":\"2026-11-16\",\"items\":[{\"sku\":\"KC-ALO-150\",\"name\":\"Aloe Calm Gel 150 g\",\"qty\":1,\"unit_price\":499}],\"subtotal\":499,\"shipping_fee\":79,\"cod_fee\":0,\"total\":578,\"payment_method\":\"prepaid\",\"status\":\"shipped\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781043\",\"shipped_date\":\"2026-11-18\",\"estimated_delivery\":\"2026-11-23\",\"delivered_date\":null,\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null},\"_tool_timing\":{\"started_at_ms\":1795537266460,\"finished_at_ms\":1795537266461,\"duration_ms\":1,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "shipping delivery time tracking"
+                  },
+                  "toolCallId": "call_9545305305889485818",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"shipping delivery time tracking\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1043\"},\"id\":\"call_9545305305889487849\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"shipping delivery time tracking\"},\"id\":\"call_9545305305889485818\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537266469,\"finished_at_ms\":1795537266469,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537212364,
+              "finished_at_ms": 1795537268422,
+              "duration_ms": 56058
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "58",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537210084,
+            "finished_at_ms": 1795537210396,
+            "duration_ms": 312
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"order_status\", \"secondary_intent\": null, \"order_id\": \"KC-1043\", \"sentiment\": \"neutral\", \"language\": \"hinglish\", \"confidence\": 0.98, \"summary\": \"Customer inquiring about delivery status for order KC-1043 before traveling on Monday.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537210423,
+                  "finished_at_ms": 1795537212101,
+                  "duration_ms": 1678
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795537212364,
+                "finished_at_ms": 1795537268422,
+                "duration_ms": 56058
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795537268613,
+            "finished_at_ms": 1795537268946,
+            "duration_ms": 333
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795537269005,
+            "finished_at_ms": 1795537269325,
+            "duration_ms": 320
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537210048,
+            "finished_at_ms": 1795537269325,
+            "duration_ms": 59277
+          },
+          "tool_timings": [
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_9545305305889487849",
+              "timing": {
+                "started_at_ms": 1795537266460,
+                "finished_at_ms": 1795537266461,
+                "duration_ms": 1,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_9545305305889485818",
+              "timing": {
+                "started_at_ms": 1795537266469,
+                "finished_at_ms": 1795537266469,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E06",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 11044,
+        "audit": {
+          "email_id": "E06",
+          "received_at": "2026-11-20T10:17:00+05:30",
+          "from_email": "promo@seo-rankers-pro.example",
+          "intent": "other",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "log_only",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:21:36.757Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":null,\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[],\"first_try_valid\":true,\"v2\":{\"fallback_kind\":\"log_only\",\"generic_fallback\":false,\"tool_compliance\":true,\"brand_compliant\":true},\"latency_ms\":10639,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"59\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537286164,\"finished_at_ms\":1795537286503,\"duration_ms\":339},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"other\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": null, \\\"sentiment\\\": \\\"neutral\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 1.0, \\\"summary\\\": \\\"Unsolicited SEO promotion offering guaranteed Google ranking for a fee.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537286541,\"finished_at_ms\":1795537296181,\"duration_ms\":9640},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[],\"ticket_read\":{\"started_at_ms\":1795537296335,\"finished_at_ms\":1795537296684,\"duration_ms\":349},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"other\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Unsolicited SEO promotion offering guaranteed Google ranking for a fee.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537286541,
+                "finished_at_ms": 1795537296181,
+                "duration_ms": 9640
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "59",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537286164,
+            "finished_at_ms": 1795537286503,
+            "duration_ms": 339
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"other\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Unsolicited SEO promotion offering guaranteed Google ranking for a fee.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537286541,
+                  "finished_at_ms": 1795537296181,
+                  "duration_ms": 9640
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [],
+          "ticket_read": {
+            "started_at_ms": 1795537296335,
+            "finished_at_ms": 1795537296684,
+            "duration_ms": 349
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795537296806,
+            "finished_at_ms": 1795537297162,
+            "duration_ms": 356
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537286118,
+            "finished_at_ms": 1795537297162,
+            "duration_ms": 11044
+          },
+          "tool_timings": []
+        }
+      },
+      {
+        "email_id": "E09",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 30030,
+        "audit": {
+          "email_id": "E09",
+          "received_at": "2026-11-20T11:10:00+05:30",
+          "from_email": "bhaskar.das@example.com",
+          "intent": "product_query",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "hi",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "draft_reply",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "Hi Bhaskar,\n\nगुवाहाटी (नॉर्थ-ईस्ट राज्यों) के लिए डिलीवरी में डिस्पैच के बाद लगभग 6 से 8 बिजनेस दिन लगेंगे, जबकि ऑर्डर्स आम तौर पर 1 से 2 बिजनेस दिनों में डिस्पैच किए जाते हैं। ₹5,000 तक के ऑर्डर्स के लिए कैश ऑन डिलीवरी (COD) उपलब्ध है, जिस पर ₹49 का COD हैंडलिंग शुल्क लगता है। किसी और सहायता के लिए हमें बताएं।\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:22:23.630Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":null,\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[1,2,7],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":29620,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"60\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537314057,\"finished_at_ms\":1795537314385,\"duration_ms\":328},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"product_query\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": null, \\\"sentiment\\\": \\\"neutral\\\", \\\"language\\\": \\\"hi\\\", \\\"confidence\\\": 1.0, \\\"summary\\\": \\\"Customer inquiring about delivery timeline for Bridal Glow Kit to Guwahati and availability of COD.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537314417,\"finished_at_ms\":1795537335567,\"duration_ms\":21150},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795537335779,\"finished_at_ms\":1795537343064,\"duration_ms\":7285},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795537343201,\"finished_at_ms\":1795537343600,\"duration_ms\":399},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"product_query\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"neutral\", \"language\": \"hi\", \"confidence\": 1.0, \"summary\": \"Customer inquiring about delivery timeline for Bridal Glow Kit to Guwahati and availability of COD.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537314417,
+                "finished_at_ms": 1795537335567,
+                "duration_ms": 21150
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"नमस्ते भास्कर दास,\\n\\nगुवाहाटी (नॉर्थ-ईस्ट राज्यों) के लिए डिलीवरी में डिस्पैच के बाद लगभग 6 से 8 बिजनेस दिन लगेंगे, जबकि ऑर्डर्स आम तौर पर 1 से 2 बिजनेस दिनों में डिस्पैच किए जाते हैं। ₹5,000 तक के ऑर्डर्स के लिए कैश ऑन डिलीवरी (COD) उपलब्ध है, जिस पर ₹49 का COD हैंडलिंग शुल्क लगता है।\\n\\nWarm regards,\\nTeam Kesar\", \"faq_sections\":[1,2],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "delivery timeline and COD availability Guwahati Bridal Glow Kit"
+                  },
+                  "toolCallId": "call_9670817009307073668",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"delivery timeline and COD availability Guwahati Bridal Glow Kit\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"delivery timeline and COD availability Guwahati Bridal Glow Kit\"},\"id\":\"call_9670817009307073668\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "delivery timeline and COD availability Guwahati Bridal Glow Kit"
+                              },
+                              "id": "call_9670817009307073668"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_9670817009307073668",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "delivery timeline and COD availability Guwahati Bridal Glow Kit"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2035,
+                          "output_tokens": 24,
+                          "total_tokens": 2059
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2035,
+                            "completionTokens": 24,
+                            "totalTokens": 2059
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e5d-75f5-72db-860c-9d314350425e"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"},{\"id\":2,\"text\":\"## 2. Cash on Delivery (COD)\\n\\n- COD is available on orders up to **₹5,000**.\\n- A **₹49** COD handling fee applies. It is not refundable.\\n- Please keep exact change ready; delivery partners may not carry change.\\n\"},{\"id\":7,\"text\":\"## 7. Products\\n\\nAll products are **cruelty-free**, **paraben-free**, made in India, and have a shelf life of **24 months** from manufacture (12 months after opening).\\n\\n| Product | Price | Key facts |\\n|---|---|---|\\n| Saffron Glow Face Serum 30 ml | ₹1,299 | Saffron + Vitamin C. Lightweight, non-greasy, suitable for **all skin types including oily**. **Vegan.** Use AM/PM after cleansing. |\\n| Kumkumadi Night Oil 15 ml | ₹1,149 | Traditional kumkumadi tailam blend. Best for **normal to dry** skin. **Not recommended for very oily or acne-prone skin.** Night use only. Vegan. |\\n| Ubtan Face Pack 100 g | ₹699 | Turmeric, chickpea flour, sandalwood. Mix with water or rose water. Use 2× a week. Vegan. |\\n| Rose Water Toner 200 ml | ₹899 | Steam-distilled rose water, alcohol-free. Suitable for all skin types. Vegan. |\\n| Bhringraj Hair Oil 200 ml | ₹649 | Bhringraj, amla, coconut oil base. Apply 1 hour before washing. Vegan. |\\n| Sandalwood Body Lotion 250 ml | ₹749 | Sandalwood + shea butter. Contains **beeswax**, so **not vegan**. |\\n| Aloe Calm Gel 150 g | ₹499 | 92% aloe vera. Soothing, suitable for all skin types. Vegan. |\\n| Bridal Glow Kit | ₹3,499 | Contains Saffron Glow Serum, Kumkumadi Night Oil, Ubtan Face Pack and Rose Water Toner. Start 4–6 weeks before the event. |\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537336652,\"finished_at_ms\":1795537336652,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537335779,
+              "finished_at_ms": 1795537343064,
+              "duration_ms": 7285
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "60",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537314057,
+            "finished_at_ms": 1795537314385,
+            "duration_ms": 328
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"product_query\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"neutral\", \"language\": \"hi\", \"confidence\": 1.0, \"summary\": \"Customer inquiring about delivery timeline for Bridal Glow Kit to Guwahati and availability of COD.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537314417,
+                  "finished_at_ms": 1795537335567,
+                  "duration_ms": 21150
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795537335779,
+                "finished_at_ms": 1795537343064,
+                "duration_ms": 7285
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795537343201,
+            "finished_at_ms": 1795537343600,
+            "duration_ms": 399
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795537343657,
+            "finished_at_ms": 1795537344040,
+            "duration_ms": 383
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537314010,
+            "finished_at_ms": 1795537344040,
+            "duration_ms": 30030
+          },
+          "tool_timings": [
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_9670817009307073668",
+              "timing": {
+                "started_at_ms": 1795537336652,
+                "finished_at_ms": 1795537336652,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E11",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 28386,
+        "audit": {
+          "email_id": "E11",
+          "received_at": "2026-11-20T11:48:00+05:30",
+          "from_email": "sneha.joshi@example.com",
+          "intent": "return_refund",
+          "secondary_intent": "",
+          "order_id": "KC-1048",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1048-2",
+          "reply_draft": "Hi Sneha,\n\nwe can help with your return request for order KC-1048 delivered on 2026-11-15 via BharatExpress, with tracking available at https://track.example.com/BX5521048. You reported that the Bridal Glow Kit is unopened with seals intact, and returns are accepted within 7 days of delivery as a complete set. We arrange a free reverse pickup within 2–3 business days, subject to coordination and quality check. Prepaid orders are refunded to the original payment method within 5–7 business days after the returned item passes the quality check, with non-refundable shipping fees of INR 0. A human team member will follow up within 24 business hours to complete the verification and coordinate your pickup.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:23:08.973Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":\"KC-1048\",\"reasons\":[\"human_must_review_ticket_no_operational_action\"],\"eligibility\":{\"state\":\"eligible_pending_pickup_and_qc\",\"days_since_delivery\":5,\"used_claim\":false,\"unopened_claim\":true,\"complete_set_required\":true,\"reason\":\"Customer claims are not quality verification.\",\"payment_method\":\"prepaid\",\"merchandise_value\":3499,\"nonrefundable_fees\":0,\"refund_method\":\"Original payment method.\",\"refund_timing\":\"5–7 business days after returned item passes quality check.\",\"pickup_executed\":false,\"refund_approved\":false},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[4,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":28077,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"61\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537360944,\"finished_at_ms\":1795537361323,\"duration_ms\":379},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"return_refund\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": \\\"KC-1048\\\", \\\"sentiment\\\": \\\"neutral\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 1.0, \\\"summary\\\": \\\"Customer wants to return an unopened Bridal Glow Kit from order KC-1048 for a refund due to a postponed wedding.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537361353,\"finished_at_ms\":1795537362334,\"duration_ms\":981},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795537362480,\"finished_at_ms\":1795537387939,\"duration_ms\":25459},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795537388081,\"finished_at_ms\":1795537388624,\"duration_ms\":543},\"ticket_write\":{\"started_at_ms\":1795537388657,\"finished_at_ms\":1795537388940,\"duration_ms\":283}}}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1048-2",
+          "created_at": "2026-11-24T16:23:08.623Z",
+          "updated_at": "2026-11-24T16:23:08.623Z",
+          "order_id": "KC-1048",
+          "customer_email": "sneha.joshi@example.com",
+          "email_ids": "E11",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return an unopened Bridal Glow Kit from order KC-1048 for a refund due to a postponed wedding.",
+          "notes": "2026-11-24T16:23:08.623Z E11: Customer wants to return an unopened Bridal Glow Kit from order KC-1048 for a refund due to a postponed wedding. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"return_refund\", \"secondary_intent\": null, \"order_id\": \"KC-1048\", \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer wants to return an unopened Bridal Glow Kit from order KC-1048 for a refund due to a postponed wedding.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537361353,
+                "finished_at_ms": 1795537362334,
+                "duration_ms": 981
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"Hi Sneha, we can help with your return request for order KC-1048 delivered on 2026-11-15 via BharatExpress, with tracking available at https://track.example.com/BX5521048. You reported that the Bridal Glow Kit is unopened with seals intact, and returns are accepted within 7 days of delivery as a complete set. We arrange a free reverse pickup within 2–3 business days, subject to coordination and quality check. Prepaid orders are refunded to the original payment method within 5–7 business days after the returned item passes the quality check, with non-refundable shipping fees of INR 0. A human team member will follow up within 24 business hours to complete the verification and coordinate your pickup.\", \"faq_sections\":[4,6], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1048"
+                  },
+                  "toolCallId": "call_13191550062663711431",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1048\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1048\"},\"id\":\"call_13191550062663711431\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return refund policy\"},\"id\":\"call_13191550062663709346\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1048"
+                              },
+                              "id": "call_13191550062663711431"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "return refund policy"
+                              },
+                              "id": "call_13191550062663709346"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_13191550062663711431",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1048"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_13191550062663709346",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "return refund policy"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2287,
+                          "output_tokens": 40,
+                          "total_tokens": 2327
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2287,
+                            "completionTokens": 40,
+                            "totalTokens": 2327
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e5d-de3a-72df-a010-8c60261c0e7b"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1048\",\"order_date\":\"2026-11-11\",\"items\":[{\"sku\":\"KC-KIT-BRD\",\"name\":\"Bridal Glow Kit\",\"qty\":1,\"unit_price\":3499}],\"subtotal\":3499,\"shipping_fee\":0,\"cod_fee\":0,\"total\":3499,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521048\",\"shipped_date\":\"2026-11-12\",\"estimated_delivery\":\"2026-11-15\",\"delivered_date\":\"2026-11-15\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null},\"_tool_timing\":{\"started_at_ms\":1795537364054,\"finished_at_ms\":1795537364054,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "return refund policy"
+                  },
+                  "toolCallId": "call_13191550062663709346",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"return refund policy\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1048\"},\"id\":\"call_13191550062663711431\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return refund policy\"},\"id\":\"call_13191550062663709346\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":4,\"text\":\"## 4. Returns\\n\\n- Returns are accepted within **7 days of delivery**.\\n- Returned items must be **unused, unopened and with the seal intact**. For hygiene reasons, we cannot accept opened or used products, including \\\"didn't suit me\\\" or \\\"didn't see results\\\" cases.\\n- To start a return, the customer replies with the order ID. We arrange a free reverse pickup within 2–3 business days.\\n- Combo or kit products (e.g., Bridal Glow Kit) must be returned as a complete set.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537364069,\"finished_at_ms\":1795537364069,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537362480,
+              "finished_at_ms": 1795537387939,
+              "duration_ms": 25459
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "61",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537360944,
+            "finished_at_ms": 1795537361323,
+            "duration_ms": 379
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"return_refund\", \"secondary_intent\": null, \"order_id\": \"KC-1048\", \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer wants to return an unopened Bridal Glow Kit from order KC-1048 for a refund due to a postponed wedding.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537361353,
+                  "finished_at_ms": 1795537362334,
+                  "duration_ms": 981
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795537362480,
+                "finished_at_ms": 1795537387939,
+                "duration_ms": 25459
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795537388081,
+            "finished_at_ms": 1795537388624,
+            "duration_ms": 543
+          },
+          "ticket_write": {
+            "started_at_ms": 1795537388657,
+            "finished_at_ms": 1795537388940,
+            "duration_ms": 283
+          },
+          "audit_write": {
+            "started_at_ms": 1795537389000,
+            "finished_at_ms": 1795537389282,
+            "duration_ms": 282
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537360896,
+            "finished_at_ms": 1795537389282,
+            "duration_ms": 28386
+          },
+          "tool_timings": [
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_13191550062663711431",
+              "timing": {
+                "started_at_ms": 1795537364054,
+                "finished_at_ms": 1795537364054,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_13191550062663709346",
+              "timing": {
+                "started_at_ms": 1795537364069,
+                "finished_at_ms": 1795537364069,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E13",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 58912,
+        "audit": {
+          "email_id": "E13",
+          "received_at": "2026-11-20T12:31:00+05:30",
+          "from_email": "accounts@brightdesigns.example",
+          "intent": "other",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "log_only",
+          "needs_human": true,
+          "ticket_id": "",
+          "reply_draft": "",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:24:24.568Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":null,\"reasons\":[\"manual_business_or_unsupported_request\"],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[],\"first_try_valid\":true,\"v2\":{\"fallback_kind\":\"log_only\",\"generic_fallback\":false,\"tool_compliance\":true,\"brand_compliant\":true},\"latency_ms\":58516,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"62\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537406099,\"finished_at_ms\":1795537406473,\"duration_ms\":374},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\":\\\"other\\\",\\\"secondary_intent\\\":null,\\\"order_id\\\":null,\\\"sentiment\\\":\\\"neutral\\\",\\\"language\\\":\\\"en\\\",\\\"confidence\\\":1,\\\"summary\\\":\\\"Customer requesting a GST invoice for a previous corporate purchase.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537406515,\"finished_at_ms\":1795537464042,\"duration_ms\":57527},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[],\"ticket_read\":{\"started_at_ms\":1795537464231,\"finished_at_ms\":1795537464535,\"duration_ms\":304},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\":\"other\",\"secondary_intent\":null,\"order_id\":null,\"sentiment\":\"neutral\",\"language\":\"en\",\"confidence\":1,\"summary\":\"Customer requesting a GST invoice for a previous corporate purchase.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537406515,
+                "finished_at_ms": 1795537464042,
+                "duration_ms": 57527
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "62",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537406099,
+            "finished_at_ms": 1795537406473,
+            "duration_ms": 374
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\":\"other\",\"secondary_intent\":null,\"order_id\":null,\"sentiment\":\"neutral\",\"language\":\"en\",\"confidence\":1,\"summary\":\"Customer requesting a GST invoice for a previous corporate purchase.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537406515,
+                  "finished_at_ms": 1795537464042,
+                  "duration_ms": 57527
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [],
+          "ticket_read": {
+            "started_at_ms": 1795537464231,
+            "finished_at_ms": 1795537464535,
+            "duration_ms": 304
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795537464603,
+            "finished_at_ms": 1795537464964,
+            "duration_ms": 361
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537406052,
+            "finished_at_ms": 1795537464964,
+            "duration_ms": 58912
+          },
+          "tool_timings": []
+        }
+      },
+      {
+        "email_id": "E14",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 43400,
+        "audit": {
+          "email_id": "E14",
+          "received_at": "2026-11-20T12:57:00+05:30",
+          "from_email": "karan.malhotra@example.com",
+          "intent": "complaint",
+          "secondary_intent": "",
+          "order_id": "KC-1053",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1053-3",
+          "reply_draft": "Hi Karan,\n\nI am sorry to hear that you received Bhringraj Hair Oil instead of the Ubtan Face Packs for order KC-1053. Please report this issue within 48 hours of delivery along with photos of the product and outer box as noted in FAQ section 5. A team member will follow up within 24 business hours to help arrange a free correction pickup and send the correct items after verification.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:25:24.873Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":\"KC-1053\",\"reasons\":[\"human_must_review_ticket_no_operational_action\",\"item_issue_verification_required\"],\"eligibility\":{\"state\":\"within_reporting_window_pending_verification\",\"issue\":\"wrong\",\"age_min_hours\":12.950000000000003,\"age_max_hours\":36.95,\"photos_listed\":[],\"photos_verified\":false,\"packing_weight_verified\":false,\"remedy\":\"FAQ section 5; human verification required; no refund or replacement executed.\",\"customer_requested_remedy\":\"correct_items\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[5,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":43058,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"63\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537481868,\"finished_at_ms\":1795537482224,\"duration_ms\":356},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\n  \\\"intent\\\": \\\"complaint\\\",\\n  \\\"secondary_intent\\\": null,\\n  \\\"order_id\\\": \\\"KC-1053\\\",\\n  \\\"sentiment\\\": \\\"neutral\\\",\\n  \\\"language\\\": \\\"en\\\",\\n  \\\"confidence\\\": 1.0,\\n  \\\"summary\\\": \\\"Customer received the wrong items (Bhringraj Hair Oil instead of Ubtan Face Packs) for order KC-1053 and requests the correct items.\\\"\\n}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537482257,\"finished_at_ms\":1795537521543,\"duration_ms\":39286},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795537521692,\"finished_at_ms\":1795537523933,\"duration_ms\":2241},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795537524060,\"finished_at_ms\":1795537524448,\"duration_ms\":388},\"ticket_write\":{\"started_at_ms\":1795537524476,\"finished_at_ms\":1795537524843,\"duration_ms\":367}}}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1053-3",
+          "created_at": "2026-11-24T16:25:24.447Z",
+          "updated_at": "2026-11-24T16:25:24.447Z",
+          "order_id": "KC-1053",
+          "customer_email": "karan.malhotra@example.com",
+          "email_ids": "E14",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer received the wrong items (Bhringraj Hair Oil instead of Ubtan Face Packs) for order KC-1053 and requests the correct items.",
+          "notes": "2026-11-24T16:25:24.447Z E14: Customer received the wrong items (Bhringraj Hair Oil instead of Ubtan Face Packs) for order KC-1053 and requests the correct items. | eligibility=within_reporting_window_pending_verification; requested_remedy=correct_items; attachments=none (unverified)"
+        },
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\n  \"intent\": \"complaint\",\n  \"secondary_intent\": null,\n  \"order_id\": \"KC-1053\",\n  \"sentiment\": \"neutral\",\n  \"language\": \"en\",\n  \"confidence\": 1.0,\n  \"summary\": \"Customer received the wrong items (Bhringraj Hair Oil instead of Ubtan Face Packs) for order KC-1053 and requests the correct items.\"\n}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537482257,
+                "finished_at_ms": 1795537521543,
+                "duration_ms": 39286
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"Hi Karan, I am sorry to hear that you received Bhringraj Hair Oil instead of the Ubtan Face Packs for order KC-1053. Please report this issue within 48 hours of delivery along with photos of the product and outer box as noted in FAQ section 5. A team member will follow up within 24 business hours to help arrange a free correction pickup and send the correct items after verification. Warm regards, Team Kesar\", \"faq_sections\":[5,6], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1053"
+                  },
+                  "toolCallId": "call_11571682477551175284",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1053\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1053\"},\"id\":\"call_11571682477551175284\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"wrong item complaint photo evidence 48 hours correction\"},\"id\":\"call_11571682477551174015\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1053"
+                              },
+                              "id": "call_11571682477551175284"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "wrong item complaint photo evidence 48 hours correction"
+                              },
+                              "id": "call_11571682477551174015"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_11571682477551175284",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1053"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_11571682477551174015",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "wrong item complaint photo evidence 48 hours correction"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2276,
+                          "output_tokens": 46,
+                          "total_tokens": 2322
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2276,
+                            "completionTokens": 46,
+                            "totalTokens": 2322
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e60-4c27-735d-8360-78167346400d"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1053\",\"order_date\":\"2026-11-15\",\"items\":[{\"sku\":\"KC-UBT-100\",\"name\":\"Ubtan Face Pack 100 g\",\"qty\":2,\"unit_price\":699}],\"subtotal\":1398,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1398,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781053\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null},\"_tool_timing\":{\"started_at_ms\":1795537522463,\"finished_at_ms\":1795537522463,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "wrong item complaint photo evidence 48 hours correction"
+                  },
+                  "toolCallId": "call_11571682477551174015",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"wrong item complaint photo evidence 48 hours correction\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1053\"},\"id\":\"call_11571682477551175284\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"wrong item complaint photo evidence 48 hours correction\"},\"id\":\"call_11571682477551174015\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537522478,\"finished_at_ms\":1795537522478,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537521692,
+              "finished_at_ms": 1795537523933,
+              "duration_ms": 2241
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "63",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537481868,
+            "finished_at_ms": 1795537482224,
+            "duration_ms": 356
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\n  \"intent\": \"complaint\",\n  \"secondary_intent\": null,\n  \"order_id\": \"KC-1053\",\n  \"sentiment\": \"neutral\",\n  \"language\": \"en\",\n  \"confidence\": 1.0,\n  \"summary\": \"Customer received the wrong items (Bhringraj Hair Oil instead of Ubtan Face Packs) for order KC-1053 and requests the correct items.\"\n}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537482257,
+                  "finished_at_ms": 1795537521543,
+                  "duration_ms": 39286
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795537521692,
+                "finished_at_ms": 1795537523933,
+                "duration_ms": 2241
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795537524060,
+            "finished_at_ms": 1795537524448,
+            "duration_ms": 388
+          },
+          "ticket_write": {
+            "started_at_ms": 1795537524476,
+            "finished_at_ms": 1795537524843,
+            "duration_ms": 367
+          },
+          "audit_write": {
+            "started_at_ms": 1795537524903,
+            "finished_at_ms": 1795537525214,
+            "duration_ms": 311
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537481815,
+            "finished_at_ms": 1795537525214,
+            "duration_ms": 43399
+          },
+          "tool_timings": [
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_11571682477551175284",
+              "timing": {
+                "started_at_ms": 1795537522463,
+                "finished_at_ms": 1795537522463,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_11571682477551174015",
+              "timing": {
+                "started_at_ms": 1795537522478,
+                "finished_at_ms": 1795537522478,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E15",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 180500,
+        "audit": {
+          "email_id": "E15",
+          "received_at": "2026-11-20T13:20:00+05:30",
+          "from_email": "rohit.mehta@example.com",
+          "intent": "order_status",
+          "secondary_intent": "",
+          "order_id": "KC-1042",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "draft_reply",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "Hi Rohit,\n\nYour order KC-1042 is currently out for delivery with BharatExpress, and you can track it via https://track.example.com/BX5521042. The estimated delivery date is 2026-11-20. As a Cash on Delivery order with a COD fee of INR 49, please keep exact change ready for the delivery partner. Please let us know if you need any further help.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:28:42.181Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":\"KC-1042\",\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[1,2],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":180112,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"64\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537542143,\"finished_at_ms\":1795537542508,\"duration_ms\":365},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"order_status\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": \\\"KC-1042\\\", \\\"sentiment\\\": \\\"neutral\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 1.0, \\\"summary\\\": \\\"Customer is asking for the delivery date of COD order KC-1042 to arrange cash.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537542539,\"finished_at_ms\":1795537543540,\"duration_ms\":1001},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795537543715,\"finished_at_ms\":1795537721443,\"duration_ms\":177728},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795537721584,\"finished_at_ms\":1795537722147,\"duration_ms\":563},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"order_status\", \"secondary_intent\": null, \"order_id\": \"KC-1042\", \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer is asking for the delivery date of COD order KC-1042 to arrange cash.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537542539,
+                "finished_at_ms": 1795537543540,
+                "duration_ms": 1001
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"Hi Rohit,\\n\\nYour order KC-1042 is currently out for delivery with BharatExpress, and you can track it via https://track.example.com/BX5521042. The estimated delivery date is 2026-11-20. As a Cash on Delivery order with a COD fee of INR 49, please keep exact change ready for the delivery partner.\\n\\nWarm regards,\\nTeam Kesar\", \"faq_sections\":[1,2], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1042"
+                  },
+                  "toolCallId": "call_7220065308470717296",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1042\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1042\"},\"id\":\"call_7220065308470717296\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"delivery date tracking courier status\"},\"id\":\"call_7220065308470715297\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1042"
+                              },
+                              "id": "call_7220065308470717296"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "delivery date tracking courier status"
+                              },
+                              "id": "call_7220065308470715297"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_7220065308470717296",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1042"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_7220065308470715297",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "delivery date tracking courier status"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2137,
+                          "output_tokens": 41,
+                          "total_tokens": 2178
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2137,
+                            "completionTokens": 41,
+                            "totalTokens": 2178
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e60-a234-769f-82e3-dd1f8df0d1e0"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1042\",\"order_date\":\"2026-11-14\",\"items\":[{\"sku\":\"KC-KUM-15\",\"name\":\"Kumkumadi Night Oil 15 ml\",\"qty\":1,\"unit_price\":1149},{\"sku\":\"KC-UBT-100\",\"name\":\"Ubtan Face Pack 100 g\",\"qty\":1,\"unit_price\":699}],\"subtotal\":1848,\"shipping_fee\":0,\"cod_fee\":49,\"total\":1897,\"payment_method\":\"cod\",\"status\":\"out_for_delivery\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521042\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-20\",\"delivered_date\":null,\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null},\"_tool_timing\":{\"started_at_ms\":1795537701220,\"finished_at_ms\":1795537701220,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "delivery date tracking courier status"
+                  },
+                  "toolCallId": "call_7220065308470715297",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"delivery date tracking courier status\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1042\"},\"id\":\"call_7220065308470717296\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"delivery date tracking courier status\"},\"id\":\"call_7220065308470715297\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"},{\"id\":2,\"text\":\"## 2. Cash on Delivery (COD)\\n\\n- COD is available on orders up to **₹5,000**.\\n- A **₹49** COD handling fee applies. It is not refundable.\\n- Please keep exact change ready; delivery partners may not carry change.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537701227,\"finished_at_ms\":1795537701227,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537543715,
+              "finished_at_ms": 1795537721443,
+              "duration_ms": 177728
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "64",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537542143,
+            "finished_at_ms": 1795537542508,
+            "duration_ms": 365
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"order_status\", \"secondary_intent\": null, \"order_id\": \"KC-1042\", \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer is asking for the delivery date of COD order KC-1042 to arrange cash.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537542539,
+                  "finished_at_ms": 1795537543540,
+                  "duration_ms": 1001
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795537543715,
+                "finished_at_ms": 1795537721443,
+                "duration_ms": 177728
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795537721584,
+            "finished_at_ms": 1795537722147,
+            "duration_ms": 563
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795537722216,
+            "finished_at_ms": 1795537722568,
+            "duration_ms": 352
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537542069,
+            "finished_at_ms": 1795537722568,
+            "duration_ms": 180499
+          },
+          "tool_timings": [
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_7220065308470717296",
+              "timing": {
+                "started_at_ms": 1795537701220,
+                "finished_at_ms": 1795537701220,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_7220065308470715297",
+              "timing": {
+                "started_at_ms": 1795537701227,
+                "finished_at_ms": 1795537701227,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E16",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 20175,
+        "audit": {
+          "email_id": "E16",
+          "received_at": "2026-11-20T13:44:00+05:30",
+          "from_email": "aditya.verma@example.com",
+          "intent": "return_refund",
+          "secondary_intent": "",
+          "order_id": "KC-1049",
+          "language": "en",
+          "sentiment": "negative",
+          "confidence": 0.98,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1049-4",
+          "reply_draft": "Hi Aditya,\n\nI understand you would like to return the products in order KC-1049. Ordinary returns are accepted within 7 days of delivery only for unused, unopened products with seals intact; you reported using the products, so this request is not eligible under that policy. Your request is recorded for human review, and a team member will follow up within 24 business hours.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:29:19.292Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":\"KC-1049\",\"reasons\":[\"human_must_review_ticket_no_operational_action\",\"unreported_intact_seals\",\"unreported_product_condition\"],\"eligibility\":{\"state\":\"ineligible\",\"days_since_delivery\":15,\"used_claim\":true,\"unopened_claim\":false,\"complete_set_required\":false,\"reason\":\"Outside seven-day window.\",\"payment_method\":\"prepaid\",\"merchandise_value\":1299,\"nonrefundable_fees\":0,\"refund_method\":\"Original payment method.\",\"refund_timing\":\"5–7 business days after returned item passes quality check.\",\"pickup_executed\":false,\"refund_approved\":false},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true},{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":2,\"validation_history\":[[\"unverified_product_condition\"],[\"unreported_intact_seals\",\"unreported_product_condition\"]],\"fallback_kind\":\"return_ineligible\",\"generic_fallback\":false,\"faq_sections\":[4,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":19842,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"65\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537739495,\"finished_at_ms\":1795537739823,\"duration_ms\":328},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"return_refund\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": \\\"KC-1049\\\", \\\"sentiment\\\": \\\"negative\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 0.98, \\\"summary\\\": \\\"Customer is unsatisfied with the Saffron Glow serum from order KC-1049 and is requesting a refund.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537739853,\"finished_at_ms\":1795537744120,\"duration_ms\":4267},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"negative\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795537744310,\"finished_at_ms\":1795537746898,\"duration_ms\":2588},\"provider_error\":null,\"retry_count\":null},{\"timing\":{\"started_at_ms\":1795537746924,\"finished_at_ms\":1795537758374,\"duration_ms\":11450},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795537758526,\"finished_at_ms\":1795537758925,\"duration_ms\":399},\"ticket_write\":{\"started_at_ms\":1795537758948,\"finished_at_ms\":1795537759263,\"duration_ms\":315}}}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1049-4",
+          "created_at": "2026-11-24T16:29:18.924Z",
+          "updated_at": "2026-11-24T16:29:18.924Z",
+          "order_id": "KC-1049",
+          "customer_email": "aditya.verma@example.com",
+          "email_ids": "E16",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer is unsatisfied with the Saffron Glow serum from order KC-1049 and is requesting a refund.",
+          "notes": "2026-11-24T16:29:18.924Z E16: Customer is unsatisfied with the Saffron Glow serum from order KC-1049 and is requesting a refund. | eligibility=ineligible; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"return_refund\", \"secondary_intent\": null, \"order_id\": \"KC-1049\", \"sentiment\": \"negative\", \"language\": \"en\", \"confidence\": 0.98, \"summary\": \"Customer is unsatisfied with the Saffron Glow serum from order KC-1049 and is requesting a refund.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537739853,
+                "finished_at_ms": 1795537744120,
+                "duration_ms": 4267
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "```json\n{\"body\":\"Hello Aditya, thank you for reaching out about order KC-1049. Under our return policy, returns are accepted within 7 days of delivery for unused and unopened products, and we cannot accept opened or used items where results were not seen. Because your order was delivered on 2026-11-05, it is outside the 7-day return window. A human team member will follow up with you within 24 business hours regarding your feedback on the Saffron Glow Face Serum 30 ml.\", \"faq_sections\":[4,6], \"unsupported_question\":false}\n```",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1049"
+                  },
+                  "toolCallId": "call_5038386243102222243",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1049\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1049\"},\"id\":\"call_5038386243102222243\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return window refund policy serum efficacy\"},\"id\":\"call_5038386243102220950\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1049"
+                              },
+                              "id": "call_5038386243102222243"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "return window refund policy serum efficacy"
+                              },
+                              "id": "call_5038386243102220950"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_5038386243102222243",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1049"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_5038386243102220950",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "return window refund policy serum efficacy"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2257,
+                          "output_tokens": 42,
+                          "total_tokens": 2299
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2257,
+                            "completionTokens": 42,
+                            "totalTokens": 2299
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e63-b1c5-7596-a40a-6b80825fa2a4"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1049\",\"order_date\":\"2026-11-01\",\"items\":[{\"sku\":\"KC-SER-30\",\"name\":\"Saffron Glow Face Serum 30 ml\",\"qty\":1,\"unit_price\":1299}],\"subtotal\":1299,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1299,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781049\",\"shipped_date\":\"2026-11-02\",\"estimated_delivery\":\"2026-11-05\",\"delivered_date\":\"2026-11-05\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null},\"_tool_timing\":{\"started_at_ms\":1795537745388,\"finished_at_ms\":1795537745388,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "return window refund policy serum efficacy"
+                  },
+                  "toolCallId": "call_5038386243102220950",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"return window refund policy serum efficacy\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1049\"},\"id\":\"call_5038386243102222243\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return window refund policy serum efficacy\"},\"id\":\"call_5038386243102220950\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":4,\"text\":\"## 4. Returns\\n\\n- Returns are accepted within **7 days of delivery**.\\n- Returned items must be **unused, unopened and with the seal intact**. For hygiene reasons, we cannot accept opened or used products, including \\\"didn't suit me\\\" or \\\"didn't see results\\\" cases.\\n- To start a return, the customer replies with the order ID. We arrange a free reverse pickup within 2–3 business days.\\n- Combo or kit products (e.g., Bridal Glow Kit) must be returned as a complete set.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537745397,\"finished_at_ms\":1795537745397,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537744310,
+              "finished_at_ms": 1795537746898,
+              "duration_ms": 2588
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          },
+          {
+            "raw": "{\"body\":\"Hello Aditya, thank you for reaching out about order KC-1049. You reported that you have been using the Saffron Glow Face Serum 30 ml and did not see results, but our policy states that returns are accepted within 7 days of delivery for unused and unopened products with seals intact. Because your order was delivered on 2026-11-05, it is outside the 7-day return window. A human team member will follow up with you within 24 business hours regarding your feedback.\",\"faq_sections\":[4,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1049"
+                  },
+                  "toolCallId": "call_16460320233821069687",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1049\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1049\"},\"id\":\"call_16460320233821069687\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return window policy unused unopened\"},\"id\":\"call_16460320233821069402\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1049"
+                              },
+                              "id": "call_16460320233821069687"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "return window policy unused unopened"
+                              },
+                              "id": "call_16460320233821069402"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_16460320233821069687",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1049"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_16460320233821069402",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "return window policy unused unopened"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2527,
+                          "output_tokens": 41,
+                          "total_tokens": 2568
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2527,
+                            "completionTokens": 41,
+                            "totalTokens": 2568
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e63-bbf8-770c-a342-a89e8880b75b"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1049\",\"order_date\":\"2026-11-01\",\"items\":[{\"sku\":\"KC-SER-30\",\"name\":\"Saffron Glow Face Serum 30 ml\",\"qty\":1,\"unit_price\":1299}],\"subtotal\":1299,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1299,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781049\",\"shipped_date\":\"2026-11-02\",\"estimated_delivery\":\"2026-11-05\",\"delivered_date\":\"2026-11-05\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null},\"_tool_timing\":{\"started_at_ms\":1795537747708,\"finished_at_ms\":1795537747708,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "return window policy unused unopened"
+                  },
+                  "toolCallId": "call_16460320233821069402",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"return window policy unused unopened\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1049\"},\"id\":\"call_16460320233821069687\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return window policy unused unopened\"},\"id\":\"call_16460320233821069402\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":4,\"text\":\"## 4. Returns\\n\\n- Returns are accepted within **7 days of delivery**.\\n- Returned items must be **unused, unopened and with the seal intact**. For hygiene reasons, we cannot accept opened or used products, including \\\"didn't suit me\\\" or \\\"didn't see results\\\" cases.\\n- To start a return, the customer replies with the order ID. We arrange a free reverse pickup within 2–3 business days.\\n- Combo or kit products (e.g., Bridal Glow Kit) must be returned as a complete set.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537747718,\"finished_at_ms\":1795537747718,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537746924,
+              "finished_at_ms": 1795537758374,
+              "duration_ms": 11450
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "65",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537739495,
+            "finished_at_ms": 1795537739823,
+            "duration_ms": 328
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"return_refund\", \"secondary_intent\": null, \"order_id\": \"KC-1049\", \"sentiment\": \"negative\", \"language\": \"en\", \"confidence\": 0.98, \"summary\": \"Customer is unsatisfied with the Saffron Glow serum from order KC-1049 and is requesting a refund.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537739853,
+                  "finished_at_ms": 1795537744120,
+                  "duration_ms": 4267
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "negative",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795537744310,
+                "finished_at_ms": 1795537746898,
+                "duration_ms": 2588
+              },
+              "provider_error": null,
+              "retry_count": null
+            },
+            {
+              "timing": {
+                "started_at_ms": 1795537746924,
+                "finished_at_ms": 1795537758374,
+                "duration_ms": 11450
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795537758526,
+            "finished_at_ms": 1795537758925,
+            "duration_ms": 399
+          },
+          "ticket_write": {
+            "started_at_ms": 1795537758948,
+            "finished_at_ms": 1795537759263,
+            "duration_ms": 315
+          },
+          "audit_write": {
+            "started_at_ms": 1795537759322,
+            "finished_at_ms": 1795537759625,
+            "duration_ms": 303
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537739450,
+            "finished_at_ms": 1795537759625,
+            "duration_ms": 20175
+          },
+          "tool_timings": [
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_5038386243102222243",
+              "timing": {
+                "started_at_ms": 1795537745388,
+                "finished_at_ms": 1795537745388,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_5038386243102220950",
+              "timing": {
+                "started_at_ms": 1795537745397,
+                "finished_at_ms": 1795537745397,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_16460320233821069687",
+              "timing": {
+                "started_at_ms": 1795537747708,
+                "finished_at_ms": 1795537747708,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_16460320233821069402",
+              "timing": {
+                "started_at_ms": 1795537747718,
+                "finished_at_ms": 1795537747718,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E17",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 2411,
+        "audit": {
+          "email_id": "E17",
+          "received_at": "2026-11-20T14:09:00+05:30",
+          "from_email": "collab@glowwithmira.example",
+          "intent": "other",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "log_only",
+          "needs_human": true,
+          "ticket_id": "",
+          "reply_draft": "",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:29:38.546Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":null,\"reasons\":[\"manual_business_or_unsupported_request\"],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[],\"first_try_valid\":true,\"v2\":{\"fallback_kind\":\"log_only\",\"generic_fallback\":false,\"tool_compliance\":true,\"brand_compliant\":true},\"latency_ms\":2072,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"66\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537776534,\"finished_at_ms\":1795537776851,\"duration_ms\":317},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"other\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": null, \\\"sentiment\\\": \\\"neutral\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 1.0, \\\"summary\\\": \\\"Influencer partnership and paid collaboration proposal from skincare creator Mira Kapadia.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537776882,\"finished_at_ms\":1795537778064,\"duration_ms\":1182},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[],\"ticket_read\":{\"started_at_ms\":1795537778227,\"finished_at_ms\":1795537778509,\"duration_ms\":282},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"other\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Influencer partnership and paid collaboration proposal from skincare creator Mira Kapadia.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537776882,
+                "finished_at_ms": 1795537778064,
+                "duration_ms": 1182
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "66",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537776534,
+            "finished_at_ms": 1795537776851,
+            "duration_ms": 317
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"other\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Influencer partnership and paid collaboration proposal from skincare creator Mira Kapadia.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537776882,
+                  "finished_at_ms": 1795537778064,
+                  "duration_ms": 1182
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [],
+          "ticket_read": {
+            "started_at_ms": 1795537778227,
+            "finished_at_ms": 1795537778509,
+            "duration_ms": 282
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795537778582,
+            "finished_at_ms": 1795537778885,
+            "duration_ms": 303
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537776474,
+            "finished_at_ms": 1795537778885,
+            "duration_ms": 2411
+          },
+          "tool_timings": []
+        }
+      },
+      {
+        "email_id": "E18",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 173631,
+        "audit": {
+          "email_id": "E18",
+          "received_at": "2026-11-20T14:30:00+05:30",
+          "from_email": "rahul.b@example.com",
+          "intent": "order_status",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "en",
+          "sentiment": "angry",
+          "confidence": 0.85,
+          "order_found": false,
+          "action_taken": "draft_reply",
+          "needs_human": true,
+          "ticket_id": "",
+          "reply_draft": "Hi Rahul,\n\nWe are unable to locate an active order associated with your email address. Please reply with your correct order number so we can check the status for you. A team member will follow up within 24 business hours to assist further.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:32:49.017Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":null,\"reasons\":[\"angry_customer\",\"order_not_found\"],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"not_found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[1],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":173271,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"67\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537795793,\"finished_at_ms\":1795537796191,\"duration_ms\":398},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"order_status\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": null, \\\"sentiment\\\": \\\"angry\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 0.85, \\\"summary\\\": \\\"Customer angrily asks for their order status after a long wait.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537796223,\"finished_at_ms\":1795537797112,\"duration_ms\":889},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"angry\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795537797252,\"finished_at_ms\":1795537968384,\"duration_ms\":171132},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795537968579,\"finished_at_ms\":1795537968980,\"duration_ms\":401},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"order_status\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"angry\", \"language\": \"en\", \"confidence\": 0.85, \"summary\": \"Customer angrily asks for their order status after a long wait.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537796223,
+                "finished_at_ms": 1795537797112,
+                "duration_ms": 889
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"We are unable to locate an active order associated with your email address. Please reply with your correct order number so we can check the status for you. A team member will follow up within 24 business hours to assist further.\", \"faq_sections\":[1], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "rahul.b@example.com"
+                  },
+                  "toolCallId": "call_248369589271014099",
+                  "log": "Invoking \"get_order\" with {\"input\":\"rahul.b@example.com\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"rahul.b@example.com\"},\"id\":\"call_248369589271014099\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status tracking\"},\"id\":\"call_248369589271012610\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "rahul.b@example.com"
+                              },
+                              "id": "call_248369589271014099"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "order status tracking"
+                              },
+                              "id": "call_248369589271012610"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_248369589271014099",
+                            "name": "get_order",
+                            "args": {
+                              "input": "rahul.b@example.com"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_248369589271012610",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "order status tracking"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2001,
+                          "output_tokens": 41,
+                          "total_tokens": 2042
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2001,
+                            "completionTokens": 41,
+                            "totalTokens": 2042
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e64-808e-73fe-951f-56251e33c84d"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"not_found\",\"_tool_timing\":{\"started_at_ms\":1795537965115,\"finished_at_ms\":1795537965116,\"duration_ms\":1,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "order status tracking"
+                  },
+                  "toolCallId": "call_248369589271012610",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"order status tracking\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"rahul.b@example.com\"},\"id\":\"call_248369589271014099\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status tracking\"},\"id\":\"call_248369589271012610\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537965125,\"finished_at_ms\":1795537965126,\"duration_ms\":1,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537797252,
+              "finished_at_ms": 1795537968384,
+              "duration_ms": 171132
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "67",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537795793,
+            "finished_at_ms": 1795537796191,
+            "duration_ms": 398
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"order_status\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"angry\", \"language\": \"en\", \"confidence\": 0.85, \"summary\": \"Customer angrily asks for their order status after a long wait.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537796223,
+                  "finished_at_ms": 1795537797112,
+                  "duration_ms": 889
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "angry",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795537797252,
+                "finished_at_ms": 1795537968384,
+                "duration_ms": 171132
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795537968579,
+            "finished_at_ms": 1795537968980,
+            "duration_ms": 401
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795537969050,
+            "finished_at_ms": 1795537969376,
+            "duration_ms": 326
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537795746,
+            "finished_at_ms": 1795537969376,
+            "duration_ms": 173630
+          },
+          "tool_timings": [
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_248369589271014099",
+              "timing": {
+                "started_at_ms": 1795537965115,
+                "finished_at_ms": 1795537965116,
+                "duration_ms": 1,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_248369589271012610",
+              "timing": {
+                "started_at_ms": 1795537965125,
+                "finished_at_ms": 1795537965126,
+                "duration_ms": 1,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E22",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 11483,
+        "audit": {
+          "email_id": "E22",
+          "received_at": "2026-11-20T16:20:00+05:30",
+          "from_email": "neha.kulkarni@example.com",
+          "intent": "order_status",
+          "secondary_intent": "",
+          "order_id": "KC-1099",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "draft_reply",
+          "needs_human": true,
+          "ticket_id": "",
+          "reply_draft": "Hi Neha,\n\nI could not resolve an authorized order from the information provided. Please confirm your order number and contact us from the email address used for the order. A team member will follow up within 24 business hours.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:33:17.344Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":\"KC-1099\",\"reasons\":[\"order_not_found\",\"unauthorized_order_reference\"],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"not_found\"},{\"name\":\"search_faq\",\"ok\":true},{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"not_found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":2,\"validation_history\":[[\"unauthorized_order_reference\"],[\"unauthorized_order_reference\"]],\"fallback_kind\":\"order_clarification\",\"generic_fallback\":false,\"faq_sections\":[1],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":11138,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"68\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795537986252,\"finished_at_ms\":1795537987586,\"duration_ms\":1334},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"order_status\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": \\\"KC-1099\\\", \\\"sentiment\\\": \\\"neutral\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 1.0, \\\"summary\\\": \\\"Customer is asking for the delivery status of order KC-1099 containing the Ubtan face pack.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795537987619,\"finished_at_ms\":1795537989031,\"duration_ms\":1412},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795537989177,\"finished_at_ms\":1795537992637,\"duration_ms\":3460},\"provider_error\":null,\"retry_count\":null},{\"timing\":{\"started_at_ms\":1795537992675,\"finished_at_ms\":1795537996860,\"duration_ms\":4185},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795537996994,\"finished_at_ms\":1795537997319,\"duration_ms\":325},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"order_status\", \"secondary_intent\": null, \"order_id\": \"KC-1099\", \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer is asking for the delivery status of order KC-1099 containing the Ubtan face pack.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795537987619,
+                "finished_at_ms": 1795537989031,
+                "duration_ms": 1412
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "```json\n{\"body\":\"Hello Neha. We could not locate an order with the number KC-1099 using your email address. Please confirm your order number and make sure you are writing from the email address used during purchase. We will be happy to check the details for you once confirmed.\", \"faq_sections\":[1], \"unsupported_question\":false}\n```",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1099"
+                  },
+                  "toolCallId": "call_748254500139435052",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1099\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1099\"},\"id\":\"call_748254500139435052\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status missing order number\"},\"id\":\"call_748254500139434799\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1099"
+                              },
+                              "id": "call_748254500139435052"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "order status missing order number"
+                              },
+                              "id": "call_748254500139434799"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_748254500139435052",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1099"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_748254500139434799",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "order status missing order number"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2056,
+                          "output_tokens": 42,
+                          "total_tokens": 2098
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2056,
+                            "completionTokens": 42,
+                            "totalTokens": 2098
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e67-6e43-707d-a870-920bd42b36be"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"not_found\",\"_tool_timing\":{\"started_at_ms\":1795537991511,\"finished_at_ms\":1795537991511,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "order status missing order number"
+                  },
+                  "toolCallId": "call_748254500139434799",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"order status missing order number\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1099\"},\"id\":\"call_748254500139435052\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status missing order number\"},\"id\":\"call_748254500139434799\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537991524,\"finished_at_ms\":1795537991525,\"duration_ms\":1,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537989177,
+              "finished_at_ms": 1795537992637,
+              "duration_ms": 3460
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          },
+          {
+            "raw": "{\"body\":\"We could not locate an order matching the number KC-1099 with your current email address. Please confirm your correct order number and ensure you are writing from the email address used during purchase. We cannot disclose unrelated order details without verification. A human team member will follow up within 24 business hours to assist you further.\", \"faq_sections\":[1], \"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1099"
+                  },
+                  "toolCallId": "call_11187443433209906708",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1099\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1099\"},\"id\":\"call_11187443433209906708\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status missing order number\"},\"id\":\"call_11187443433209906243\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1099"
+                              },
+                              "id": "call_11187443433209906708"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "order status missing order number"
+                              },
+                              "id": "call_11187443433209906243"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_11187443433209906708",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1099"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_11187443433209906243",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "order status missing order number"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2182,
+                          "output_tokens": 41,
+                          "total_tokens": 2223
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2182,
+                            "completionTokens": 41,
+                            "totalTokens": 2223
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e67-7bec-7578-9af5-ae4086b9c923"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"not_found\",\"_tool_timing\":{\"started_at_ms\":1795537993382,\"finished_at_ms\":1795537993382,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "order status missing order number"
+                  },
+                  "toolCallId": "call_11187443433209906243",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"order status missing order number\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1099\"},\"id\":\"call_11187443433209906708\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"order status missing order number\"},\"id\":\"call_11187443433209906243\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":1,\"text\":\"## 1. Shipping\\n\\n- Orders are dispatched within **1–2 business days** (Mon–Sat, excluding public holidays).\\n- Delivery times after dispatch:\\n  - Metro cities (Delhi NCR, Mumbai, Bengaluru, Chennai, Kolkata, Hyderabad, Pune): **2–4 business days**\\n  - Rest of India: **4–6 business days**\\n  - North-East states, Jammu & Kashmir, Ladakh, Andaman & Nicobar, Lakshadweep: **6–8 business days**\\n- Shipping is **free on orders of ₹999 and above**. Below ₹999, a flat **₹79** shipping fee applies.\\n- We ship with our courier partners SwiftShip and BharatExpress. A tracking link is emailed when the order is dispatched.\\n- We do **not** ship outside India.\\n- We cannot change the delivery address once an order has been dispatched.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795537993396,\"finished_at_ms\":1795537993396,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795537992675,
+              "finished_at_ms": 1795537996860,
+              "duration_ms": 4185
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "68",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795537986252,
+            "finished_at_ms": 1795537987586,
+            "duration_ms": 1334
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"order_status\", \"secondary_intent\": null, \"order_id\": \"KC-1099\", \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer is asking for the delivery status of order KC-1099 containing the Ubtan face pack.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795537987619,
+                  "finished_at_ms": 1795537989031,
+                  "duration_ms": 1412
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795537989177,
+                "finished_at_ms": 1795537992637,
+                "duration_ms": 3460
+              },
+              "provider_error": null,
+              "retry_count": null
+            },
+            {
+              "timing": {
+                "started_at_ms": 1795537992675,
+                "finished_at_ms": 1795537996860,
+                "duration_ms": 4185
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795537996994,
+            "finished_at_ms": 1795537997319,
+            "duration_ms": 325
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795537997366,
+            "finished_at_ms": 1795537997689,
+            "duration_ms": 323
+          },
+          "end_to_end": {
+            "started_at_ms": 1795537986206,
+            "finished_at_ms": 1795537997689,
+            "duration_ms": 11483
+          },
+          "tool_timings": [
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_748254500139435052",
+              "timing": {
+                "started_at_ms": 1795537991511,
+                "finished_at_ms": 1795537991511,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_748254500139434799",
+              "timing": {
+                "started_at_ms": 1795537991524,
+                "finished_at_ms": 1795537991525,
+                "duration_ms": 1,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_11187443433209906708",
+              "timing": {
+                "started_at_ms": 1795537993382,
+                "finished_at_ms": 1795537993382,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_11187443433209906243",
+              "timing": {
+                "started_at_ms": 1795537993396,
+                "finished_at_ms": 1795537993396,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E23",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 32451,
+        "audit": {
+          "email_id": "E23",
+          "received_at": "2026-11-20T16:47:00+05:30",
+          "from_email": "pooja.nair@example.com",
+          "intent": "complaint",
+          "secondary_intent": "return_refund",
+          "order_id": "KC-1054",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1054-5",
+          "reply_draft": "Hi Pooja,\n\nI’m sorry about the missing item in order KC-1054. Your report falls within the 48-hour reporting window. Please share photos of the product and outer box for verification. After packing weight verification, the missing item can be shipped or its value refunded (INR 499). A team member will follow up within 24 business hours.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:34:06.525Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":\"KC-1054\",\"reasons\":[\"human_must_review_ticket_no_operational_action\",\"item_issue_verification_required\",\"packing_weight_missing\"],\"eligibility\":{\"state\":\"within_reporting_window_pending_verification\",\"issue\":\"missing\",\"age_min_hours\":16.78333333333333,\"age_max_hours\":40.78333333333333,\"photos_listed\":[],\"photos_verified\":false,\"packing_weight_verified\":false,\"remedy\":\"FAQ section 5; human verification required; no refund or replacement executed.\",\"customer_requested_remedy\":\"refund\",\"missing_item_value\":499,\"missing_item_refund\":\"Only missing item value, after packing-weight verification; no full-order approval.\"},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true},{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":2,\"validation_history\":[[\"photo_evidence_missing\",\"packing_weight_missing\"],[\"packing_weight_missing\"]],\"fallback_kind\":\"item_issue\",\"generic_fallback\":false,\"faq_sections\":[5,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":31989,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"69\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795538014584,\"finished_at_ms\":1795538014935,\"duration_ms\":351},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"complaint\\\", \\\"secondary_intent\\\": \\\"return_refund\\\", \\\"order_id\\\": \\\"KC-1054\\\", \\\"sentiment\\\": \\\"neutral\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 1.0, \\\"summary\\\": \\\"Customer reports Aloe Calm Gel missing from order KC-1054 and requests a refund for the missing item.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795538014967,\"finished_at_ms\":1795538015755,\"duration_ms\":788},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"neutral\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[{\"timing\":{\"started_at_ms\":1795538015920,\"finished_at_ms\":1795538040195,\"duration_ms\":24275},\"provider_error\":null,\"retry_count\":null},{\"timing\":{\"started_at_ms\":1795538040230,\"finished_at_ms\":1795538045358,\"duration_ms\":5128},\"provider_error\":null,\"retry_count\":null}],\"ticket_read\":{\"started_at_ms\":1795538045508,\"finished_at_ms\":1795538046054,\"duration_ms\":546},\"ticket_write\":{\"started_at_ms\":1795538046084,\"finished_at_ms\":1795538046492,\"duration_ms\":408}}}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1054-5",
+          "created_at": "2026-11-24T16:34:06.054Z",
+          "updated_at": "2026-11-24T16:34:06.054Z",
+          "order_id": "KC-1054",
+          "customer_email": "pooja.nair@example.com",
+          "email_ids": "E23",
+          "intent": "complaint",
+          "priority": "High",
+          "status": "Open",
+          "summary": "Customer reports Aloe Calm Gel missing from order KC-1054 and requests a refund for the missing item.",
+          "notes": "2026-11-24T16:34:06.054Z E23: Customer reports Aloe Calm Gel missing from order KC-1054 and requests a refund for the missing item. | eligibility=within_reporting_window_pending_verification; requested_remedy=refund; attachments=none (unverified)"
+        },
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"complaint\", \"secondary_intent\": \"return_refund\", \"order_id\": \"KC-1054\", \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer reports Aloe Calm Gel missing from order KC-1054 and requests a refund for the missing item.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795538014967,
+                "finished_at_ms": 1795538015755,
+                "duration_ms": 788
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [
+          {
+            "raw": "```json\n{\"body\":\"Hi Pooja,\\n\\nI am sorry to hear that the Aloe Calm Gel was missing from your order KC-1054 delivered on 2026-11-19 via BharatExpress ( https://track.example.com/BX5521054 ). Under our policy, missing item claims must be reported within 48 hours with packing-weight verification. A human team member will review your request and follow up within 24 business hours. Approved missing items are eligible for a refund of the missing item value of INR 499.\\n\\nWarm regards,\\nTeam Kesar\", \"faq_sections\":[5], \"unsupported_question\":false}\n```",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1054"
+                  },
+                  "toolCallId": "call_13643691728907966977",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1054\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1054\"},\"id\":\"call_13643691728907966977\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"missing item packing weight verification refund value\"},\"id\":\"call_13643691728907964694\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1054"
+                              },
+                              "id": "call_13643691728907966977"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "missing item packing weight verification refund value"
+                              },
+                              "id": "call_13643691728907964694"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_13643691728907966977",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1054"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_13643691728907964694",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "missing item packing weight verification refund value"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2315,
+                          "output_tokens": 43,
+                          "total_tokens": 2358
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2315,
+                            "completionTokens": 43,
+                            "totalTokens": 2358
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e67-d6bb-747b-befc-1a779986def2"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1054\",\"order_date\":\"2026-11-14\",\"items\":[{\"sku\":\"KC-SER-30\",\"name\":\"Saffron Glow Face Serum 30 ml\",\"qty\":1,\"unit_price\":1299},{\"sku\":\"KC-ALO-150\",\"name\":\"Aloe Calm Gel 150 g\",\"qty\":1,\"unit_price\":499}],\"subtotal\":1798,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1798,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521054\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null},\"_tool_timing\":{\"started_at_ms\":1795538033915,\"finished_at_ms\":1795538033916,\"duration_ms\":1,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "missing item packing weight verification refund value"
+                  },
+                  "toolCallId": "call_13643691728907964694",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"missing item packing weight verification refund value\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1054\"},\"id\":\"call_13643691728907966977\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"missing item packing weight verification refund value\"},\"id\":\"call_13643691728907964694\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795538033925,\"finished_at_ms\":1795538033925,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795538015920,
+              "finished_at_ms": 1795538040195,
+              "duration_ms": 24275
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          },
+          {
+            "raw": "```json\n{\"body\":\"Hi Pooja, I am sorry to hear that the Aloe Calm Gel was missing from your order KC-1054 delivered on 2026-11-19 via BharatExpress. Under FAQ sections 5 and 6, missing item claims must be reported within 48 hours with product and outer-box photos, subject to packing-weight verification. As photo and packing-weight evidence are currently pending verification, no refund has been executed. A human team member will review your request and follow up within 24 business hours. Approved missing items are eligible for a refund of the missing item value of INR 499.\", \"faq_sections\":[5,6], \"unsupported_question\":false}\n```",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1054"
+                  },
+                  "toolCallId": "call_16584714966242342505",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1054\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1054\"},\"id\":\"call_16584714966242342505\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"missing item packing weight photo evidence 48 hours\"},\"id\":\"call_16584714966242340906\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1054"
+                              },
+                              "id": "call_16584714966242342505"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "missing item packing weight photo evidence 48 hours"
+                              },
+                              "id": "call_16584714966242340906"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_16584714966242342505",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1054"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_16584714966242340906",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "missing item packing weight photo evidence 48 hours"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 2608,
+                          "output_tokens": 46,
+                          "total_tokens": 2654
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 2608,
+                            "completionTokens": 46,
+                            "totalTokens": 2654
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20e68-35b5-743a-9dc7-062118afcb72"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1054\",\"order_date\":\"2026-11-14\",\"items\":[{\"sku\":\"KC-SER-30\",\"name\":\"Saffron Glow Face Serum 30 ml\",\"qty\":1,\"unit_price\":1299},{\"sku\":\"KC-ALO-150\",\"name\":\"Aloe Calm Gel 150 g\",\"qty\":1,\"unit_price\":499}],\"subtotal\":1798,\"shipping_fee\":0,\"cod_fee\":0,\"total\":1798,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"BharatExpress\",\"tracking_url\":\"https://track.example.com/BX5521054\",\"shipped_date\":\"2026-11-16\",\"estimated_delivery\":\"2026-11-19\",\"delivered_date\":\"2026-11-19\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null},\"_tool_timing\":{\"started_at_ms\":1795538041512,\"finished_at_ms\":1795538041512,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "missing item packing weight photo evidence 48 hours"
+                  },
+                  "toolCallId": "call_16584714966242340906",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"missing item packing weight photo evidence 48 hours\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1054\"},\"id\":\"call_16584714966242342505\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"missing item packing weight photo evidence 48 hours\"},\"id\":\"call_16584714966242340906\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":5,\"text\":\"## 5. Damaged, Leaking, Wrong or Missing Items\\n\\n- Report within **48 hours of delivery**, with **photos** of the product and the outer box.\\n- After verification, we offer a **free replacement or a full refund** (customer's choice). The 7-day / unopened rule does **not** apply to these cases.\\n- Wrong item delivered: we pick up the wrong item and send the correct one at no cost.\\n- Missing item: we verify against the packing weight record and ship the missing item or refund its value.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}],\"_tool_timing\":{\"started_at_ms\":1795538041521,\"finished_at_ms\":1795538041521,\"duration_ms\":0,\"scope\":\"local_read_only_tool\"}}"
+              }
+            ],
+            "timing": {
+              "started_at_ms": 1795538040230,
+              "finished_at_ms": 1795538045358,
+              "duration_ms": 5128
+            },
+            "provider_error": null,
+            "provider_retry_count": null
+          }
+        ],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "69",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795538014584,
+            "finished_at_ms": 1795538014935,
+            "duration_ms": 351
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"complaint\", \"secondary_intent\": \"return_refund\", \"order_id\": \"KC-1054\", \"sentiment\": \"neutral\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer reports Aloe Calm Gel missing from order KC-1054 and requests a refund for the missing item.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795538014967,
+                  "finished_at_ms": 1795538015755,
+                  "duration_ms": 788
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "neutral",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [
+            {
+              "timing": {
+                "started_at_ms": 1795538015920,
+                "finished_at_ms": 1795538040195,
+                "duration_ms": 24275
+              },
+              "provider_error": null,
+              "retry_count": null
+            },
+            {
+              "timing": {
+                "started_at_ms": 1795538040230,
+                "finished_at_ms": 1795538045358,
+                "duration_ms": 5128
+              },
+              "provider_error": null,
+              "retry_count": null
+            }
+          ],
+          "ticket_read": {
+            "started_at_ms": 1795538045508,
+            "finished_at_ms": 1795538046054,
+            "duration_ms": 546
+          },
+          "ticket_write": {
+            "started_at_ms": 1795538046084,
+            "finished_at_ms": 1795538046492,
+            "duration_ms": 408
+          },
+          "audit_write": {
+            "started_at_ms": 1795538046555,
+            "finished_at_ms": 1795538046986,
+            "duration_ms": 431
+          },
+          "end_to_end": {
+            "started_at_ms": 1795538014536,
+            "finished_at_ms": 1795538046986,
+            "duration_ms": 32450
+          },
+          "tool_timings": [
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_13643691728907966977",
+              "timing": {
+                "started_at_ms": 1795538033915,
+                "finished_at_ms": 1795538033916,
+                "duration_ms": 1,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_13643691728907964694",
+              "timing": {
+                "started_at_ms": 1795538033925,
+                "finished_at_ms": 1795538033925,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "get_order",
+              "tool_call_id": "call_16584714966242342505",
+              "timing": {
+                "started_at_ms": 1795538041512,
+                "finished_at_ms": 1795538041512,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            },
+            {
+              "tool": "search_faq",
+              "tool_call_id": "call_16584714966242340906",
+              "timing": {
+                "started_at_ms": 1795538041521,
+                "finished_at_ms": 1795538041521,
+                "duration_ms": 0,
+                "scope": "local_read_only_tool"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "email_id": "E25",
+        "status": "persisted",
+        "workflow_version": "v2.1-currency-1",
+        "processing_latency_ms": 13506,
+        "audit": {
+          "email_id": "E25",
+          "received_at": "2026-11-20T17:48:00+05:30",
+          "from_email": "simran.kaur@example.com",
+          "intent": "other",
+          "secondary_intent": "",
+          "order_id": "",
+          "language": "en",
+          "sentiment": "positive",
+          "confidence": 1,
+          "order_found": false,
+          "action_taken": "log_only",
+          "needs_human": false,
+          "ticket_id": "",
+          "reply_draft": "",
+          "prompt_version": "v2.1-currency-1",
+          "processed_at": "2026-11-24T16:34:36.901Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2.1-currency-extended\",\"extracted_order_id\":null,\"reasons\":[],\"eligibility\":{\"state\":\"not_applicable\"},\"tools\":[],\"first_try_valid\":true,\"v2\":{\"fallback_kind\":\"log_only\",\"generic_fallback\":false,\"tool_compliance\":true,\"brand_compliant\":true},\"latency_ms\":13120,\"observability\":{\"version\":\"v2.1-currency-1\",\"profile_revision\":\"v2.1-currency-1\",\"model\":\"models/gemini-3.5-flash-lite\",\"baseline_model\":\"models/gemini-3.5-flash-lite\",\"v1_model_confirmed\":false,\"reference_model\":\"models/gemini-3.1-flash-lite\",\"controlled_same_model_comparison\":false,\"comparison_note\":\"Different model from V1/V2; not a controlled same-model comparison.\",\"temperature\":0,\"confidence_threshold\":0.85,\"n8n_version\":\"3.3.0\",\"execution_id\":\"70\",\"workflow_id\":\"ScFToWd0CKYCabUo\",\"runner\":{\"execution_id\":\"57\",\"workflow_id\":\"vGPVHH0uw37vYcxK\",\"scope\":\"extended\",\"freshness_verified\":true},\"provider_retry_count\":null,\"configured_model_max_attempts\":2,\"audit_read\":{\"started_at_ms\":1795538063831,\"finished_at_ms\":1795538064457,\"duration_ms\":626},\"classification\":{\"attempts\":[{\"raw\":{\"text\":\"{\\\"intent\\\": \\\"other\\\", \\\"secondary_intent\\\": null, \\\"order_id\\\": null, \\\"sentiment\\\": \\\"positive\\\", \\\"language\\\": \\\"en\\\", \\\"confidence\\\": 1.0, \\\"summary\\\": \\\"Customer expressed satisfaction and thanked the team for the quick delivery and handwritten note.\\\"}\"},\"validation_errors\":[],\"timing\":{\"started_at_ms\":1795538064487,\"finished_at_ms\":1795538076362,\"duration_ms\":11875},\"provider_error\":null,\"provider_retry_count\":null}],\"repair_used\":false},\"sentiment_review\":{\"sentiment\":\"positive\",\"changed\":false,\"reason\":\"model_sentiment_retained\"},\"draft_attempts\":[],\"ticket_read\":{\"started_at_ms\":1795538076549,\"finished_at_ms\":1795538076861,\"duration_ms\":312},\"ticket_write\":null}}"
+        },
+        "ticket": null,
+        "classification_evidence": {
+          "attempts": [
+            {
+              "raw": {
+                "text": "{\"intent\": \"other\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"positive\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer expressed satisfaction and thanked the team for the quick delivery and handwritten note.\"}"
+              },
+              "validation_errors": [],
+              "timing": {
+                "started_at_ms": 1795538064487,
+                "finished_at_ms": 1795538076362,
+                "duration_ms": 11875
+              },
+              "provider_error": null,
+              "provider_retry_count": null
+            }
+          ],
+          "repair_used": false
+        },
+        "draft_evidence": [],
+        "observability": {
+          "version": "v2.1-currency-1",
+          "profile_revision": "v2.1-currency-1",
+          "model": "models/gemini-3.5-flash-lite",
+          "baseline_model": "models/gemini-3.5-flash-lite",
+          "v1_model_confirmed": false,
+          "reference_model": "models/gemini-3.1-flash-lite",
+          "controlled_same_model_comparison": false,
+          "comparison_note": "Different model from V1/V2; not a controlled same-model comparison.",
+          "temperature": 0,
+          "confidence_threshold": 0.85,
+          "n8n_version": "3.3.0",
+          "execution_id": "70",
+          "workflow_id": "ScFToWd0CKYCabUo",
+          "runner": {
+            "execution_id": "57",
+            "workflow_id": "vGPVHH0uw37vYcxK",
+            "scope": "extended",
+            "freshness_verified": true
+          },
+          "provider_retry_count": null,
+          "configured_model_max_attempts": 2,
+          "audit_read": {
+            "started_at_ms": 1795538063831,
+            "finished_at_ms": 1795538064457,
+            "duration_ms": 626
+          },
+          "classification": {
+            "attempts": [
+              {
+                "raw": {
+                  "text": "{\"intent\": \"other\", \"secondary_intent\": null, \"order_id\": null, \"sentiment\": \"positive\", \"language\": \"en\", \"confidence\": 1.0, \"summary\": \"Customer expressed satisfaction and thanked the team for the quick delivery and handwritten note.\"}"
+                },
+                "validation_errors": [],
+                "timing": {
+                  "started_at_ms": 1795538064487,
+                  "finished_at_ms": 1795538076362,
+                  "duration_ms": 11875
+                },
+                "provider_error": null,
+                "provider_retry_count": null
+              }
+            ],
+            "repair_used": false
+          },
+          "sentiment_review": {
+            "sentiment": "positive",
+            "changed": false,
+            "reason": "model_sentiment_retained"
+          },
+          "draft_attempts": [],
+          "ticket_read": {
+            "started_at_ms": 1795538076549,
+            "finished_at_ms": 1795538076861,
+            "duration_ms": 312
+          },
+          "ticket_write": null,
+          "audit_write": {
+            "started_at_ms": 1795538076938,
+            "finished_at_ms": 1795538077287,
+            "duration_ms": 349
+          },
+          "end_to_end": {
+            "started_at_ms": 1795538063781,
+            "finished_at_ms": 1795538077287,
+            "duration_ms": 13506
+          },
+          "tool_timings": []
+        }
+      }
+    ]
+  }
+]

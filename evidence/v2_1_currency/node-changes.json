@@ -1,0 +1,92 @@
+{
+  "processor": {
+    "old_node_count": 50,
+    "new_node_count": 50,
+    "connection_graph_unchanged": true,
+    "changed_nodes": [
+      {
+        "node": "Initialize",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      },
+      {
+        "node": "Replay result",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      },
+      {
+        "node": "Drafting Agent",
+        "parameter_fields_changed": [
+          "options",
+          "text"
+        ]
+      },
+      {
+        "node": "Plan audit",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      },
+      {
+        "node": "Result",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      },
+      {
+        "node": "Tool requirement planning",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      },
+      {
+        "node": "Semantic validation",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      },
+      {
+        "node": "Targeted Repair Agent",
+        "parameter_fields_changed": [
+          "options",
+          "text"
+        ]
+      }
+    ],
+    "new_node_ids_are_version_specific": true
+  },
+  "runner": {
+    "old_node_count": 9,
+    "new_node_count": 9,
+    "connection_graph_unchanged": true,
+    "changed_nodes": [
+      {
+        "node": "Select official emails",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      },
+      {
+        "node": "Execute V2.1 processor",
+        "parameter_fields_changed": [
+          "workflowId"
+        ]
+      },
+      {
+        "node": "Completed results",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      },
+      {
+        "node": "Runner configuration",
+        "parameter_fields_changed": [
+          "jsCode"
+        ]
+      }
+    ],
+    "new_node_ids_are_version_specific": true
+  }
+}

@@ -1,0 +1,155 @@
+[
+  {
+    "version": "v2",
+    "run_id": "v2-baseline",
+    "run_mode": "smoke",
+    "results": [
+      {
+        "email_id": "E03",
+        "status": "persisted",
+        "processing_latency_ms": 19127,
+        "audit": {
+          "email_id": "E03",
+          "received_at": "2026-11-20T09:28:00+05:30",
+          "from_email": "kavya.reddy@example.com",
+          "intent": "return_refund",
+          "secondary_intent": "",
+          "order_id": "KC-1047",
+          "language": "en",
+          "sentiment": "neutral",
+          "confidence": 1,
+          "order_found": true,
+          "action_taken": "ticket_and_draft",
+          "needs_human": true,
+          "ticket_id": "TKT-KC-1047-1",
+          "reply_draft": "Hi Kavya,\n\nWe can certainly assist with your return request for the Rose Water Toner from order KC-1047, as it falls within our 7-day return window. Please ensure the product remains unused and unopened with the seal intact for the quality check process. We will arrange a free reverse pickup for you, and a team member will follow up within 24 business hours to coordinate this. Once the item passes our quality check, your refund will be processed to your original payment method within 5–7 business days, excluding the non-refundable shipping fee.\n\nWarm regards,\nTeam Kesar",
+          "prompt_version": "v2",
+          "processed_at": "2026-11-24T10:48:43.849Z",
+          "error": "",
+          "notes": "{\"run_id\":\"v2-baseline\",\"extracted_order_id\":\"KC-1047\",\"reasons\":[\"human_must_review_ticket_no_operational_action\"],\"eligibility\":{\"state\":\"eligible_pending_pickup_and_qc\",\"days_since_delivery\":4,\"used_claim\":false,\"unopened_claim\":true,\"complete_set_required\":false,\"reason\":\"Customer claims are not quality verification.\",\"payment_method\":\"prepaid\",\"merchandise_value\":899,\"nonrefundable_fees\":79,\"refund_method\":\"Original payment method.\",\"refund_timing\":\"5–7 business days after returned item passes quality check.\",\"pickup_executed\":false,\"refund_approved\":false},\"tools\":[\"get_order\",\"search_faq\"],\"first_try_valid\":true,\"v2\":{\"required_tools\":[\"get_order\",\"search_faq\"],\"tool_compliance\":true,\"tool_outcomes\":[{\"name\":\"get_order\",\"ok\":true,\"outcome\":\"found\"},{\"name\":\"search_faq\",\"ok\":true}],\"attempt_count\":1,\"validation_history\":[[]],\"fallback_kind\":\"none\",\"generic_fallback\":false,\"faq_sections\":[4,6],\"brand_compliant\":true,\"final_safety_errors\":[]},\"latency_ms\":18191}"
+        },
+        "ticket": {
+          "ticket_id": "TKT-KC-1047-1",
+          "created_at": "2026-11-24T10:48:42.999Z",
+          "updated_at": "2026-11-24T10:48:42.999Z",
+          "order_id": "KC-1047",
+          "customer_email": "kavya.reddy@example.com",
+          "email_ids": "E03",
+          "intent": "return_refund",
+          "priority": "Normal",
+          "status": "Open",
+          "summary": "Customer wants to return a sealed, unopened Rose Water Toner from order KC-1047 for a refund.",
+          "notes": "2026-11-24T10:48:42.999Z E03: Customer wants to return a sealed, unopened Rose Water Toner from order KC-1047 for a refund. | eligibility=eligible_pending_pickup_and_qc; requested_remedy=return_refund; attachments=none (unverified)"
+        },
+        "draft_evidence": [
+          {
+            "raw": "{\"body\":\"We can certainly assist with your return request for the Rose Water Toner from order KC-1047, as it falls within our 7-day return window. Please ensure the product remains unused and unopened with the seal intact for the quality check process. We will arrange a free reverse pickup for you, and a team member will follow up within 24 business hours to coordinate this. Once the item passes our quality check, your refund will be processed to your original payment method within 5–7 business days, excluding the non-refundable shipping fee.\",\"faq_sections\":[4,6],\"unsupported_question\":false}",
+            "steps": [
+              {
+                "action": {
+                  "tool": "get_order",
+                  "toolInput": {
+                    "input": "KC-1047"
+                  },
+                  "toolCallId": "call_10148694091026361883",
+                  "log": "Invoking \"get_order\" with {\"input\":\"KC-1047\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1047\"},\"id\":\"call_10148694091026361883\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return policy refund process\"},\"id\":\"call_10148694091026359736\"}}]",
+                  "messageLog": [
+                    {
+                      "lc": 1,
+                      "type": "constructor",
+                      "id": [
+                        "langchain_core",
+                        "messages",
+                        "AIMessage"
+                      ],
+                      "kwargs": {
+                        "content": [
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "get_order",
+                              "args": {
+                                "input": "KC-1047"
+                              },
+                              "id": "call_10148694091026361883"
+                            }
+                          },
+                          {
+                            "type": "functionCall",
+                            "functionCall": {
+                              "name": "search_faq",
+                              "args": {
+                                "input": "return policy refund process"
+                              },
+                              "id": "call_10148694091026359736"
+                            }
+                          }
+                        ],
+                        "tool_calls": [
+                          {
+                            "type": "tool_call",
+                            "id": "call_10148694091026361883",
+                            "name": "get_order",
+                            "args": {
+                              "input": "KC-1047"
+                            }
+                          },
+                          {
+                            "type": "tool_call",
+                            "id": "call_10148694091026359736",
+                            "name": "search_faq",
+                            "args": {
+                              "input": "return policy refund process"
+                            }
+                          }
+                        ],
+                        "additional_kwargs": {
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s).",
+                          "__gemini_function_call_thought_signatures__": {
+                            "call_10148694091026361883": "EqkBCqYBAWkUfRNDs8Fo06HHnAkon22x4Blv58pAokKj03k5oOT+eC3ECt6crvP9QLoeBOMvqEDZk3Iny0Ou+3UkFJgl5gp4gxid19IZVTPbzr+dqBVeWGs/Hhk019Nm2sRVjJOpB8nV4nTb843pbc4KzuCdOTgZsR0avfUf8vKIU10r+p/k+ei9IHW17q3pV/yQ3W+P4dgUWxQnrfocisPPN/DCDnjlti6Mqw=="
+                          }
+                        },
+                        "usage_metadata": {
+                          "input_tokens": 1678,
+                          "output_tokens": 40,
+                          "total_tokens": 1718
+                        },
+                        "invalid_tool_calls": [],
+                        "response_metadata": {
+                          "tokenUsage": {
+                            "promptTokens": 1678,
+                            "completionTokens": 40,
+                            "totalTokens": 1718
+                          },
+                          "finishReason": "STOP",
+                          "index": 0,
+                          "finishMessage": "Model generated function call(s)."
+                        },
+                        "id": "run-01a20d2b-f67c-7578-a684-a45c81068a00"
+                      }
+                    }
+                  ]
+                },
+                "observation": "{\"result\":\"found\",\"order\":{\"order_id\":\"KC-1047\",\"order_date\":\"2026-11-12\",\"items\":[{\"sku\":\"KC-ROS-200\",\"name\":\"Rose Water Toner 200 ml\",\"qty\":1,\"unit_price\":899}],\"subtotal\":899,\"shipping_fee\":79,\"cod_fee\":0,\"total\":978,\"payment_method\":\"prepaid\",\"status\":\"delivered\",\"courier\":\"SwiftShip\",\"tracking_url\":\"https://track.example.com/SS7781047\",\"shipped_date\":\"2026-11-13\",\"estimated_delivery\":\"2026-11-16\",\"delivered_date\":\"2026-11-16\",\"cancelled_date\":null,\"cancellation_reason\":null,\"refund_status\":null}}"
+              },
+              {
+                "action": {
+                  "tool": "search_faq",
+                  "toolInput": {
+                    "input": "return policy refund process"
+                  },
+                  "toolCallId": "call_10148694091026359736",
+                  "log": "Invoking \"search_faq\" with {\"input\":\"return policy refund process\"}\n[{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"get_order\",\"args\":{\"input\":\"KC-1047\"},\"id\":\"call_10148694091026361883\"}},{\"type\":\"functionCall\",\"functionCall\":{\"name\":\"search_faq\",\"args\":{\"input\":\"return policy refund process\"},\"id\":\"call_10148694091026359736\"}}]",
+                  "messageLog": []
+                },
+                "observation": "{\"sections\":[{\"id\":4,\"text\":\"## 4. Returns\\n\\n- Returns are accepted within **7 days of delivery**.\\n- Returned items must be **unused, unopened and with the seal intact**. For hygiene reasons, we cannot accept opened or used products, including \\\"didn't suit me\\\" or \\\"didn't see results\\\" cases.\\n- To start a return, the customer replies with the order ID. We arrange a free reverse pickup within 2–3 business days.\\n- Combo or kit products (e.g., Bridal Glow Kit) must be returned as a complete set.\\n\"},{\"id\":6,\"text\":\"## 6. Refunds\\n\\n- **Prepaid orders:** refunded to the original payment method within **5–7 business days** after the returned item passes quality check.\\n- **COD orders:** refunded via **UPI or bank transfer**. We will ask the customer to share a UPI ID (or account holder name, account number and IFSC) **after** the pickup is completed.\\n- Shipping fees and COD fees are non-refundable, except for damaged, wrong or missing item cases where the full amount paid is refunded.\\n- We will **never** ask for an OTP, card PIN, CVV or password. Customers should not share these with anyone.\\n\"}]}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "provenance": "Read-only reconciliation of supplied V1/V2 files, not new executions. Screenshots verified visually in the preceding evaluation; hashes here preserve those artifacts.",
+  "versions": {
+    "v1": {
+      "audit_rows": 12,
+      "ticket_rows": 5,
+      "duplicate_email_ids": 0,
+      "distinct_ticket_orders": 5,
+      "audit_differences": [],
+      "ticket_differences": [],
+      "schemas": {
+        "audit": {
+          "exact_headers": true,
+          "valid_row_widths": true
+        },
+        "tickets": {
+          "exact_headers": true,
+          "valid_row_widths": true
+        }
+      },
+      "replayed_emails": [
+        "E01"
+      ],
+      "files": {
+        "v1-baseline-audit.csv": "e99c3fad75ce7bf9ea141b616b0ee72143c2bcfac16b6397157d35971bf06bdb",
+        "v1-baseline-execution.png": "725feca4b5f5b3b3c4a14294d8f362b6298d364ef9bd52c2100d523e115d1f18",
+        "v1-baseline-results.json": "11646237aec1d47a2ba824c8ebf64a344a3a135f4ed92cea48bd76559879a666",
+        "v1-baseline-tickets.csv": "1e950837f49769aacbfaae47973fce0e6d894a7a904c6560fa409d879eff69f1"
+      }
+    },
+    "v2": {
+      "audit_rows": 12,
+      "ticket_rows": 5,
+      "duplicate_email_ids": 0,
+      "distinct_ticket_orders": 5,
+      "audit_differences": [],
+      "ticket_differences": [],
+      "schemas": {
+        "audit": {
+          "exact_headers": true,
+          "valid_row_widths": true
+        },
+        "tickets": {
+          "exact_headers": true,
+          "valid_row_widths": true
+        }
+      },
+      "replayed_emails": [
+        "E03"
+      ],
+      "files": {
+        "v2-baseline-audit.csv": "4d7653f9fa7fa3cc5ef210f233b575e7c3c5be1c1b74e4f46c92bf37acb07989",
+        "v2-baseline-execution.png": "4f1f5e0f808a02e6b35d364353051ca2273c6b13da2c03645ec04d4197058774",
+        "v2-baseline-results.json": "cf7671c421b9c77ab5e8a9701f6399c7b2c21fa358187bc18bc428a9dfd0bb5e",
+        "v2-baseline-tickets.csv": "5bb981b008edee54b6d6bcdb330aaaf551c3516649927442583c75fb4712e246"
+      }
+    }
+  },
+  "v2_1_preservation": {
+    "checked_files": 84,
+    "changed_files": [
+      "implementation/evidence/v1/.DS_Store"
+    ]
+  },
+  "historical_v2_manifest_mismatches": [
+    {
+      "path": "implementation/evidence/.DS_Store",
+      "historical_hash": "3670b454e3689d3d697b96d5e04b8fa538de4d025d0d1829ded69c0e3eccb293",
+      "current_hash": "a83e33583fb1c76974445f120beeaca1de940eb87cfb212ebca7e95a8f2ce5bf",
+      "already_present_at_v2_1_start": true
+    },
+    {
+      "path": "implementation/workflow/v1/.DS_Store",
+      "historical_hash": "67a6f70261614be60ee973003800fb5f665e477b6521d99ddd21d8ca6e15440a",
+      "current_hash": "8332b763ab1e17470c0bc5e1964979a302ee5dc9f0ae3fd25a0457438c1480e3",
+      "already_present_at_v2_1_start": true
+    }
+  ]
+}
